@@ -1,0 +1,111 @@
+@extends('layouts.app')
+
+@section('title', 'Commercial Solar Roof Ventilation Fan | Ventilation Fan - SolarKing')
+
+@section('description', 'Solar Roof Ventilation Fan extracts the dry and hot air in the Roof. Solar Roof Ventilation Fan makes your home much cooler & big difference to your indoor comfort level.')
+
+@section('keywords', 'SolarKing, Solar Fan,Solar roof fan,Solar Roof Exhaust fan,Solar roof ventilation fan,Solar attic fan,Solar attic exhaust fan,Solarking Solar Fan,Solar Panels, Folding Solar Panels, Solar Regulators,Autosat, Sphere Dish, Automatic Dish, Satellite System, budget auto dish')
+
+@section('content')
+    <div class="section-head" >
+        <div class="container">
+            <h2 class="left">Caravan Satellite Dish</h2>
+            <h5 class="right"><a href="{{url('/')}}">Home</a> / <a href="{{url()->current()}}">Description</a></h5>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div id="carouselExampleFade" class="carousel product-gallery carousel-dark slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            @foreach($product->images as $ind => $image)
+                                <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="{{$ind}}" class="{{!$ind ? "active" : ""}}" aria-current="{{!$ind ? "true" : ""}}" aria-label="Slide {{$ind + 1}}"></button>
+                            @endforeach
+
+                        </div>
+                        <h3 class="product-slide-head">{{$product->title}}</h3>
+                        <div class="carousel-inner">
+                            @foreach($product->images as $ind => $image)
+                            <div class="carousel-item {{!$ind ? "active" : ""}}"> <img class="d-block " src="{{url($image)}}" alt="{{$product->title}}"> </div>
+                            @endforeach
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-4 product-overview">
+                    <h3 class=" mb-4">overview</h3>
+                    <div class="overview-item "><span ><i class="fa fa-star-o  c-main ">&nbsp;</i> <em>SKU</em></span> <span >{{$product->sku}}</span>                            </div>
+
+                    <div class="overview-item "><span ><i class="fa fa-money c-main ">&nbsp;</i> <em>RRP</em></span> <span >{{$product->price}}</span>                            </div>
+
+                    <div class="overview-item "><span ><i class="fa fa-file-pdf-o c-main ">&nbsp;</i> <em>Model</em></span> 600MM SRVF                           </div>
+                    <div class="mt-5">{!! $product->intro !!}</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="product-detail">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" href="#description" type="button" role="tab" aria-controls="description" aria-selected="true">Description</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="features-tab" data-bs-toggle="tab" data-bs-target="#features"  href="#features" type="button" role="tab" aria-controls="features" aria-selected="true">Features</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="specifications-tab" data-bs-toggle="tab" data-bs-target="#specifications" href="#specifications" type="button" role="tab" aria-controls="specifications" aria-selected="true">Specifications</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="parts-tab" data-bs-toggle="tab" data-bs-target="#parts" href="#parts"  type="button" role="tab" aria-controls="parts" aria-selected="true">PARTS INCLUDED</a>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="resources-tab" data-bs-toggle="tab" data-bs-target="#resources" href="#resources"  type="button" role="tab" aria-controls="resources" aria-selected="true">Resources</a>
+                        </li>
+
+                    </ul>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade active show" id="description" role="tabpanel" aria-labelledby="description-tab">
+                            <div class="desc">
+                                {!! $product->description !!}
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="features" role="tabpanel" aria-labelledby="features-tab">
+                            <div class="feature">
+                                {!! $product->feature !!}
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="specifications" role="tabpanel" aria-labelledby="specifications-tab">
+                            <div class="specifications">
+                                {!! $product->specification !!}
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="parts" role="tabpanel" aria-labelledby="parts-tab">
+                            <div class="feature">
+                                {!! $product->package !!}
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="resources" role="tabpanel" aria-labelledby="resources-tab">
+                            <div class="specifications">
+                                <ul class="time-list">
+                                    @foreach($product->downloads ?? []  as $download)
+                                    <li class="time-item ">
+                                        <div class="name"><a title="Commercial Solar Roof Ventilation Fan" target="_blank" href="{{url($download)}}">PDF Download <span class="fa fa-download"></span></a>                                            </div>
+                                        <div class="date">{{basename($download,'.pdf')}}</div>
+                                    </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            @include('front.contact.part_contact')
+        </div>
+    </div>
+
+@endsection

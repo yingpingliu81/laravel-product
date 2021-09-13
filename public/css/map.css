@@ -1,0 +1,102 @@
+/* Map selector
+--------------------------------------- */
+#mapRow .padding{padding:0 20px 20px 60px;}
+.mapBox{position:relative; width:68%; float:left;}
+.map {margin-left:360px; padding-top:50px; width:130px; height:240px; float:left;}
+.map li {width:50%; float:left; list-style:none; text-align:center; margin-bottom:0.5em;}
+.map a{display:block; width:60%; padding:4px; text-decoration:none; color:#191919 !important;position:static}
+.map a:hover,
+.map a:focus{background-color:#191919 !important; color:#FFFFFF !important;text-decoration:none !important;}
+.map span {position: absolute; z-index: 0; background-image: url(../images/v2australia-map.png); background-repeat: no-repeat;}
+
+/* States */
+.stateWA a span {
+    left: 0;
+    top: 25px;
+    width: 122px;
+    height: 190px;
+    background-position: 0px -25px; }
+.stateWA a:hover span,
+.stateWA a:focus span,
+.stateWA a:active span {
+    background-position: 0px -315px; }
+
+.stateNT a span {
+    left: 122px;
+    top: 5px;
+    width: 66px;
+    height: 122px;
+    background-position: -122px -5px; }
+.stateNT a:hover span,
+.stateNT a:focus span,
+.stateNT a:active span {
+    background-position: -122px -295px; }
+
+.stateQLD a span {
+    left: 188px;
+    top: 0;
+    width: 122px;
+    height: 153px;
+    background-position: -188px 0px; }
+.stateQLD a:hover span,
+.stateQLD a:focus span,
+.stateQLD a:active span {
+    background-position: -188px -290px; }
+
+.stateNSW a span {
+    left: 210px;
+    top: 153px;
+    width: 100px;
+    height: 70px;
+    background-position: -210px -153px; }
+.stateNSW a:hover span,
+.stateNSW a:focus span,
+.stateNSW a:active span {
+    background-position: -210px -443px; }
+
+.stateTAS a span {
+    left: 230px;
+    top: 253px;
+    width: 33px;
+    height: 35px;
+    background-position: -230px -253px; }
+.stateTAS a:hover span,
+.stateTAS a:focus span,
+.stateTAS a:active span {
+    background-position: -230px -543px; }
+
+.stateSA a span {
+    z-index: 1;
+    left: 122px;
+    top: 127px;
+    width: 88px;
+    height: 115px;
+    background-position: -122px -127px; }
+.stateSA a:hover span,
+.stateSA a:focus span,
+.stateSA a:active span {
+    background-position: -122px -417px; }
+
+.stateVIC a span {
+    z-index: 1;
+    left: 210px;
+    top: 194px;
+    width: 68px;
+    height: 54px;
+    background-position: -30px -232px; }
+.stateVIC a:hover span,
+.stateVIC a:focus span,
+.stateVIC a:active span {
+    background-position: -30px -522px; }
+
+.stateACT a span {
+    z-index: 2;
+    left: 260px;
+    top: 194px;
+    width: 12px;
+    height: 20px;
+    background-position: -80px -232px; }
+.stateACT a:hover span,
+.stateACT a:focus span,
+.stateACT a:active span {
+    background-position: -80px -522px; }

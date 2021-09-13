@@ -1,0 +1,313 @@
+html,body
+    height: 100%
+    font: $base-font-size $font-family-base
+a
+    text-decoration: none
+.header
+    background-color: $white-color
+    @include padding-top(10px)
+    .menu1
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .logo
+            width: 350px
+            @media (max-width: 992px)
+              width: 141px
+        .menu1-right
+          display: flex
+          align-items: flex-end
+          .contact-phone
+            display: flex
+            @include margin-right(30px)
+            background-color: rgba(0,0,0,0.13)
+            padding: 4px 30px
+            border-radius: 40px
+            .fa-phone
+              color: #fff
+              background-color: #F5A623
+              font-size: 2rem
+              padding: 5px 7px
+              border-radius: 50%
+              margin-right: 10px
+            .phone
+              font-family: EloquiaDisplay_Bold
+              font-size: 25px
+              color: #F5A623
+          .contact-form
+            display: flex
+            flex-direction: column
+            .social
+              text-align: center
+              @include margin-bottom(5px)
+              a
+                font-size: 20px
+                margin-left: 5px
+                color: $text-active-color
+        @media (max-width: 575.99px)
+            display: none
+    .menu2
+       display: flex
+       @include margin-top(10px)
+       background-color: $background-active
+       height: 60px
+       border-radius: 60px
+       padding: 0 20px
+       align-items: center
+       @media (max-width: 575.99px)
+         display: none
+       ul
+        flex: 1
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 0
+        margin: 0
+        height: 100%
+        li
+            display: flex
+            align-items: center
+            position: relative
+            height: 100%
+            a
+                color: $white-color
+                font-family: EloquiaDisplay_Bold
+                @include fluid-type(16px, 18px)
+                @include padding(0 20px)
+                height: 100%
+                display: flex
+                align-items: center
+                @media (max-width: 992px)
+                    padding: 0 5px
+            .active
+                color: $white-color
+                font-weight: bold
+                background-color: $menu-active-color
+            .sub
+                display: none
+                flex-direction: column
+                padding: 5px
+                position: absolute
+                left: 0
+                top:  60px
+                border-top: none
+                border-bottom-left-radius: 5px
+                border-bottom-right-radius: 5px
+                z-index: 9999
+                background-color: $background-active
+                margin: 0
+                height: auto
+                li
+                    display: flex
+                    padding: 0
+                    width: 100%
+                    min-width: 180px
+                    a
+                        @include fluid-type(14px, 16px)
+                        border-bottom: 1px dashed $white-color
+                        width: 100%
+                        @include padding(15px 10px)
+                        text-wrap: none
+                        font-family: EloquiaDisplay_Regular
+                    a:after
+                        content: ""
+                    a:hover
+                      background-color: $menu-active-color
+                @media (max-width: 992px)
+                  min-width: 145px
+                li:last-child a
+                        border-bottom: none
+        li:hover .sub
+            display: flex
+        li:last-child a:after
+           content: ""
+        li:hover
+            background-color: $menu-active-color
+       .container
+         height: 100%
+    .mobile
+        display: none
+        justify-content: space-between
+        margin: 0 15px
+        padding-bottom: 10px
+        border-bottom: .5px solid #bbb
+        .logo
+            width: 170px
+        .menu
+            width: 50px
+            height: 50px
+            display: flex
+            justify-content: center
+            align-items: center
+            .fa-bars
+                font-size: 30px
+            .toggle
+                position: absolute
+                left: 0
+                right: 0
+                width: 100%
+                display: flex
+                flex-direction: column
+                background-color: $black-color
+                top: 70px
+                padding: 10px 0
+                z-index: 999
+                border-radius: 10px
+                border: 1px solid #bbb
+                display: none
+                ul
+                    li
+                        padding: 5px
+                        .plus
+                           font-size: 20px
+                           line-height: 20px
+                           float: right
+                           margin-right: 20px
+                           vertical-align: middle
+                           color: #fff
+                        a
+                            color: $white-color
+                            font-size:  20px
+                            line-height: 24px
+                        .active
+                            color: $text-active-color
+                        .sub
+                            display: none
+                            padding-left: 15px
+                            flex-direction: column
+                            a
+                                font-size: 18px
+                                line-height: 20px
+                .social
+                  font-size: 18px
+                  padding: 5px 28px
+                  a
+                    margin-right: 10px
+                    color: $white-color
+                .btn-customize1
+                   margin: 0 40px 0 28px
+                   padding: 5px 30px
+                   color: #fff
+                   font-size: 18px
+                   margin-bottom: 15px
+        @media (max-width: 575.99px)
+            display: flex
+    .menu-over
+      position: absolute
+      z-index: 1
+.footer
+    @include margin(40px 0)
+    @include padding(60px 0 20px)
+    position: relative
+    background-color: #898989
+    .footer-content
+      display: flex
+      flex-direction: column
+      img
+        width: 200px
+      .list-inline
+          display: flex
+          align-items: center
+          margin-top: 20px
+          li
+            margin-right: 15px
+            .fa
+              color: $white-color
+              font-size: 20px
+    .footer-link
+      color: $white-color
+      a
+        color: $white-color
+        font-size: 14px
+    .copyright
+      color: $white-color
+    .to-top
+      position: absolute
+      left: 50%
+      top: -20px
+      .btn-to-top
+        width: 40px
+        height: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        color: $white-color
+        font-size: 20px
+        border-radius: 20px
+        background: -webkit-linear-gradient(45deg,#f5c815,#F5A623)
+        background: -moz-linear-gradient(45deg,#f5c815,#F5A623)
+        background: -ms-linear-gradient(45deg,#f5c815,#F5A623)
+        background: -o-linear-gradient(45deg,#f5c815,#F5A623)
+        background: linear-gradient(45deg,#f5c815,#F5A623)
+.show
+    display: flex !important
+.btn-customize1
+    padding: 8px 40px
+    color: $txt-color-black
+    font-size: 20px
+    border: none
+    border-radius: 40px
+    background: -webkit-linear-gradient(45deg,#f5c815,#F5A623)
+    background: -moz-linear-gradient(45deg,#f5c815,#F5A623)
+    background: -ms-linear-gradient(45deg,#f5c815,#F5A623)
+    background: -o-linear-gradient(45deg,#f5c815,#F5A623)
+    background: linear-gradient(45deg,#f5c815,#F5A623)
+    transition: all,.3s
+    webkit-transition: all,.3s
+    -moz-transition: all,.3s
+    -ms-transition: all,.3s
+    &:hover, &:active
+      color: $white-color
+      background: -webkit-linear-gradient(45deg,#F5A623,#f5c815)
+      background: -moz-linear-gradient(45deg,#F5A623,#f5c815)
+      background: -ms-linear-gradient(45deg,#F5A623,#f5c815)
+      background: -o-linear-gradient(45deg,#F5A623,#f5c815)
+      background: linear-gradient(45deg,#F5A623,#f5c815)
+.btn-customize2
+  padding: 8px 40px
+  color: $txt-color-black !important
+  font-size: 20px
+  font-family: 'EloquiaDisplay_Bold'
+  border-radius: 40px
+  background: -webkit-linear-gradient(45deg,#f5c815,#F5A623)
+  background: -moz-linear-gradient(45deg,#f5c815,#F5A623)
+  background: -ms-linear-gradient(45deg,#f5c815,#F5A623)
+  background: -o-linear-gradient(45deg,#f5c815,#F5A623)
+  background: linear-gradient(45deg,#f5c815,#F5A623)
+  transition: all,.3s
+  webkit-transition: all,.3s
+  -moz-transition: all,.3s
+  -ms-transition: all,.3s
+  position: relative
+  padding-right: 90px
+  &:before
+    content: ''
+    position: absolute
+    top: 50%
+    width: 35px
+    height: 1px
+    right: 40px
+    background-repeat: repeat-x
+    background-size: 70px 100%
+    transition: all .6s linear
+    -webkit-transition: all .6s linear
+    -moz-transition: all .6s linear
+    -ms-transition: all .6s linear
+    background-image: -webkit-repeating-linear-gradient(left, #222 0, #222 35px, #fff 35px, #fff 70px)
+    background-image: -moz-repeating-linear-gradient(left, #222 0, #222 35px, #fff 35px, #fff 70px)
+    background-image: -ms-repeating-linear-gradient(left, #222 0, #222 35px, #fff 35px, #fff 70px)
+    background-image: -o-repeating-linear-gradient(left, #222 0, #222 35px, #fff 35px, #fff 70px)
+    background-image: repeating-linear-gradient(left, #222 0, #222 35px, #fff 35px, #fff 70px)
+    background-position: 0 0
+  &:hover, &:active
+    color: $white-color !important
+    background: -webkit-linear-gradient(45deg,#F5A623,#f5c815)
+    background: -moz-linear-gradient(45deg,#F5A623,#f5c815)
+    background: -ms-linear-gradient(45deg,#F5A623,#f5c815)
+    background: -o-linear-gradient(45deg,#F5A623,#f5c815)
+    background: linear-gradient(45deg,#F5A623,#f5c815)
+  &:hover:before
+    background-position: 35px 0
+
+
+

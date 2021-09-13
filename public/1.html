@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src='https://cdn.tiny.cloud/1/vbf70c55i7hpf4szfvozgfgsln5de758nigh1c4d4oy2j7vy/tinymce/5/tinymce.min.js' referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea',
+        });
+        tinymce.init({
+            selector: '#mytextarea1',
+            plugins: 'advcode',
+        });
+    </script>
+</head>
+<body>
+<h1>TinyMCE Quick Start Guide</h1>
+<form method="post">
+    <textarea id="mytextarea" name="mytextarea">Hello, World!</textarea>
+    <textarea id="mytextarea1" name="mytextarea">Hello, World!</textarea>
+
+</form>
+</body>
+</html>

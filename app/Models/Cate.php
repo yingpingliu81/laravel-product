@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Cate extends Model
+{
+    protected $table = "cate";
+
+    protected $fillable = [
+        'title',
+        'slug',
+        'type_slug',
+        'sort'
+    ];
+
+    public function scopePriority($query) {
+        return $query->orderBy('sort','desc');
+    }
+
+    public function products() {
+        return $this->belongsToMany(Product::class,'product_cate','cate_id','product_id');
+    }
+
+    public function visibleProducts() {
+        return $this->belongsToMany(Product::class,'product_cate','cate_id','product_id')
+            ->where('status',Product::STATUS_VISIBLE)
+            ->orderBy('sort','desc');
+    }
+
+}
