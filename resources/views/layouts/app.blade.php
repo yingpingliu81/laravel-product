@@ -15,40 +15,42 @@
     @show
     @section('google')
 
-        <meta name="google-site-verification" content="ws6c3yc8iWPuASqm8euHLJu4n-lOU31EUoAqv_ZB5Ho" />
+        <meta name="google-site-verification" content="PDm9s2sAYWVxvlzL3FfpAdc5lymHlR9FZcX3l1rXdj4" />
 
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134332138-4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-134332138-4');
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Ads: 861711757 -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-861711757"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-
+            function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
             gtag('config', 'AW-861711757');
         </script>
-
-
-        <!-- Event snippet for Promax Phone Number Clicks conversion page In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-        <script> function gtag_report_conversion(url) {
-                var callback = function () {
-                    if (typeof (url) != 'undefined') {
-                        window.location = url;
-                    }
-                };
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-861711757/865qCIrs5sgBEI3b8poD',
-                    'event_callback': callback
-                });
-                return false;
-            } </script>
-
+        <script>
+            function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-861711757/tdNMCIHf_8UBEI3b8poD', 'event_callback': callback }); return false; }
+        </script>
     @show
 
     @section('facebook')
-    <!-- Facebook Pixel Code -->
+    <!--  Clickcease.com tracking--><script type="text/javascript">var script = document.createElement('script');
+            script.async = true; script.type = 'text/javascript';
+            var target = 'https://www.clickcease.com/monitor/stat.js';
+            script.src = target;var elem = document.head;elem.appendChild(script);</script>
+        <noscript><a href="https://www.clickcease.com" rel="nofollow"><img src="https://monitor.clickcease.com/stats/stats.aspx" alt="ClickCease" /></a></noscript><!--  Clickcease.com tracking-->
+
+        <!-- Facebook Pixel Code -->
         <script>
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -67,19 +69,7 @@
         </noscript>
         <!-- End Facebook Pixel Code -->
 
-        <!--  Clickcease.com tracking-->
-        <script type="text/javascript">var script = document.createElement('script');
-            script.async = true;
-            script.type = 'text/javascript';
-            var target = 'https://www.clickcease.com/monitor/stat.js';
-            script.src = target;
-            var elem = document.head;
-            elem.appendChild(script);</script>
-        <noscript><a href="https://www.clickcease.com" rel="nofollow"><img
-                        src="https://monitor.clickcease.com/stats/stats.aspx" alt="ClickCease"/></a></noscript>
-        <!--  Clickcease.com tracking-->
-        <meta name="facebook-domain-verification" content="94bt4obja37pin8ryn9y77shj441as" />
-
+        <meta name="facebook-domain-verification" content="gwwgmh3pmqrypxuuq0882un6kvv5an" />
     @endsection
 
 
@@ -102,10 +92,28 @@
         js.id = id;
         js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+<script>
+    window.twttr = (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0],
+            t = window.twttr || {};
+        if (d.getElementById(id)) return t;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://platform.twitter.com/widgets.js";
+        fjs.parentNode.insertBefore(js, fjs);
+        t._e = [];
+        t.ready = function(f) {
+            t._e.push(f);
+        };
+        return t;
+    }(document, "script", "twitter-wjs"));
+</script>
+
 
 <!-- Your Chat Plugin code -->
-<div class="fb-customerchat" attribution="install_email" page_id="321949508433204" theme_color="#6699cc"></div>
+<div class="fb-customerchat" attribution="install_email" page_id="167954660436659" theme_color="#ffc300">
 
 <header class="header">
     <div class="container">
