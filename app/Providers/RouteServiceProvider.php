@@ -25,8 +25,8 @@ class RouteServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        $cate_slug = Cate::where('type_slug','accessories')->get()->implode('slug','|');
-        Route::pattern('cate_slug', $cate_slug);
+        //$cate_slug = Cate::where('type_slug','accessories')->get()->implode('slug','|');
+        //Route::pattern('cate_slug', $cate_slug);
         parent::boot();
     }
 
