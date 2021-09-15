@@ -87,12 +87,13 @@
                                                         <icons-image _ngcontent-mes-c22="" _nghost-mes-c19=""><span class="material-icons icon-image-preview">edit</span></icons-image _ngcontent-mes-c22="" _nghost-mes-c19="">
                                                     </a>
 
-                                                    <a href="javascript:;" onclick="setVisible(this)" data-productId="{{$product->id}}"  class="ml-5">
+                                                    <a href="javascript:;" onclick="setVisible(this)" data-productId="{{$product->id}}" class="ml-1">
                                                         @if($product->status === \App\Models\Product::STATUS_VISIBLE)
                                                         <icons-image  _ngcontent-mes-c22="" _nghost-mes-c19=""><span class="material-icons material-icons-outlined">visibility</span></icons-image _ngcontent-mes-c22="" _nghost-mes-c19="">
                                                         @elseif($product->status === \App\Models\Product::STATUS_INVISIBLE)
                                                         <icons-image  _ngcontent-mes-c22="" _nghost-mes-c19=""><span class="material-icons material-icons-outlined">visibility_off</span>     </icons-image _ngcontent-mes-c22="" _nghost-mes-c19="">                                                   @endif
                                                     </a>
+                                                    <a href="{{url($product->cates[0]->slug.'/'.$product->slug)}}" class="ml-1" target="_blank"><span class="material-icons material-icons-outlined">open_in_browser</span></a>
                                                     @csrf
                                                     <input name="_method" type="hidden" value="DELETE">
                                                     <button class="custom-button btn-del" >
