@@ -240,7 +240,7 @@
 
                                 <li>
                                     <a href="{{url('/support/approved-installers')}}"
-                                       class="{{Request::is('support/approved-installers') ? 'active' : ''}}">Approved
+                                       class="{{Request::is('support/approved-installers') ? 'active' : ''}}">Fan
                                         Installers
                                     </a>
                                 </li>
@@ -276,7 +276,7 @@
                             </ul>
                         </li>
                         <li><a href="{{url('support/approved-installers')}}"
-                               class="{{Request::is('support/approved-installers*') ? 'active' : ''}}">Installers</a>
+                               class="{{Request::is('support/approved-installers*') ? 'active' : ''}}">Fan Installers</a>
                         </li>
                     </ul>
                     <div class="social">
@@ -376,7 +376,7 @@
 
                         <li>
                             <a href="{{url('/support/approved-installers')}}"
-                               class="{{Request::is('support/approved-installers') ? 'active' : ''}}">Approved
+                               class="{{Request::is('support/approved-installers') ? 'active' : ''}}">Fan
                                 Installers
                             </a>
                         </li>
@@ -410,7 +410,7 @@
                     </ul>
                 </li>
                 <li><a href="{{url('support/approved-installers')}}"
-                       class="{{Request::is('support/approved-installers*') ? 'active' : ''}}">Installers</a></li>
+                       class="{{Request::is('support/approved-installers*') ? 'active' : ''}}">Fan Installers</a></li>
             </ul>
         </div>
     </div>

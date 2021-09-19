@@ -14,7 +14,7 @@
 @section('content')
     <div class="section-head" >
         <div class="container">
-            <h2 class="left">Approved Installers
+            <h2 class="left">Fan  Installers
             </h2>
             <h5 class="right"><a href="{{url('/')}}">Home</a> / <a href="{{url()->current()}}">Installers
                 </a></h5>
