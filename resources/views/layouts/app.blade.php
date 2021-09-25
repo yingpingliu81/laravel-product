@@ -94,6 +94,9 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 </script>
+<!-- Your Chat Plugin code -->
+<div class="fb-customerchat" attribution="install_email" page_id="167954660436659" theme_color="#ffc300"></div>
+
 <script>
     window.twttr = (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
@@ -112,8 +115,6 @@
 </script>
 
 
-<!-- Your Chat Plugin code -->
-<div class="fb-customerchat" attribution="install_email" page_id="167954660436659" theme_color="#ffc300">
 
 <header class="header">
     <div class="container">
