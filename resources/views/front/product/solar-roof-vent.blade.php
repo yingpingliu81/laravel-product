@@ -9,7 +9,7 @@
 @section('content')
     <div class="section-head" >
         <div class="container">
-            <h2 class="left">Caravan Satellite Dish</h2>
+            <h2 class="left"> Solar Roof Vent </h2>
             <h5 class="right"><a href="{{url('/')}}">Home</a> / <a href="{{url()->current()}}">Description</a></h5>
         </div>
     </div>
@@ -206,7 +206,7 @@
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
                                        <a href="javascript:;">
-                                           <img src="../images/product/gallery/Solar-Roof-Ventilation-Solarking-3.jpg">
+                                           <img src="{{url('images/product/gallery/Solar-Roof-ventilation-Solarking-4.jpg')}}">
                                        </a>
                                    </div>
                                </div><!-- /-fx-gal-item -->
