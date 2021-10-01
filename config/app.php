@@ -234,8 +234,7 @@ return [
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
-
-    'admin_notified_mail' => env('ADMIN_NOTIFIED_MAIL','louis.liu@ptv.com.au'),
+    'admin_notified_mails' => env('ADMIN_NOTIFIED_MAIlS'),
     'admin_login_init_password' => env('ADMIN_LOGIN_INIT_PASSWORD'),
     'product_cate_slog_group' => env('PRODUCT_CATE_SLOG_GROUP'),
     'dealer_types' => env('DEALER_TYPES'),

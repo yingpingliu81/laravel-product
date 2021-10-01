@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>{{config('app.name')}} Email Notified</title>
+    <title>Contact Email Notified</title>
     <style>
         /* -------------------------------------
             GLOBAL RESETS
@@ -250,14 +250,16 @@
                             <table border="0" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td>
-                                        <h1>Dear {{$contact->getFirstName()}}</h1>
-                                        <p>Thanks for contacting {{config('app.name')}} recently and leave message to us: </p>
-                                        <p>{{$contact->message}}</p>
-
-                                        <p></p>
-                                        <p>{{$contact->reply}}</p>
-
+                                        <h2>Inquiry Form Detail</h2>
+                                        <p><strong>Name: </strong> {{$name ?? ''}}</p>
+                                        <p><strong>Email: </strong> {{$email ?? ''}}</p>
+                                        <p><strong>Phone: </strong> {{$phone ?? ''}}</p>
+                                        <p><strong>Company: </strong> {{$company ?? ''}}</p>
+                                        <br>
+                                        <h2>Message: </h2>
+                                        <p>{{$contact}}</p>
                                     </td>
+
                                 </tr>
                             </table>
                         </td>
@@ -265,11 +267,8 @@
 
                     <!-- END MAIN CONTENT AREA -->
                 </table>
-
-
             </div>
         </td>
-        <td>&nbsp;</td>
     </tr>
 </table>
 </body>

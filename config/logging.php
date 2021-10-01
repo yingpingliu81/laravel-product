@@ -47,7 +47,7 @@ return [
         ],
 
         'mail' => [
-            'driver' => 'single',
+            'driver' => 'mail',
             'path' => storage_path('logs/mail.log'),
             'level' => 'debug',
         ],

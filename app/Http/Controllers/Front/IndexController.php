@@ -9,6 +9,8 @@ use App\Models\Dealer;
 use App\Models\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Mail;
 use View;
 
 class IndexController extends Controller
@@ -65,6 +67,22 @@ class IndexController extends Controller
             $data = $request->except('_method');
             $data['type'] = Contact::TYPE_CUSTOMER;
             $res = Contact::create($data);
+
+            try {
+                $adminNotifyEmails = json_decode(config('app.admin_notified_mails'), true);
+                $data['contact'] = $data['message'];
+                Mail::send('mails.contact_notify', $data, function ($message) use ($adminNotifyEmails) {
+                    $message->subject(config('app.name').' Receive Contact Form '.date('Y-m-d h:i'));
+                    $message->to(data_get($adminNotifyEmails,0,'sales@ptv.com.au'));
+                    $message->cc(data_get($adminNotifyEmails,1,'glenn.murphy@ptv.com.au'));
+                    $message->cc(data_get($adminNotifyEmails,2,'louis.liu@ptv.com.au'));
+                    $message->replyTo(data_get($adminNotifyEmails,0,'sales@ptv.com.au'));
+                });
+            } catch (\Exception $exception) {
+
+                Log::channel('mail')->error($exception->getMessage());
+            }
+
             return back()->with('success','Thanks for contact us, we have received your information');
         }
         return view('front.contact.form');
