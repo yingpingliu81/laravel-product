@@ -10,8 +10,8 @@
 @section('content')
     <div class="section-head" >
         <div class="container">
-            <h2 class="left">Accessories</h2>
-            <h5 class="right"><a href="{{url('/')}}">Home</a> / <a href="{{url()->current()}}">Accessories</a></h5>
+            <h2 class="left">{{data_get($cate, "title", "")}}</h2>
+            <h5 class="right"><a href="{{url('/')}}">Home</a> / <a href="{{url()->current()}}">{{data_get($cate, "title", "")}}</a></h5>
         </div>
     </div>
 

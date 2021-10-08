@@ -9,8 +9,8 @@
 @section('content')
     <div class="section-head" >
         <div class="container">
-            <h2 class="left">Accessories</h2>
-            <h5 class="right"><a href="{{url('/')}}">Home</a> / <a href="{{url('product/accessories/'.$cate_slug)}}">Accessories</a></h5>
+            <h2 class="left">{{$product->title}}</h2>
+            <h5 class="right"><a href="{{url('/')}}">Home</a> / <a href="{{url('product/accessories/'.$cate_slug)}}">{{ucwords(str_replace("-"," ", $cate_slug))}}</a></h5>
         </div>
     </div>
     <div class="section">
