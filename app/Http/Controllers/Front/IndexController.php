@@ -171,6 +171,15 @@ class IndexController extends Controller
         return view('front.product.detail', compact('product','cates','cate_slug'));
     }
 
+    public function search(Request $request) {
+        $products = Product::visible()->where(function ($query)  use ($request){
+            $query->where('title', 'like', '%'.$request->keyword.'%')
+                ->orWhere('sku', 'like', '%'.$request->keyword.'%')
+                ->orWhere('feature','like', '%'.$request->keyword.'%');
+        })->get();
+        return view('front.product.search', compact('products'));
+    }
+
     public function policies() {
         return view("front.policies");
     }

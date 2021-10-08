@@ -56,6 +56,7 @@ class Product extends Model
         return $this->belongsToMany(Cate::class,'product_cate','product_id','cate_id')->withTimestamps();
     }
 
+
     public function scopeActive($query) {
         return $query->whereIn("status", [self::STATUS_VISIBLE,self::STATUS_INVISIBLE]);
     }

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Caravan Satellite Dish - Satking Orbit')
+@section('title', 'Caravan Satellite Dish - Solarking')
 
 @section('description', 'Solar Roof Ventilation Fan extracts the dry and hot air in the Roof. Solar Roof Ventilation Fan makes your home much cooler & big difference to your indoor comfort level.')
 

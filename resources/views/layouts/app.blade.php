@@ -150,12 +150,7 @@
                 </a>
             </div>
             <div class="menu1-right">
-                <div class="contact-phone">
-                    <a href="tel: 1300 139 255" class="phone">
-                       <i class="fa fa-phone"></i> 1300 139 255
-                    </a>
-                </div>
-                <div class="contact-form">
+                <div class="search">
                     <div class="social">
                         <a href="https://www.facebook.com/satkingorbit/?ref=bookmarks" target="_blank"><i
                                     class="fa fa-facebook mr-3"></i></a>
@@ -163,10 +158,26 @@
                         <a href="https://www.youtube.com/channel/UC9DucGZ9nAHAOV6hxdiXatQ" target="_blank"><i
                                     class="fa fa-youtube mr-3"></i></a>
                     </div>
-                    <button class="btn btn-customize1" data-bs-toggle="modal"
-                            data-bs-target="#contact-form">
-                        Send us a Message
-                    </button>
+                    <form method="post" action="{{url('/search-products')}}">
+                        {{csrf_field()}}
+                        <div class="input-group">
+                            <input type="text" required name="keyword" placeholder="search" class="form-control">
+                            <button type="submit" class="input-group-text">Search</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="contact">
+                    <div class="contact-phone">
+                        <a href="tel: 1300 139 255" class="phone">
+                            <i class="fa fa-phone"></i> 1300 139 255
+                        </a>
+                    </div>
+                    <div class="contact-form">
+                        <button class="btn btn-customize1" data-bs-toggle="modal"
+                                data-bs-target="#contact-form">
+                            Send us a Message
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -312,6 +323,13 @@
                         <a href="https://www.youtube.com/channel/UC9DucGZ9nAHAOV6hxdiXatQ" target="_blank"><i
                                     class="fa fa-youtube mr-3"></i></a>
                     </div>
+                    <form method="post" action="{{url('/search-products')}}">
+                        {{csrf_field()}}
+                        <div class="input-group">
+                            <input type="text" required name="keyword" placeholder="search" class="form-control">
+                            <button type="submit" class="input-group-text">Search</button>
+                        </div>
+                    </form>
                     <div class="btn btn-customize1" data-bs-toggle="modal"
                          data-bs-target="#contact-form">
                         Send us a Message

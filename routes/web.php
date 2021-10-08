@@ -19,6 +19,8 @@ Route::get('/', [IndexController::class, 'home'])->name('home');
 
 Route::get('/about', [IndexController::class, 'about']);
 
+Route::post('/search-products', [IndexController::class, 'search']);
+
 Route::get('/employment', function () {
     return view('front.employment');
 });
