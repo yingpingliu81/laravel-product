@@ -88,9 +88,9 @@
                                                     </a>
 
                                                     <a href="javascript:;" onclick="setVisible(this)" data-productId="{{$product->id}}" class="ml-1">
-                                                        @if($product->status === \App\Models\Product::STATUS_VISIBLE)
+                                                        @if($product->status == \App\Models\Product::STATUS_VISIBLE)
                                                         <icons-image  _ngcontent-mes-c22="" _nghost-mes-c19=""><span class="material-icons material-icons-outlined">visibility</span></icons-image _ngcontent-mes-c22="" _nghost-mes-c19="">
-                                                        @elseif($product->status === \App\Models\Product::STATUS_INVISIBLE)
+                                                        @elseif($product->status == \App\Models\Product::STATUS_INVISIBLE)
                                                         <icons-image  _ngcontent-mes-c22="" _nghost-mes-c19=""><span class="material-icons material-icons-outlined">visibility_off</span>     </icons-image _ngcontent-mes-c22="" _nghost-mes-c19="">
                                                         @endif
                                                     </a>
