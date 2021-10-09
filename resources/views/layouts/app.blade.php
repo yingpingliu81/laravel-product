@@ -152,9 +152,8 @@
             <div class="menu1-right">
                 <div class="search">
                     <div class="social">
-                        <a href="https://www.facebook.com/satkingorbit/?ref=bookmarks" target="_blank"><i
+                        <a href="https://www.facebook.com/SolarKingAU/?ref=br_rs" target="_blank"><i
                                     class="fa fa-facebook mr-3"></i></a>
-                        <a href=""><i class="fa fa-twitter mr-3"></i></a>
                         <a href="https://www.youtube.com/channel/UC9DucGZ9nAHAOV6hxdiXatQ" target="_blank"><i
                                     class="fa fa-youtube mr-3"></i></a>
                     </div>
@@ -317,9 +316,8 @@
                         </li>
                     </ul>
                     <div class="social">
-                        <a href="https://www.facebook.com/satkingorbit/?ref=bookmarks" target="_blank"><i
+                        <a href="https://www.facebook.com/SolarKingAU/?ref=br_rs" target="_blank"><i
                                     class="fa fa-facebook mr-3"></i></a>
-                        <a href=""><i class="fa fa-twitter mr-3"></i></a>
                         <a href="https://www.youtube.com/channel/UC9DucGZ9nAHAOV6hxdiXatQ" target="_blank"><i
                                     class="fa fa-youtube mr-3"></i></a>
                     </div>
@@ -474,11 +472,11 @@
                 </a>
 
                 <ul class="list-inline">
-                    <li><a href="https://www.facebook.com/satkingorbit/?ref=bookmarks" target="_blank"> <i
+                    <li><a href="https://www.facebook.com/SolarKingAU/?ref=br_rs" target="_blank"> <i
                                     class="fa fa-facebook mr-3">&nbsp;</i> </a>
                     </li>
-                    <li><a href="https://twitter.com/satkingau" target="_blank" title="satking promax twitter"><i
-                                    class="fa fa-twitter mr-3">&nbsp;</i></a></li>
+                    {{--<li><a href="https://twitter.com/satkingau" target="_blank" title="satking promax twitter"><i
+                                    class="fa fa-twitter mr-3">&nbsp;</i></a></li>--}}
                     <li><a href="https://www.youtube.com/channel/UC9DucGZ9nAHAOV6hxdiXatQ" target="_blank"><i
                                     class="fa fa-youtube mr-3">&nbsp;</i></a>
                     </li>
