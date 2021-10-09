@@ -197,7 +197,7 @@
                            <div class="-fx-image-gal mt-5">
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/gallery/1/Solar-Roof-Vent-Perth.jpg">
                                        </a>
                                    </div>
@@ -205,7 +205,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="{{url('images/product/gallery/Solar-Roof-ventilation-Solarking-4.jpg')}}">
                                        </a>
                                    </div>
@@ -214,7 +214,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/gallery/Solar-Roof-Ventilation-Solarking-7.jpg">
                                        </a>
                                    </div>
@@ -222,7 +222,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/gallery/Solar-Roof-Ventilation-Solarking-12.jpg">
                                        </a>
                                    </div>
@@ -230,7 +230,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/gallery/Solar-Roof-Ventilation-Solarking-14.jpg">
                                        </a>
                                    </div>
@@ -238,7 +238,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/gallery/Solar-Roof-Ventilation-Solarking-15.jpg">
                                        </a>
                                    </div>
@@ -246,7 +246,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/gallery/1/Solar-Roof-Vent-Installation-Solarking.jpg">
                                        </a>
                                    </div>
@@ -254,7 +254,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/gallery/1/Solar-Roof-Vents-Australia.jpg">
                                        </a>
                                    </div>
@@ -263,7 +263,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/gallery/1/Solar-Roof-Ventilation-South-Australia.jpg">
                                        </a>
                                    </div>
@@ -272,7 +272,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/gallery/1/Solarking-Roof-Ventilation-fan.jpg">
                                        </a>
                                    </div>
@@ -280,7 +280,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/gallery/QQ-Photo20171207113423.jpg">
                                        </a>
                                    </div>
@@ -288,7 +288,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/gallery/QQ-Photo20171207113540.jpg">
                                        </a>
                                    </div>
@@ -296,7 +296,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/165017540_866109803954471_1909091883708774098_n.jpeg">
                                        </a>
                                    </div>
@@ -305,7 +305,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/130484021_805878483310937_561495197419026856_n.jpeg">
                                        </a>
                                    </div>
@@ -313,7 +313,7 @@
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
+                                       <a href="{{url('product/photo-gallery')}}">
                                            <img src="../images/product/88134880_616677802231007_742450526645387264_n.jpeg">
                                        </a>
                                    </div>
@@ -592,7 +592,7 @@
                                            <img class="card-img-top" src="../images/home/10000-CBM-1-.jpg" alt="Solar Whiz">
                                        </div>
 
-                                       <div class="card-header"><a href="{{url('product/commercial-solar-roof-ventilation')}}">Solar Commercial Fan</a></div>
+                                       <div class="card-header "><a href="{{url('product/commercial-solar-roof-ventilation')}}" class="card-header-title">Solar Commercial Fan</a></div>
 
                                    </div>
                                </div>
@@ -601,7 +601,7 @@
                                        <div class="picture">
                                        <img class="card-img-top" src="..//images/home/Untitled-design-87-.jpg" alt="SolarKing Exhaust Fan">
                                        </div>
-                                       <div class="card-header"><a href="{{url('product/solar-wall-exhaust-fan')}}">Solar Wall Fan</a> </div>
+                                       <div class="card-header"><a href="{{url('product/solar-wall-exhaust-fan')}}" class="card-header-title">Solar Wall Fan</a> </div>
 
                                    </div>
                                </div>
