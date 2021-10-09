@@ -17,7 +17,7 @@ class DealerController extends Controller
 
     public function index() {
         $dealers = $this->dealerService->getDefaultList();
-        dd($dealers);
+        dd($dealers[0]);
         return view('admin.dealers.index',compact('dealers'));
     }
 
