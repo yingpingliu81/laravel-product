@@ -211,13 +211,6 @@
                                    </div>
                                </div><!-- /-fx-gal-item -->
 
-                               <div class="-fx-gal-item">
-                                   <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
-                                           <img src="../images/product/gallery/Solar-Roof-Ventilation-Solarking-4.jpg">
-                                       </a>
-                                   </div>
-                               </div><!-- /-fx-gal-item -->
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
@@ -267,13 +260,6 @@
                                    </div>
                                </div><!-- /-fx-gal-item -->
 
-                               <div class="-fx-gal-item">
-                                   <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
-                                           <img src="../images/product/gallery/1/Solar-Ventilation-Fan-Gladstone.jpg">
-                                       </a>
-                                   </div>
-                               </div><!-- /-fx-gal-item -->
 
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
@@ -295,14 +281,6 @@
                                <div class="-fx-gal-item">
                                    <div class="-fx-gal-image-thumb" tabindex="1">
                                        <a href="javascript:;">
-                                           <img src="../images/product/gallery/1/njp-perth.jpg">
-                                       </a>
-                                   </div>
-                               </div><!-- /-fx-gal-item -->
-
-                               <div class="-fx-gal-item">
-                                   <div class="-fx-gal-image-thumb" tabindex="1">
-                                       <a href="javascript:;">
                                            <img src="../images/product/gallery/QQ-Photo20171207113423.jpg">
                                        </a>
                                    </div>
@@ -315,6 +293,32 @@
                                        </a>
                                    </div>
                                </div><!-- /-fx-gal-item -->
+
+                               <div class="-fx-gal-item">
+                                   <div class="-fx-gal-image-thumb" tabindex="1">
+                                       <a href="javascript:;">
+                                           <img src="../images/product/165017540_866109803954471_1909091883708774098_n.jpeg">
+                                       </a>
+                                   </div>
+                               </div><!-- /-fx-gal-item -->
+
+
+                               <div class="-fx-gal-item">
+                                   <div class="-fx-gal-image-thumb" tabindex="1">
+                                       <a href="javascript:;">
+                                           <img src="../images/product/130484021_805878483310937_561495197419026856_n.jpeg">
+                                       </a>
+                                   </div>
+                               </div><!-- /-fx-gal-item -->
+
+                               <div class="-fx-gal-item">
+                                   <div class="-fx-gal-image-thumb" tabindex="1">
+                                       <a href="javascript:;">
+                                           <img src="../images/product/88134880_616677802231007_742450526645387264_n.jpeg">
+                                       </a>
+                                   </div>
+                               </div><!-- /-fx-gal-item -->
+
                            </div>
                            <div class="text-center mt-5">
                                <a href="{{url('product/photo-gallery')}}" class="btn btn-customize2">Photo Gallery</a>
