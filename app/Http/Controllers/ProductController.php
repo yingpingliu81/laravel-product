@@ -18,6 +18,7 @@ class ProductController extends Controller
 
     public function index(Request $request) {
         $products = $this->productService->getDefaultProductsList($request);
+        dd($products);
         return view('admin.products.index',compact('products'));
     }
 
