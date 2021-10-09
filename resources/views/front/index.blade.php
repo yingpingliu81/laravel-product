@@ -137,7 +137,7 @@
                                 <li class="stateNT"><a href="{{url('product/where-to-buy#where-nt')}}" target="_blank" title="Northern Territory"><span></span>
                                         <button class="btn btn-primary">NT</button>
                                     </a></li>
-                                <li class="stateTAS"><a href="{{url('product/where-to-buy#where-ta')}}" target="_blank" title="Tasmania"><span></span>
+                                <li class="stateTAS"><a href="{{url('product/where-to-buy#where-tass')}}" target="_blank" title="Tasmania"><span></span>
                                         <button class="btn btn-primary">TAS</button>
                                     </a></li>
                             </ul>

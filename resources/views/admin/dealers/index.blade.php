@@ -48,7 +48,7 @@
                                         state
                                     </th>
 
-                                    <th width="120px">
+                                    <th width="160px">
                                        actions
                                     </th>
                                     </thead>
@@ -79,12 +79,15 @@
                                                     <a href="{{url('admin/dealers/'.$dealer->id.'/edit')}}">
                                                         <icons-image _ngcontent-mes-c22="" _nghost-mes-c19=""><span _ngcontent-mes-c19="" class="material-icons icon-image-preview">edit</span></icons-image>
                                                     </a>
+                                                    @php($urls = [\App\Models\Dealer::TYPE_BATTER_DEALER => 'product/lithium-batteries-dealers', \App\Models\Dealer::TYPE_DEALER => 'product/where-to-buy', \App\Models\Dealer::TYPE_INSTALLER => 'support/approved-installers'])
+                                                    <a href="{{url($urls[$dealer->type].'#where-'.strtolower($dealer->state))}}" class="ml-1" target="_blank"><span class="material-icons material-icons-outlined">open_in_browser</span></a>
 
                                                     <a href="javascript:;" onclick="setVisible(this)" data-dealerId="{{$dealer->id}}"  class="ml-1">
-                                                        @if($dealer->status === \App\Models\Dealer::STATUS_VISIBLE)
+                                                        @if($dealer->status == \App\Models\Dealer::STATUS_VISIBLE)
                                                             <icons-image  _ngcontent-mes-c22="" _nghost-mes-c19=""><span class="material-icons material-icons-outlined">visibility</span></icons-image _ngcontent-mes-c22="" _nghost-mes-c19="">
-                                                        @elseif($dealer->status === \App\Models\Dealer::STATUS_INVISIBLE)
-                                                            <icons-image  _ngcontent-mes-c22="" _nghost-mes-c19=""><span class="material-icons material-icons-outlined">visibility_off</span>     </icons-image _ngcontent-mes-c22="" _nghost-mes-c19="">                                                   @endif
+                                                        @elseif($dealer->status == \App\Models\Dealer::STATUS_INVISIBLE)
+                                                            <icons-image  _ngcontent-mes-c22="" _nghost-mes-c19=""><span class="material-icons material-icons-outlined">visibility_off</span>     </icons-image _ngcontent-mes-c22="" _nghost-mes-c19="">
+                                                        @endif
                                                     </a>
 
                                                     @csrf

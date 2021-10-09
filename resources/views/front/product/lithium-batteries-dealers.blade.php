@@ -41,7 +41,7 @@
                     <a class="nav-link" id="where-sa-tab" data-bs-toggle="tab" data-bs-target="#where-sa" href="#where-sa"  type="button" role="tab" aria-controls="where-sa" aria-selected="true">SA</a>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <a class="nav-link" id="where-ta-tab" data-bs-toggle="tab" data-bs-target="#where-ta" href="#where-ta"  type="button" role="tab" aria-controls="where-ta" aria-selected="true">TAS</a>
+                    <a class="nav-link" id="where-tas-tab" data-bs-toggle="tab" data-bs-target="#where-tas" href="#where-tas"  type="button" role="tab" aria-controls="where-tas" aria-selected="true">TAS</a>
                 </li>
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="where-nt-tab" data-bs-toggle="tab" data-bs-target="#where-nt" href="#where-nt" type="button" role="tab" aria-controls="where-nt" aria-selected="true">NT</a>
@@ -220,7 +220,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="where-ta" role="tabpanel" aria-labelledby="where-ta-tab">
+                <div class="tab-pane fade" id="where-tas" role="tabpanel" aria-labelledby="where-tas-tab">
                     <div class="container">
                         <div class="row">
                             @foreach($dealers['TAS'] as $dealer)

@@ -91,7 +91,8 @@
                                                         @if($product->status === \App\Models\Product::STATUS_VISIBLE)
                                                         <icons-image  _ngcontent-mes-c22="" _nghost-mes-c19=""><span class="material-icons material-icons-outlined">visibility</span></icons-image _ngcontent-mes-c22="" _nghost-mes-c19="">
                                                         @elseif($product->status === \App\Models\Product::STATUS_INVISIBLE)
-                                                        <icons-image  _ngcontent-mes-c22="" _nghost-mes-c19=""><span class="material-icons material-icons-outlined">visibility_off</span>     </icons-image _ngcontent-mes-c22="" _nghost-mes-c19="">                                                   @endif
+                                                        <icons-image  _ngcontent-mes-c22="" _nghost-mes-c19=""><span class="material-icons material-icons-outlined">visibility_off</span>     </icons-image _ngcontent-mes-c22="" _nghost-mes-c19="">
+                                                        @endif
                                                     </a>
                                                     <a href="{{url($product->cates[0]->slug.'/'.$product->slug)}}" class="ml-1" target="_blank"><span class="material-icons material-icons-outlined">open_in_browser</span></a>
                                                     @csrf
