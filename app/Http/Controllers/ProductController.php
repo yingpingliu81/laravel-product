@@ -60,7 +60,7 @@ class ProductController extends Controller
 
     public function ajaxVisible(Product $product) {
         $product = $this->productService->setVisible($product);
-        return response()->json(['msg' => $product->status === Product::STATUS_INVISIBLE ? 'set invisible successfully' : 'set visible successfully',
+        return response()->json(['msg' => $product->status == Product::STATUS_INVISIBLE ? 'set invisible successfully' : 'set visible successfully',
                                  'status' => $product->status]);
     }
 

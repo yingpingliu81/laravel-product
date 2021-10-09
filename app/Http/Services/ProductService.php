@@ -70,7 +70,7 @@ class ProductService
     }
 
     public function setVisible(Product $product) {
-        $product->status = $product->status === Product::STATUS_INVISIBLE ? Product::STATUS_VISIBLE : Product::STATUS_INVISIBLE;
+        $product->status = $product->status == Product::STATUS_INVISIBLE ? Product::STATUS_VISIBLE : Product::STATUS_INVISIBLE;
         $product->save();
         return $product;
     }

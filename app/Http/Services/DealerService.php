@@ -46,7 +46,7 @@ class DealerService
     }
 
     public function setVisible(Dealer $dealer) {
-        $dealer->status = $dealer->status === Dealer::STATUS_INVISIBLE ? Dealer::STATUS_VISIBLE : Dealer::STATUS_INVISIBLE;
+        $dealer->status = $dealer->status == Dealer::STATUS_INVISIBLE ? Dealer::STATUS_VISIBLE : Dealer::STATUS_INVISIBLE;
         $dealer->save();
         return $dealer;
     }

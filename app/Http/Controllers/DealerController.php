@@ -59,7 +59,7 @@ class DealerController extends Controller
 
     public function ajaxVisible(Dealer $dealer) {
         $dealer = $this->dealerService->setVisible($dealer);
-        return response()->json(['msg' => $dealer->status === Dealer::STATUS_INVISIBLE ? 'set invisible successfully' : 'set visible successfully',
+        return response()->json(['msg' => $dealer->status == Dealer::STATUS_INVISIBLE ? 'set invisible successfully' : 'set visible successfully',
             'status' => $dealer->status]);
     }
 
