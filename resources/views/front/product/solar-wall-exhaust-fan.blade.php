@@ -53,15 +53,6 @@
                             <a class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" href="#description" type="button" role="tab" aria-controls="description" aria-selected="true">Description</a>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="features-tab" data-bs-toggle="tab" data-bs-target="#features"  href="#features" type="button" role="tab" aria-controls="features" aria-selected="true">Features</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="specifications-tab" data-bs-toggle="tab" data-bs-target="#specifications" href="#specifications" type="button" role="tab" aria-controls="specifications" aria-selected="true">Specifications</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="parts-tab" data-bs-toggle="tab" data-bs-target="#parts" href="#parts"  type="button" role="tab" aria-controls="parts" aria-selected="true">PARTS INCLUDED</a>
-                        </li>
-                        <li class="nav-item" role="presentation">
                             <a class="nav-link" id="resources-tab" data-bs-toggle="tab" data-bs-target="#resources" href="#resources"  type="button" role="tab" aria-controls="resources" aria-selected="true">Resources</a>
                         </li>
 
@@ -69,25 +60,38 @@
 
                     <div class="tab-content" id="myTabContent">
                         <div class="tab-pane fade active show" id="description" role="tabpanel" aria-labelledby="description-tab">
-                            <div class="desc">
-                                {!! $product->description !!}
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="features" role="tabpanel" aria-labelledby="features-tab">
-                            <div class="feature">
-                                {!! $product->feature !!}
+                          <div class="container">
+                              <div class="row">
+                                      <div class="desc">
+                                          {!! $product->description !!}
+                                      </div>
+                              </div>
+                              <div class="row">
+                                  <h2 class="mt-4 mb-2 text-center"><span class="fontLine">Features</span></h2>
 
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="specifications" role="tabpanel" aria-labelledby="specifications-tab">
-                            <div class="specifications">
-                                {!! $product->specification !!}
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="parts" role="tabpanel" aria-labelledby="parts-tab">
-                            <div class="feature">
-                                {!! $product->package !!}
-                            </div>
+                                  <div class="feature">
+                                      {!! $product->feature !!}
+
+                                  </div>
+                              </div>
+
+                              <div class="row">
+                                  <h2 class="mt-4 mb-2 text-center"><span class="fontLine">Specifications</span></h2>
+
+                                  <div class="specifications">
+                                      {!! $product->specification !!}
+                                  </div>
+                              </div>
+
+                              <div class="row">
+                                  <h2 class="mt-4 mb-2 text-center"><span class="fontLine">Package</span></h2>
+
+                                  <div class="feature">
+                                          {!! $product->package !!}
+                                      </div>
+                              </div>
+                          </div>
+
                         </div>
                         <div class="tab-pane fade" id="resources" role="tabpanel" aria-labelledby="resources-tab">
                             <div class="specifications">
