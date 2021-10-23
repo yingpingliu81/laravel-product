@@ -34,8 +34,10 @@ Route::group(['prefix' => '/support'], function ($router) {
 
 Route::group(['prefix' => '/product'], function ($router) {
     Route::get('/{slug}',[IndexController::class, 'product'])->where('slug','commercial-solar-roof-ventilation|solar-roof-vent|solar-wall-exhaust-fan|photo-gallery|where-to-buy|lithium-batteries-dealers');
-    Route::get('/accessories/{slug}',[IndexController::class, 'accessories']);
 });
+
+Route::get('/{slug}',[IndexController::class, 'accessories'])->where('slug','batteries|solar-fan|solar-panels|solar-regulators|portable-power|pure-sine-wave-inverters|power-outlets|discontinued-items');
+
 
 Route::get('/{cate_slug}/{product}',[IndexController::class, 'detail']);
 
