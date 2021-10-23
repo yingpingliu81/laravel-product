@@ -171,32 +171,32 @@
                                 </li>
 
                                 <li>
-                                    <a href="{{url('/product/accessories/batteries')}}"
-                                       class="{{Request::is('product/accessories/batteries') ? 'active' : ''}}">Batteries
+                                    <a href="{{url('/batteries')}}"
+                                       class="{{Request::is('batteries') ? 'active' : ''}}">Batteries
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="{{url('/product/accessories/solar-panels')}}"
-                                       class="{{Request::is('product/accessories/solar-panels') ? 'active' : ''}}">Solar Panels
+                                    <a href="{{url('/solar-panels')}}"
+                                       class="{{Request::is('solar-panels') ? 'active' : ''}}">Solar Panels
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="{{url('/product/accessories/solar-regulators')}}"
-                                       class="{{Request::is('product/accessories/solar-regulators') ? 'active' : ''}}">Solar Regulators
+                                    <a href="{{url('/solar-regulators')}}"
+                                       class="{{Request::is('solar-regulators') ? 'active' : ''}}">Solar Regulators
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="{{url('/product/accessories/portable-power')}}"
-                                       class="{{Request::is('product/accessories/portable-power') ? 'active' : ''}}">Portable Power
+                                    <a href="{{url('/portable-power')}}"
+                                       class="{{Request::is('portable-power') ? 'active' : ''}}">Portable Power
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="{{url('/product/accessories/pure-sine-wave-inverters')}}"
-                                       class="{{Request::is('product/accessories/pure-sine-wave-inverters') ? 'active' : ''}}">Inverters
+                                    <a href="{{url('/pure-sine-wave-inverters')}}"
+                                       class="{{Request::is('pure-sine-wave-inverters') ? 'active' : ''}}">Inverters
                                     </a>
                                 </li>
 
@@ -297,8 +297,8 @@
                 </li>
                 <li>
                     <a href="javascript:;" class="{{Request::is('product/solar-roof-vent') || Request::is('product/commercial-solar-roof-ventilation') || Request::is('product/solar-wall-exhaust-fan') ||
-                 Request::is('product/accessories/batteries') || Request::is('product/accessories/solar-panels') || Request::is('product/accessories/solar-regulators')
-                 || Request::is('product/accessories/portable-power') || Request::is('product/accessories/pure-sine-wave-inverters') ? 'active' : ''}}">Product</a>
+                 Request::is('batteries') || Request::is('solar-panels') || Request::is('solar-regulators')
+                 || Request::is('portable-power') || Request::is('pure-sine-wave-inverters') ? 'active' : ''}}">Product</a>
                     <ul class="sub">
                         <li>
                             <a href="{{url('product/solar-roof-vent')}}"
@@ -318,32 +318,32 @@
                         </li>
 
                         <li>
-                            <a href="{{url('/product/accessories/batteries')}}"
-                               class="{{Request::is('product/accessories/batteries') ? 'active' : ''}}">Batteries
+                            <a href="{{url('/batteries')}}"
+                               class="{{Request::is('batteries') ? 'active' : ''}}">Batteries
                             </a>
                         </li>
 
                         <li>
-                            <a href="{{url('/product/accessories/solar-panels')}}"
-                               class="{{Request::is('product/accessories/solar-panels') ? 'active' : ''}}">Solar Panels
+                            <a href="{{url('/solar-panels')}}"
+                               class="{{Request::is('solar-panels') ? 'active' : ''}}">Solar Panels
                             </a>
                         </li>
 
                         <li>
-                            <a href="{{url('/product/accessories/solar-regulators')}}"
-                               class="{{Request::is('product/accessories/solar-regulators') ? 'active' : ''}}">Solar Regulators
+                            <a href="{{url('/solar-regulators')}}"
+                               class="{{Request::is('solar-regulators') ? 'active' : ''}}">Solar Regulators
                             </a>
                         </li>
 
                         <li>
-                            <a href="{{url('/product/accessories/portable-power')}}"
-                               class="{{Request::is('product/accessories/portable-power') ? 'active' : ''}}">Portable Power
+                            <a href="{{url('/portable-power')}}"
+                               class="{{Request::is('portable-power') ? 'active' : ''}}">Portable Power
                             </a>
                         </li>
 
                         <li>
-                            <a href="{{url('/product/accessories/pure-sine-wave-inverters')}}"
-                               class="{{Request::is('product/accessories/pure-sine-wave-inverters') ? 'active' : ''}}">Inverters
+                            <a href="{{url('/pure-sine-wave-inverters')}}"
+                               class="{{Request::is('pure-sine-wave-inverters') ? 'active' : ''}}">Inverters
                             </a>
                         </li>
 

@@ -73,7 +73,7 @@
                             SolarKing Lithium batteries have a much greater depth of discharge than deep cycle lead acid batteries making lithium batteries the equivalent of 2 or 3 similar capacity deep cycle lead acid batteries.
 
                             SolarKing lithium batteries incorporate advanced battery management systems “BMS” to maximise performance and protect the battery from over charge and over discharge.</p>
-                    <a href="{{url('product/accessories/batteries')}}" class="btn btn-customize2 mt-5">View Details</a>
+                    <a href="{{url('/batteries')}}" class="btn btn-customize2 mt-5">View Details</a>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
                     <p>All of our panels are supplied with hail resistant 3mm toughened glass.
                     </p>
 
-                    <a href="{{url('product/accessories/solar-panels')}}" class="btn btn-customize2">View Details</a>
+                    <a href="{{url('/solar-panels')}}" class="btn btn-customize2">View Details</a>
                 </div>
                 <div class="col-sm-6">
                     <div class="imagestwo">
