@@ -69,7 +69,7 @@
         <!-- End Facebook Pixel Code -->
 
         <meta name="facebook-domain-verification" content="gwwgmh3pmqrypxuuq0882un6kvv5an" />
-    @endsection
+    @show
 
 
 </head>
