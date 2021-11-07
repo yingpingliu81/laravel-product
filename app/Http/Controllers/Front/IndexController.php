@@ -62,6 +62,7 @@ class IndexController extends Controller
                 'name' => 'required|string',
                 'email' => 'required|string',
                 'message' => 'required|string',
+                'company' => '|not_regex:/^(google)$/i',
                 'g-recaptcha-response' => 'recaptcha',
             ]);
             $data = $request->except('_method');
