@@ -120,7 +120,7 @@
                 </div>
                 <div class="contact">
                     <div class="contact-phone">
-                        <a href="tel: 1300 139 255" class="phone">
+                        <a href="tel: 1300 139 255" class="phone" onclick="return gtag_report_conversion('tel: 1300 139 255')">
                             <i class="fa fa-phone"></i> 1300 139 255
                         </a>
                     </div>

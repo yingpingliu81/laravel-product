@@ -19,7 +19,7 @@
                 </div>
                 <div class="form-group col-md-6">
                     <label class="form-label">Phone </label>
-                    <input type="text" name="phone" value="{{old('phone')}}" class="form-control">
+                    <input type="text" name="phone"  value="{{old('phone')}}" class="form-control">
                 </div>
             </div>
             <div class="row mb-3">
