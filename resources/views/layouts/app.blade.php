@@ -39,7 +39,8 @@
             gtag('config', 'AW-861711757');
         </script>
         <script>
-            function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-861711757/tdNMCIHf_8UBEI3b8poD', 'event_callback': callback }); return false; }
+            function gtag_report_conversion(url) {
+                var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-861711757/tdNMCIHf_8UBEI3b8poD', 'event_callback': callback }); return false; }
         </script>
     @show
 
@@ -71,6 +72,10 @@
         <meta name="facebook-domain-verification" content="gwwgmh3pmqrypxuuq0882un6kvv5an" />
     @show
 
+<!-- Event snippet for Solarking Submit lead form conversion page -->
+@if(Session::has('success') || Session::has('message'))
+        <script> gtag('event', 'conversion', {'send_to': 'AW-861711757/tdNMCIHf_8UBEI3b8poD'}); </script>
+    @endif
 
 </head>
 <body>
