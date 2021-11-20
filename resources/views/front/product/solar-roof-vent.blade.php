@@ -669,24 +669,13 @@
                     <div class="tab-pane fade" id="resources" role="tabpanel" aria-labelledby="resources-tab">
                         <div class="specifications">
                             <ul class="time-list">
-                                <li class="time-item ">
-                                    <!-- <div class="icon">1 </div>-->
-                                    <div class="name"><a title="Solar Roof Exhaust Fan brouchure" target="_blank" href="../images/product/6752_SolarKing-320MM-Solar-Fan_Instructions-Tile-Roof.pdf">PDF Download <span class="fa fa-download"></span></a>                                            </div>
-                                    <div class="date">How to install Solar Roof Exhaust Fan for tile roof
-                                    </div>
-                                </li>
-                                <li class="time-item  ">
-                                    <!-- <div class="icon">2 </div>-->
-                                    <div class="name"><a title="Solar Roof Exhaust Fan User's Manual" target="_blank" href="../images/product/6752_SolarKing-320MM-Solar-Fan_Instructions-Metal-Roof.pdf">PDF Download <span class="fa fa-download"></span></a>                                            </div>
-                                    <div class="date">How to install Solar Roof Exhaust Fan for metal roof
-                                    </div>
-                                </li>
-                                <li class="time-item  ">
-                                    <!-- <div class="icon">2 </div>-->
-                                    <div class="name"><a title="Solar Roof Exhaust Fan User's Manual" target="_blank" href="../images/product/SolarKing-320mm-Solar-Roof-Ventilation-Fan_Final.pdf">PDF Download <span class="fa fa-download"></span></a>                                            </div>
-                                    <div class="date">How to install Solar Roof Exhaust Fan for metal roof
-                                    </div>
-                                </li>
+                                @foreach($product->downloads as $download)
+                                    <li class="time-item ">
+                                        <div class="name"><a title="Solar Roof Exhaust Fan brouchure" target="_blank" href="{{url($download)}}">PDF Download <span class="fa fa-download"></span></a>                                            </div>
+                                        <div class="date"> {{basename($download, ".pdf")}}
+                                        </div>
+                                    </li>
+                                @endforeach
                             </ul>
                         </div>
                     </div>
