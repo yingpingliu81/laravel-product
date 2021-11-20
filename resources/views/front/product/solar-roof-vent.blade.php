@@ -669,13 +669,15 @@
                     <div class="tab-pane fade" id="resources" role="tabpanel" aria-labelledby="resources-tab">
                         <div class="specifications">
                             <ul class="time-list">
-                                @foreach($product->downloads as $download)
-                                    <li class="time-item ">
-                                        <div class="name"><a title="Solar Roof Exhaust Fan brouchure" target="_blank" href="{{url($download)}}">PDF Download <span class="fa fa-download"></span></a>                                            </div>
-                                        <div class="date"> {{basename($download, ".pdf")}}
-                                        </div>
-                                    </li>
-                                @endforeach
+                                @if($product->downloads)
+                                    @foreach($product->downloads as $download)
+                                        <li class="time-item ">
+                                            <div class="name"><a title="Solar Roof Exhaust Fan brouchure" target="_blank" href="{{url($download)}}">PDF Download <span class="fa fa-download"></span></a>                                            </div>
+                                            <div class="date"> {{basename($download, ".pdf")}}
+                                            </div>
+                                        </li>
+                                    @endforeach
+                                @endif
                             </ul>
                         </div>
                     </div>
