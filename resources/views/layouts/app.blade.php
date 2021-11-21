@@ -74,8 +74,8 @@
 
 <!-- Event snippet for Solarking Submit lead form conversion page -->
 @if(Session::has('success') || Session::has('message'))
-        <script> gtag('event', 'conversion', {'send_to': 'AW-861711757/tdNMCIHf_8UBEI3b8poD'}); </script>
-    @endif
+        <script> gtag('event', 'conversion', {'send_to': 'AW-861711757/qR0fCLOFs8QBEI3b8poD'}); </script>
+@endif
 
 </head>
 <body>
