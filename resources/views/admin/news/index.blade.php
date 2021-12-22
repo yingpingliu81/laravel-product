@@ -84,6 +84,7 @@
                                                         @elseif($blog->is_active === \App\Models\Blog::STATUS_INVISIBLE)
                                                             <icons-image  _ngcontent-mes-c22="" _nghost-mes-c19=""><span class="material-icons material-icons-outlined">visibility_off</span>     </icons-image _ngcontent-mes-c22="" _nghost-mes-c19="">                                                   @endif
                                                     </a>
+                                                    <a href="{{url('news/'.$blog->slug)}}" class="ml-1" target="_blank"><span class="material-icons material-icons-outlined">open_in_browser</span></a>
 
                                                     @csrf
                                                     <input name="_method" type="hidden" value="DELETE">
