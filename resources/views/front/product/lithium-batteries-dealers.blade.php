@@ -122,6 +122,10 @@
                                                 <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank"  href="{{$dealer->website}}">{{$dealer->name}}</a>
                                                 </p>
                                             @endif
+                                            @if($dealer->note)
+                                                <p class="card-text">{!! $dealer->note !!}
+                                                </p>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -152,6 +156,10 @@
                                             @endif
                                             @if($dealer->website)
                                                 <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank"  href="{{$dealer->website}}">{{$dealer->name}}</a>
+                                                </p>
+                                            @endif
+                                            @if($dealer->note)
+                                                <p class="card-text">{!! $dealer->note !!}
                                                 </p>
                                             @endif
                                         </div>
@@ -187,6 +195,10 @@
                                                 <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank"  href="{{$dealer->website}}">{{$dealer->name}}</a>
                                                 </p>
                                             @endif
+                                            @if($dealer->note)
+                                                <p class="card-text">{!! $dealer->note !!}
+                                                </p>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -217,6 +229,10 @@
                                                 <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank"  href="{{$dealer->website}}">{{$dealer->name}}</a>
                                                 </p>
                                             @endif
+                                            @if($dealer->note)
+                                                <p class="card-text">{!! $dealer->note !!}
+                                                </p>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -245,6 +261,10 @@
                                             @endif
                                             @if($dealer->website)
                                                 <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank"  href="{{$dealer->website}}">{{$dealer->name}}</a>
+                                                </p>
+                                            @endif
+                                            @if($dealer->note)
+                                                <p class="card-text">{!! $dealer->note !!}
                                                 </p>
                                             @endif
                                         </div>
@@ -278,6 +298,10 @@
                                                 <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank"  href="{{$dealer->website}}">{{$dealer->name}}</a>
                                                 </p>
                                             @endif
+                                            @if($dealer->note)
+                                                <p class="card-text">{!! $dealer->note !!}
+                                                </p>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -306,6 +330,10 @@
                                             @endif
                                             @if($dealer->website)
                                                 <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank"  href="{{$dealer->website}}">{{$dealer->name}}</a>
+                                                </p>
+                                            @endif
+                                            @if($dealer->note)
+                                                <p class="card-text">{!! $dealer->note !!}
                                                 </p>
                                             @endif
                                         </div>
@@ -338,6 +366,10 @@
                                                 <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank"  href="{{$dealer->website}}">{{$dealer->name}}</a>
                                                 </p>
                                             @endif
+                                            @if($dealer->note)
+                                                <p class="card-text">{!! $dealer->note !!}
+                                                </p>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -368,6 +400,10 @@
                                                 <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank"  href="{{$dealer->website}}">{{$dealer->name}}</a>
                                                 </p>
                                             @endif
+                                            @if($dealer->note)
+                                                <p class="card-text">{!! $dealer->note !!}
+                                                </p>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
@@ -396,6 +432,10 @@
                                             @endif
                                             @if($dealer->website)
                                                 <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank"  href="{{$dealer->website}}">{{$dealer->name}}</a>
+                                                </p>
+                                            @endif
+                                            @if($dealer->note)
+                                                <p class="card-text">{!! $dealer->note !!}
                                                 </p>
                                             @endif
                                         </div>
