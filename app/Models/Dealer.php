@@ -25,7 +25,8 @@ class Dealer extends Model
         'lng',
         'suburb',
         'state',
-        'status'
+        'status',
+        'note',
     ];
 
     public function getCommonType() {

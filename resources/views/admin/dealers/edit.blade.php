@@ -100,6 +100,14 @@
                                                    class="form-control">
                                         </div>
                                     </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group bmd-form-group">
+                                            <label >Note</label>
+                                            <input type="text" id="note" name="note"  value="{{$dealer->note}}"
+                                                   class="form-control">
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <div class="mt-5 mb-5">

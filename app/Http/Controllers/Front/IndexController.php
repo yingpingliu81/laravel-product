@@ -90,7 +90,7 @@ class IndexController extends Controller
     }
 
     public function dealer() {
-        $dealers = Dealer::dealers()->orderBy('state')->get()->groupBy('state');
+        $dealers = Dealer::dealers()->orderBy('state')->priority()->get()->groupBy('state');
         return view('front.dealers.index', compact('dealers'));
     }
 

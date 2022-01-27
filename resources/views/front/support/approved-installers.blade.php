@@ -84,6 +84,10 @@
                                                 <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank"  href="{{$installer->website}}">{{$installer->name}}</a>
                                                 </p>
                                             @endif
+                                            @if($installer->note)
+                                                <p class="card-text">{!! $installer->note !!}
+                                                </p>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
