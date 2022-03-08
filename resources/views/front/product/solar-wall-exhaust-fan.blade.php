@@ -67,7 +67,7 @@
 
                     <div class="overview-item "><span ><i class="fa fa-money c-main ">&nbsp;</i> <em>RRP</em></span> <span >{{$product->price}}</span>                            </div>
 
-                    <div class="overview-item "><span ><i class="fa fa-file-pdf-o c-main ">&nbsp;</i> <em>Model</em></span> 320MM SRVF                          </div>
+                    <div class="overview-item "><span ><i class="fa fa-file-pdf-o c-main ">&nbsp;</i> <em>Model</em></span> 320MM SWVF                       </div>
                     <div class="mt-5">{!! $product->intro !!}</div>
 
                     <div class="text-center mt-5">
