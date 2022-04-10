@@ -5,7 +5,20 @@
 @section('description', 'Solar Roof Ventilation Fan extracts the dry and hot air in the Roof. Solar Roof Ventilation Fan makes your home much cooler & big difference to your indoor comfort level.')
 
 @section('keywords', 'SolarKing, Solar Fan,Solar roof fan,Solar Roof Exhaust fan,Solar roof ventilation fan,Solar attic fan,Solar attic exhaust fan,Solarking Solar Fan,Solar Panels, Folding Solar Panels, Solar Regulators,Autosat, Sphere Dish, Automatic Dish, Satellite System, budget auto dish')
+@section('google')
+    @parent
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWT1R6CNV4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){window.dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'G-HWT1R6CNV4');
+    </script>
+
+
+@endsection
 @section('content')
     <!-- Messenger Chat plugin Code -->
     <div id="fb-root"></div>
@@ -141,4 +154,23 @@
         </div>
     </div>
 
+@endsection
+@section('javascript')
+    <script src="{{url('/assets/js/core/jquery.min.js')}}"></script>
+    <script type = "text/javascript">
+        dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+        dataLayer.push({
+            event    : "view_item",
+            ecommerce: {
+                items: [{
+                    item_name     : "{{$product->title}}", // Name or ID is required.
+                    item_id       : "{{$product->sku}}",
+                    price         : "{{$product->price ?? ""}}",
+                    item_brand    : "Solarking",
+                    item_category : "{{data_get($product, 'cates.0.title', '')}}",
+                    index         : 0,  // If associated with a list selection.
+                }]
+            }
+        });
+    </script>
 @endsection
