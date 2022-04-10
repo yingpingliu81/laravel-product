@@ -431,3 +431,22 @@
     </div>
 
 @endsection
+@section('javascript')
+    <script src="{{url('/assets/js/core/jquery.min.js')}}"></script>
+    <script type = "text/javascript">
+        dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+        dataLayer.push({
+            event    : "view_item",
+            ecommerce: {
+                items: [{
+                    item_name     : "{{$product->title}}", // Name or ID is required.
+                    item_id       : "{{$product->sku}}",
+                    price         : "{{$product->price ?? ""}}",
+                    item_brand    : "Solarking",
+                    item_category : "{{data_get($product, 'cates.0.title', '')}}",
+                    index         : 0,  // If associated with a list selection.
+                }]
+            }
+        });
+    </script>
+@endsection

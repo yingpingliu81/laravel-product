@@ -6,6 +6,20 @@
 
 @section('keywords', 'SolarKing, Solar Fan,Solar roof fan,Solar Roof Exhaust fan,Solar roof ventilation fan,Solar attic fan,Solar attic exhaust fan,Solarking Solar Fan,Solar Panels, Folding Solar Panels, Solar Regulators,Autosat, Sphere Dish, Automatic Dish, Satellite System, budget auto dish')
 
+@section('google')
+@parent
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWT1R6CNV4"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){window.dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HWT1R6CNV4');
+</script>
+
+
+@endsection
 
 @section('content')
     <div class="section-head" >
@@ -42,4 +56,36 @@
             </div>
         </div>
     </section>
+@endsection
+@section('javascript')
+    <script src="{{url('/assets/js/core/jquery.min.js')}}"></script>
+    <script>
+    //Google Tag Manager Start
+    var tagArray    = <?php echo $cate->visibleProducts; ?>;
+    var tagM        = new Array();
+    var site_url = "<?php echo url('/'); ?>";
+    $.each(tagArray, function(i, product_data)
+    {
+        $.get(site_url + '/item-details-tag-manager/'+ product_data.sku, function(data){
+            tagM.push({'item_name': product_data.title,
+                'item_id': product_data.sku,
+                currency: "AUD",
+                'price': product_data.price,
+                'item_brand': 'Solarking',
+                'item_category': "{{$cate->title ?? ""}}",
+                'index': i,
+            });
+        });
+    });
+
+    // Measure product views / impressions
+    dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+    dataLayer.push({
+        event: "view_item_list",
+        ecommerce: {
+            items: tagM
+        }
+    });
+    //Google Tag Manager End
+</script>
 @endsection
