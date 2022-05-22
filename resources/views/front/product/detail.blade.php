@@ -10,9 +10,13 @@
     @parent
     @if($product->thumb)
         <meta property="og_image" content="{{url($product->thumb)}}" />
+        <meta name="twitter:image" content="{{url($product->thumb)}}">
     @endif
 @endsection
 @section('og_type', "product" )
+@section('twitter_card', "summary_large_image" )
+@section('article_modified_time', data_get($product,'updated_at'))
+@section('og_updated_time', data_get($product,'updated_at'))
 
 @section('google')
     @parent

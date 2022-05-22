@@ -91,20 +91,23 @@ class IndexController extends Controller
 
     public function dealer() {
         $dealers = Dealer::dealers()->orderBy('state')->priority()->get()->groupBy('state');
-        return view('front.dealers.index', compact('dealers'));
+        $latest_dealer = Dealer::dealers()->orderBy('updated_at','desc')->first();
+        return view('front.dealers.index', compact('dealers','latest_dealer'));
     }
 
 
     public function support($slug) {
         $installers = [];
         $faqs = [];
+        $latest_dealer = '';
         if($slug == 'faq') {
             $faqs = Blog::faqs()->active()->priority()->get();
         }
         if($slug == 'approved-installers') {
             $installers = Dealer::where('type', Dealer::TYPE_INSTALLER)->priority()->visible()->get()->groupBy('state');
+            $latest_dealer = Dealer::dealers()->orderBy('updated_at','desc')->first();
         }
-        return view("front.support.$slug", compact('faqs','installers'));
+        return view("front.support.$slug", compact('faqs','installers','latest_dealer'));
     }
 
     public function registration(Request $request) {
@@ -127,7 +130,6 @@ class IndexController extends Controller
     }
 
     public function product($slug) {
-
         if($slug == 'solar-roof-vent') {
             $cate = Cate::where('slug','main1')->with('visibleProducts')->first();
             $product = $cate->visibleProducts()->first();
@@ -150,12 +152,16 @@ class IndexController extends Controller
         }
         if($slug == 'where-to-buy') {
             $dealers = Dealer::where('type', Dealer::TYPE_DEALER)->priority()->visible()->get()->groupBy('state');
-            return view("front.product.$slug", compact('dealers'));
+            $latest_dealer = Dealer::dealers()->orderBy('updated_at','desc')->first();
+
+            return view("front.product.$slug", compact('dealers','latest_dealer'));
         }
 
         if($slug == 'lithium-batteries-dealers') {
             $dealers = Dealer::where('type', Dealer::TYPE_BATTER_DEALER)->priority()->visible()->get()->groupBy('state');
-            return view("front.product.$slug", compact('dealers'));
+            $latest_dealer = Dealer::dealers()->orderBy('updated_at','desc')->first();
+
+            return view("front.product.$slug", compact('dealers', 'latest_dealer'));
         }
     }
 
