@@ -3,14 +3,30 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
     <link href="{{url('images/favicon.ico')}}" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" />
     <link href="{{url('images/favicon.ico')}}" mce_href="favicon.ico" rel="icon" type="image/x-icon" />
     <link href="{{url('images/favicon.ico')}}" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <title>  @yield('title') </title>
     <meta name="description" content="@yield('description')">
     <meta name="keywords" content="@yield('keywords')">
+    <meta name="title" content="@yield('title')">
+    <meta name="author" content="{{config('app.name')}}">
+    <meta name="url" content="{{url()->current()}}">
 
-    @section('style')
+    <meta property="og:title" content="@yield('title')" />
+    <meta property="og:description" content="@yield('description')" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:locale:alternate" content="en_AU" />
+    <meta property="og:url" content="{{url()->current()}}" />
+    <meta property="og:site_name" content="{{config('app.name')}}" />
+    <meta property="og:type" content="@yield('og_type', 'website')" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="@yield('title')" />
+    <meta name="twitter:site" content="{{config('app.name')}}" />
+
+@section('style')
         <link rel="stylesheet" href="{{mix('css/app.css')}}">
     @show
     @section('google')

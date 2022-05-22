@@ -8,6 +8,7 @@
 
 @section('style')
     @parent
+    <meta property="og_image" content="{{url('images/home/Solarking-Perth-Solar-Roof-Vent.jpg')}}" />
     <link rel="stylesheet" href="{{url('css/lightbox.css')}}">
     <link rel="stylesheet" href="{{url('css/map.css')}}">
 @endsection

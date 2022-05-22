@@ -10,6 +10,7 @@
     @parent
     <link rel="stylesheet" href="{{url('css/map.css')}}">
 @endsection
+@section('og_type', "dealers" )
 
 @section('content')
     <div class="section-head" >

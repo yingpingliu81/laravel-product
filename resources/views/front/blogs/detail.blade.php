@@ -5,7 +5,15 @@
 @section('description', 'Solar Roof Ventilation Fan extracts the dry and hot air in the Roof. Solar Roof Ventilation Fan makes your home much cooler & big difference to your indoor comfort level.')
 
 @section('keywords', 'SolarKing, Solar Fan,Solar roof fan,Solar Roof Exhaust fan,Solar roof ventilation fan,Solar attic fan,Solar attic exhaust fan,Solarking Solar Fan,Solar Panels, Folding Solar Panels, Solar Regulators,Autosat, Sphere Dish, Automatic Dish, Satellite System, budget auto dish')
-
+@section('style')
+    @parent
+    @if($blogs->thumbnail)
+    <meta property="og_image" content="{{url($blogs->thumbnail)}}" />
+    @endif
+    <meta property="article:modified_time" content="{{$blogs->updated_at}}" />
+    <meta property="og:type" content="article" />
+@endsection
+@section('og_type', "article" )
 
 @section('content')
     <div class="section-head" >

@@ -6,6 +6,14 @@
 
 @section('keywords', 'SolarKing, Solar Fan,Solar roof fan,Solar Roof Exhaust fan,Solar roof ventilation fan,Solar attic fan,Solar attic exhaust fan,Solarking Solar Fan,Solar Panels, Folding Solar Panels, Solar Regulators,Autosat, Sphere Dish, Automatic Dish, Satellite System, budget auto dish')
 
+@section('style')
+    @parent
+    @if($product->thumb)
+        <meta property="og_image" content="{{url($product->thumb)}}" />
+    @endif
+    <meta property="og:type" content="product" />
+@endsection
+
 @section('google')
     @parent
     <!-- Global site tag (gtag.js) - Google Analytics -->
