@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="{{url('css/map.css')}}">
 @endsection
 
+@section('article_modified_time', data_get($latest_dealer,'updated_at'))
+@section('og_updated_time', data_get($latest_dealer,'updated_at'))
+@section('og_type', "article" )
+
 @section('content')
     <div class="section-head" >
         <div class="container">

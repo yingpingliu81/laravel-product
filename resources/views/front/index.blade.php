@@ -9,9 +9,11 @@
 @section('style')
     @parent
     <meta property="og_image" content="{{url('images/home/Solarking-Perth-Solar-Roof-Vent.jpg')}}" />
-    <link rel="stylesheet" href="{{url('css/lightbox.css')}}">
+<link rel="stylesheet" href="{{url('css/lightbox.css')}}">
     <link rel="stylesheet" href="{{url('css/map.css')}}">
 @endsection
+@section('og_type', "product" )
+
 @section('content')
 <div class="home">
     <div id="carouselExampleFade"   class="carousel carousel-dark slide" data-bs-ride="carousel">

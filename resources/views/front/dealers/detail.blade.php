@@ -5,7 +5,12 @@
 
 @section('keywords', 'SolarKing, Solar Fan,Solar roof fan,Solar Roof Exhaust fan,Solar roof ventilation fan,Solar attic fan,Solar attic exhaust fan,Solarking Solar Fan,Solar Panels, Folding Solar Panels, Solar Regulators,Autosat, Sphere Dish, Automatic Dish, Satellite System, budget auto dish')
 
-
+@section('style')
+    @parent
+@endsection
+@section('og_type', "article" )
+@section('article_modified_time', data_get($latest_dealer,'updated_at'))
+@section('og_updated_time', data_get($latest_dealer,'updated_at'))
 
 @section('content')
     <div class="home">

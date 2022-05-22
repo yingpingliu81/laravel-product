@@ -22,9 +22,13 @@
     <meta property="og:site_name" content="{{config('app.name')}}" />
     <meta property="og:type" content="@yield('og_type', 'website')" />
 
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="@yield('twitter_card', 'summary')" />
     <meta name="twitter:title" content="@yield('title')" />
+    <meta name="twitter:description" content="@yield('description')" />
     <meta name="twitter:site" content="{{config('app.name')}}" />
+
+    <meta property="article:modified_time" content="@yield('article_modified_time', data_get($latest_news, '0.updated_at'))" />
+    <meta property="og:updated_time" content="@yield('og_updated_time', data_get($latest_news, '0.updated_at'))">
 
 @section('style')
         <link rel="stylesheet" href="{{mix('css/app.css')}}">

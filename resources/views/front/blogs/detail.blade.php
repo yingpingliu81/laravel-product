@@ -9,11 +9,14 @@
     @parent
     @if($blogs->thumbnail)
     <meta property="og_image" content="{{url($blogs->thumbnail)}}" />
+    <meta name="twitter:image" content="{{url($blogs->thumb)}}">
     @endif
-    <meta property="article:modified_time" content="{{$blogs->updated_at}}" />
-    <meta property="og:type" content="article" />
+    <meta property="article:published_time" content="{{$blogs->published_at}}">
 @endsection
 @section('og_type', "article" )
+@section('twitter_card', "summary_large_image" )
+@section('article_modified_time', data_get($blogs,'updated_at'))
+@section('og_updated_time', data_get($blogs,'updated_at'))
 
 @section('content')
     <div class="section-head" >
