@@ -62,6 +62,9 @@
                     <a class="nav-link" id="where-hk-tab" data-bs-toggle="tab" data-bs-target="#where-hk" href="#where-hk" type="button" role="tab" aria-controls="where-hk" aria-selected="true">HK</a>
                 </li>
                 <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="where-nz-tab" data-bs-toggle="tab" data-bs-target="#where-nz" href="#where-nz" type="button" role="tab" aria-controls="where-nz" aria-selected="true">NZ</a>
+                </li>
+                <li class="nav-item" role="presentation">
                     <a class="nav-link " id="where-all-tab" data-bs-toggle="tab" data-bs-target="#where-all" href="#where-all" type="button" role="tab" aria-controls="where-all" aria-selected="true">All</a>
                 </li>
             </ul>
@@ -418,6 +421,41 @@
                     <div class="container">
                         <div class="row">
                             @foreach($dealers['HK'] as $dealer)
+                                <div class="col-sm-6">
+                                    <div class="card bg-light mb-3">
+                                        <div class="card-header">
+                                            <h5><span class="fa fa-address-card-o"></span> {{$dealer->name}}  {{$dealer->suburb ? ' - '.$dealer->suburb : ""}}</h5> </div>
+                                        <div class="card-body dealer" data-dealer="{{json_encode($dealer)}}">
+                                            <p class="card-text"><span class="fa fa-map-marker"></span> {{$dealer->address}}</p>
+                                            @if($dealer->phone)
+                                                <p class="card-text"><span class="fa fa-volume-control-phone"></span> Phone : <a href="tel:   {{$dealer->phone}}" onclick="return gtag_report_conversion('tel: {{$dealer->phone}}')">   {{$dealer->phone}} </a></p>
+                                            @endif
+                                            @if($dealer->fax)
+                                                <p class="card-text"><span class="fa fa-fax"></span> Fax : {{$dealer->fax}} </p>
+                                            @endif
+                                            @if($dealer->mobile)
+                                                <p class="card-text"><span class="fa fa-mobile-phone"></span> Mobile : <a href="tel: {{$dealer->mobile}}" onclick="return gtag_report_conversion('tel:{{$dealer->mobile}}')">{{$dealer->mobile}}</a>  </p>
+                                            @endif
+                                            @if($dealer->website)
+                                                <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank"  href="{{$dealer->website}}">{{$dealer->name}}</a>
+                                                </p>
+                                            @endif
+                                            @if($dealer->note)
+                                                <p class="card-text">{!! $dealer->note !!}
+                                                </p>
+                                            @endif
+                                        </div>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="where-nz" role="tabpanel" aria-labelledby="where-nz-tab">
+                    <div class="container">
+                        <div class="row">
+                            @foreach($dealers['NZ'] as $dealer)
                                 <div class="col-sm-6">
                                     <div class="card bg-light mb-3">
                                         <div class="card-header">
