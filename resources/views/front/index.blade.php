@@ -154,7 +154,3 @@
 </div>
 @endsection
 
-@section('javascript')
-    <script src="{{url('js/jquery.min.js')}}"></script>
-    <script src="{{url('js/lightbox.min.js')}}"></script>
-@endsection
