@@ -84,10 +84,8 @@
         <div class="section1">
             <div class="row">
                 <div class="col-sm-6">
-                    <h1>SolarKing Solar Panels
-
-
-                    </h1>
+                    <h3 class="text-center"><strong>SolarKing Solar Panels
+                        </strong></h3>
 
                    <p>Monocrystalline solar panels are a the most popular and efficient way of charging your storage batteries.
                    </p>
@@ -110,7 +108,7 @@
         <div class="section6 mb-lg-5">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1>Where to buy</h1>
+                    <h2 class="text-center">Where to buy</h2>
                     <p>SolarKing has dealers spread across Australia, select your countries to find your closest dealer or view more details.
                     </p>
                     <div class="text-center mt-lg-5 mb-lg-5">
