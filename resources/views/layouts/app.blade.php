@@ -51,7 +51,7 @@
             function gtag_report_conversion(url) {
                 var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-861711757/tdNMCIHf_8UBEI3b8poD', 'event_callback': callback }); return false; }
         </script>
-        
+
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -61,7 +61,7 @@
         <!-- End Google Tag Manager -->
 
 
-        
+
     @show
 
     @section('facebook')
@@ -71,7 +71,7 @@
             script.src = target;var elem = document.head;elem.appendChild(script);</script>
         <noscript><a href="https://www.clickcease.com" rel="nofollow"><img src="https://monitor.clickcease.com/stats/stats.aspx" alt="ClickCease" /></a></noscript><!--  Clickcease.com tracking-->
 
-       
+
 
         <meta name="facebook-domain-verification" content="gwwgmh3pmqrypxuuq0882un6kvv5an" />
     @show
@@ -516,8 +516,8 @@
         <!-- Modal content-->
         <div class="modal-content">
             <div class="modal-header">
-                <h1><span class="fa fa-lock"></span> Send us a message
-                </h1>
+                <h2><span class="fa fa-lock"></span> Send us a message
+                </h2>
             </div>
             <div class="modal-body">
                 <form method="post" action="{{url('/contact')}}">

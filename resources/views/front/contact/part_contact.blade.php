@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-sm-10 offset-sm-1 mt-5">
-        <h1 class="text-center m-5">Send us a message</h1>
+        <h2 class="text-center m-5">Send us a message</h2>
         @include('layouts.message')
         <form method="post" action="{{url('/contact')}}">
             {{csrf_field()}}
