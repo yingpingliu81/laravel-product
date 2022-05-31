@@ -9,7 +9,7 @@
     @parent
     @if($blogs->thumbnail)
     <meta property="og_image" content="{{url($blogs->thumbnail)}}" />
-    <meta name="twitter:image" content="{{url($blogs->thumb)}}">
+    <meta name="twitter:image" content="{{url($blogs->thumbnail)}}">
     @endif
     <meta property="article:published_time" content="{{$blogs->published_at}}">
 @endsection
