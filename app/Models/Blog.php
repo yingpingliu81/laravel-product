@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Blog extends Model
 {
@@ -58,4 +59,15 @@ class Blog extends Model
         return $query->where("type", self::TYPE_BLOG);
     }
 
+    public function forgetCache() {
+        if(Cache::has("latest_news")) {
+            Cache::forget("latest_news");
+        }
+        if(Cache::has("list_news")) {
+            Cache::forget("list_news");
+        }
+        if(Cache::has("list_blogs")) {
+            Cache::forget("list_blogs");
+        }
+    }
 }

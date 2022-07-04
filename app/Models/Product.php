@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Product extends Model
 {
@@ -67,6 +68,17 @@ class Product extends Model
 
     public function scopePriority($query) {
         return $query->orderBy('sort','desc');
+    }
+
+    public function forgetCache() {
+        foreach ($this->cates as $item) {
+            if(Cache::has($item->type_slug.$item->slug)) {
+                Cache::forget($item->type_slug.$item->slug);
+            }
+        }
+        if(Cache::has("accessories")) {
+            Cache::forget("accessories");
+        }
     }
 
 }

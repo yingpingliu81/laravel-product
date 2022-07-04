@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Cate extends Model
 {
@@ -27,6 +28,12 @@ class Cate extends Model
         return $this->belongsToMany(Product::class,'product_cate','cate_id','product_id')
             ->where('status',Product::STATUS_VISIBLE)
             ->orderBy('sort','desc');
+    }
+
+    public function forgetCache() {
+        if(Cache::has("accessories")) {
+            Cache::forget("accessories");
+        }
     }
 
 }

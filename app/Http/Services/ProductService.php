@@ -26,6 +26,7 @@ class ProductService
                     $otherProduct->save();
                 }
             }
+            $product->forgetCache();
             return $product;
         } catch (QueryException $e) {
             throw $e;
@@ -44,6 +45,7 @@ class ProductService
 
     public function deleteProduct($product) {
         try {
+            $product->forgetCache();
             $product->delete();
         } catch (\Exception $e) {
             throw  $e;
@@ -55,6 +57,7 @@ class ProductService
             $product->update($request->except('cate_id'));
             $product->cates()->sync($request->cate_id);
             $product->save();
+            $product->forgetCache();
         } catch (QueryException $e) {
             throw $e;
         }
@@ -72,6 +75,7 @@ class ProductService
     public function setVisible(Product $product) {
         $product->status = $product->status == Product::STATUS_INVISIBLE ? Product::STATUS_VISIBLE : Product::STATUS_INVISIBLE;
         $product->save();
+        $product->forgetCache();
         return $product;
     }
 
@@ -84,6 +88,7 @@ class ProductService
             $dest->sort = $temp;
             $source->save();
             $dest->save();
+            $dest->forgetCache();
             echo $source->sort;
         }
     }

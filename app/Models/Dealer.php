@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 
 class Dealer extends Model
 {
@@ -84,6 +85,20 @@ class Dealer extends Model
 
     public function getShortAddressAttribute() {
         return str_replace(', Australia', '', $this->address);
+    }
+
+    public function forgetCache() {
+        if(Cache::has("approved-installers")) {
+            Cache::forget("approved-installers");
+        }
+
+        if(Cache::has("lithium-batteries-dealers")) {
+            Cache::forget("lithium-batteries-dealers");
+        }
+
+        if(Cache::has("where-to-buy")) {
+            Cache::forget("where-to-buy");
+        }
     }
 
 }

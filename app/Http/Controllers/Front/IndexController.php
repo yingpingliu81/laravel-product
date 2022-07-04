@@ -9,6 +9,7 @@ use App\Models\Dealer;
 use App\Models\Product;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 use View;
@@ -17,14 +18,14 @@ class IndexController extends Controller
 {
     public function __construct()
     {
-        $latest_news = Blog::priority()->news()->latest()->take(7)->get();
+        $latest_news = Cache::rememberForever("latest_news", function () {
+            return Blog::priority()->news()->latest()->take(7)->get();
+        });
         View::share(compact('latest_news'));
     }
 
     public function home() {
-        $latest_products = Product::visible()->latest()->take(8)->with('cates')->get();
-        $latest_news = Blog::priority()->news()->take(5)->get();
-        return view('front.index', compact('latest_products','latest_news'));
+        return view('front.index');
     }
 
     public function about() {
@@ -37,7 +38,9 @@ class IndexController extends Controller
     }
 
     public function news() {
-        $news = Blog::priority()->active()->news()->get();
+        $news = Cache::rememberForever("list_news", function () {
+            return Blog::priority()->active()->news()->get();
+        });
         return view('front.news.list', compact('news'));
     }
 
@@ -47,7 +50,9 @@ class IndexController extends Controller
     }
 
     public function blogs() {
-        $blogs = Blog::priority()->active()->blogs()->get();
+        $blogs = Cache::rememberForever("list_blogs", function () {
+            return Blog::priority()->active()->blogs()->get();
+        });
         return view('front.blogs.list', compact('blogs'));
     }
 
@@ -104,7 +109,9 @@ class IndexController extends Controller
             $faqs = Blog::faqs()->active()->priority()->get();
         }
         if($slug == 'approved-installers') {
-            $installers = Dealer::where('type', Dealer::TYPE_INSTALLER)->priority()->visible()->get()->groupBy('state');
+            $installers = Cache::rememberForever("approved-installers", function () {
+                return Dealer::where('type', Dealer::TYPE_INSTALLER)->priority()->visible()->get()->groupBy('state');
+            });
             $latest_dealer = Dealer::dealers()->orderBy('updated_at','desc')->first();
         }
         return view("front.support.$slug", compact('faqs','installers','latest_dealer'));
@@ -151,14 +158,18 @@ class IndexController extends Controller
             return view("front.product.$slug");
         }
         if($slug == 'where-to-buy') {
-            $dealers = Dealer::where('type', Dealer::TYPE_DEALER)->priority()->visible()->get()->groupBy('state');
-            $latest_dealer = Dealer::dealers()->orderBy('updated_at','desc')->first();
+            $dealers = Cache::rememberForever("where-to-buy", function () {
+                return Dealer::where('type', Dealer::TYPE_DEALER)->priority()->visible()->get()->groupBy('state');
+            });
 
+            $latest_dealer = Dealer::dealers()->orderBy('updated_at','desc')->first();
             return view("front.product.$slug", compact('dealers','latest_dealer'));
         }
 
         if($slug == 'lithium-batteries-dealers') {
-            $dealers = Dealer::where('type', Dealer::TYPE_BATTER_DEALER)->priority()->visible()->get()->groupBy('state');
+            $dealers = Cache::rememberForever("lithium-batteries-dealers", function () {
+                return Dealer::where('type', Dealer::TYPE_BATTER_DEALER)->priority()->visible()->get()->groupBy('state');
+            });
             $latest_dealer = Dealer::dealers()->orderBy('updated_at','desc')->first();
 
             return view("front.product.$slug", compact('dealers', 'latest_dealer'));
@@ -166,8 +177,13 @@ class IndexController extends Controller
     }
 
     public function accessories($slug) {
-        $cates = Cate::where('type_slug','accessories')->priority()->get();
-        $cate = Cate::where('type_slug','accessories')->where('slug',$slug)->with('visibleProducts')->first();
+        $cates = Cache::rememberForever("accessories", function () {
+            return Cate::where('type_slug','accessories')->priority()->get();
+        });
+        $cate = Cache::rememberForever("accessories".$slug, function () use ($slug){
+            return Cate::where('type_slug','accessories')->where('slug',$slug)->with('visibleProducts')->first();
+        });
+
         return view("front.product.accessories", compact('cates','cate'));
     }
 

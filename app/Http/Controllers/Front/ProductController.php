@@ -6,6 +6,7 @@ use App\Models\Cate;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use View;
 
 
@@ -13,12 +14,16 @@ class ProductController extends Controller
 {
     public function __construct()
     {
-        $latest_news = Blog::priority()->news()->latest()->take(7)->get();
+        $latest_news = Cache::rememberForever("latest_news", function () {
+            return Blog::priority()->news()->latest()->take(7)->get();
+        });
         View::share(compact('latest_news'));
     }
 
     public function list($slug) {
-        $cate = Cate::where('type_slug','accessories')->where('slug',$slug)->with('visibleProducts')->first();
+        $cate = Cache::rememberForever($slug, function () use ($slug) {
+            return Cate::where('type_slug','accessories')->where('slug',$slug)->with('visibleProducts')->first();
+        });
         return view('front.product.list', compact('cate'));
     }
     public function detail($slug, $product) {
