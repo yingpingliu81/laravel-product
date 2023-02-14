@@ -80,8 +80,6 @@ class IndexController extends Controller
                 Mail::send('mails.contact_notify', $data, function ($message) use ($adminNotifyEmails, $data) {
                     $message->subject(config('app.name').' Receive Contact Form '.date('Y-m-d h:i'));
                     $message->to(data_get($adminNotifyEmails,0,'sales@ptv.com.au'));
-                    $message->cc(data_get($adminNotifyEmails,1,'glenn.murphy@ptv.com.au'));
-                    $message->cc(data_get($adminNotifyEmails,2,'louis.liu@ptv.com.au'));
                     $message->replyTo($data['email']);
                 });
             } catch (\Exception $exception) {
