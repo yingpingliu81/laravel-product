@@ -73,20 +73,19 @@ class IndexController extends Controller
             ]);
             $ld = new Language;
             $res = $ld->detect($request->message)->bestResults()->close();
-
-            if($res && (!in_array('en', $res) || !in_array('zh-Hans', $res))){
+            $res = array_keys($res);
+            if($res && (!in_array('en', $res) && !in_array('zh-Hans', $res))){
                 return back()->with('message','only english and chinese allow');
             }
 
             $data = $request->except('_method');
             $data['type'] = Contact::TYPE_CUSTOMER;
             $res = Contact::create($data);
-
             try {
                 $adminNotifyEmails = json_decode(config('app.admin_notified_mails'), true);
                 $data['contact'] = $data['message'];
                 Mail::send('mails.contact_notify', $data, function ($message) use ($adminNotifyEmails, $data) {
-                    $message->subject(config('app.name').' Receive Contact Form '.date('Y-m-d h:i'));
+                    $message->subject((empty($data['source']) ? config('app.name') : $data['source']).' Receive Contact Form '.date('Y-m-d h:i'));
                     $message->to(data_get($adminNotifyEmails,0,'sales@ptv.com.au'));
                     $message->replyTo($data['email']);
                 });
@@ -97,7 +96,8 @@ class IndexController extends Controller
 
             return back()->with('success','Thanks for contact us, we have received your information');
         }
-        return view('front.contact.form');
+        $source = $request->get('source', '');
+        return view('front.contact.form', compact('source'));
     }
 
     public function dealer() {

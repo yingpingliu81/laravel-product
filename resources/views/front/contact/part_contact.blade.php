@@ -9,6 +9,8 @@
                     <label class="form-label" for="inputEmail4">Name*</label>
                     <input type="text" name="name" value="{{old('name')}}" required class="form-control">
                 </div>
+                <input type="hidden" name="source" value="{{$source}}" required class="form-control">
+
                 <div class="form-group col-md-6">
                     <label class="form-label" for="inputPassword4">Company</label>
                     <input type="text" name="company" value="{{old('company')}}" class="form-control">
