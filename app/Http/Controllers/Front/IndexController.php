@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
+use LanguageDetection\Language;
 use View;
 
 class IndexController extends Controller
@@ -70,6 +71,13 @@ class IndexController extends Controller
                 'company' => '|not_regex:/^(google)$/i',
                 'g-recaptcha-response' => 'recaptcha',
             ]);
+            $ld = new Language;
+            $res = $ld->detect($request->message)->bestResults()->close();
+
+            if($res && (!in_array('en', $res) || !in_array('zh-Hans', $res))){
+                return back()->with('message','only english and chinese allow');
+            }
+
             $data = $request->except('_method');
             $data['type'] = Contact::TYPE_CUSTOMER;
             $res = Contact::create($data);
