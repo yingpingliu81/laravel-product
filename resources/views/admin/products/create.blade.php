@@ -212,7 +212,7 @@
             $('#slug').val($(this).val()
                 .toLowerCase()
                 .replace('&', 'and')
-                .replace(/[^\w ]+/g, '')
+               // .replace(/[^\w ]+/g, '')
                 .replace(/ +/g, '-'));
         });
 
