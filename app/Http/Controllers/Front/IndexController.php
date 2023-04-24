@@ -184,8 +184,9 @@ class IndexController extends Controller
 
     public function accessories($slug) {
         $cates = Cache::rememberForever("accessories", function () {
-            return Cate::where('type_slug','accessories')->priority()->get();
+            return Cate::where('type_slug','accessories')->where('slug', '!=', 'batteries')->priority()->get();
         });
+
         $cate = Cache::rememberForever("accessories".$slug, function () use ($slug){
             return Cate::where('type_slug','accessories')->where('slug',$slug)->with('visibleProducts')->first();
         });

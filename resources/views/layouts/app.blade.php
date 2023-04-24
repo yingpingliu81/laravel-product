@@ -183,8 +183,14 @@
                                 </li>
 
                                 <li>
-                                    <a href="{{url('/batteries')}}"
-                                       class="{{Request::is('batteries') ? 'active' : ''}}">Batteries
+                                    <a href="{{url('/batteries-large')}}"
+                                       class="{{Request::is('batteries-large') ? 'active' : ''}}">Batteries Large
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="{{url('/batteries-small')}}"
+                                       class="{{Request::is('batteries-small') ? 'active' : ''}}">Batteries Small
                                     </a>
                                 </li>
 
@@ -330,8 +336,14 @@
                         </li>
 
                         <li>
-                            <a href="{{url('/batteries')}}"
-                               class="{{Request::is('batteries') ? 'active' : ''}}">Batteries
+                            <a href="{{url('/batteries-large')}}"
+                               class="{{Request::is('batteries-large') ? 'active' : ''}}">Batteries Large
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{url('/batteries-small')}}"
+                               class="{{Request::is('batteries-small') ? 'active' : ''}}">Batteries Small
                             </a>
                         </li>
 
