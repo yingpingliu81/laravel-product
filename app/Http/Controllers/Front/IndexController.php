@@ -187,17 +187,19 @@ class IndexController extends Controller
             return Cate::where('type_slug','accessories')->where('slug', '!=', 'batteries')->priority()->get();
         });
 
-        $cate = Cache::rememberForever("accessories".$slug, function () use ($slug){
+        $cate = Cache::rememberForever("accessories".$slug, function () use ($slug) {
             return Cate::where('type_slug','accessories')->where('slug',$slug)->with('visibleProducts')->first();
         });
 
-        return view("front.product.accessories", compact('cates','cate'));
+        $subCates = Cate::where('type_slug', $slug)->orderBy('sort')->with('visibleProducts')->get();
+
+        return view("front.product.accessories", compact('cates','cate', 'subCates'));
     }
 
     public function detail($cate_slug, $product) {
         $product = Product::where('slug', $product)->first();
         if(!$product) return redirect()->route('home');
-        $cates = Cate::where('type_slug','accessories')->priority()->get();
+        $cates = Cate::where('type_slug','accessories')->where('slug', '!=', 'batteries')->priority()->get();
         return view('front.product.detail', compact('product','cates','cate_slug'));
     }
 
