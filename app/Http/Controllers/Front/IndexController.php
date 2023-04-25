@@ -191,6 +191,7 @@ class IndexController extends Controller
             return Cate::where('type_slug','accessories')->where('slug',$slug)->with('visibleProducts')->first();
         });
 
+
         $subCates = Cate::where('type_slug', $slug)->orderBy('sort')->with('visibleProducts')->get();
 
         return view("front.product.accessories", compact('cates','cate', 'subCates'));

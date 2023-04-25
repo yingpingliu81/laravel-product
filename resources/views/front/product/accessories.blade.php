@@ -62,23 +62,25 @@
                             @endforeach
                         </div>
                     @endforeach
-                    <h1>{{$cate->title}}</h1>
-                    <div class="row">
-                        @foreach($cate->visibleProducts as $item)
-                        <div class="col-sm-4">
-                            <div class="card  ">
-                                <a href="{{url($cate->slug."/".$item->slug)}}" class="picture">
-                                    <img src="{{url($item->thumb)}}" alt="{{$item->title}}">
-                                </a>
-                                <div class="card-header">
-                                    <a href="{{url($cate->slug."/".$item->slug)}}">
-                                        {{$item->title}}
+                    @if($cate->visibleProducts->count() > 0)
+                        <h1>{{$cate->title}}</h1>
+                        <div class="row">
+                            @foreach($cate->visibleProducts as $item)
+                            <div class="col-sm-4">
+                                <div class="card  ">
+                                    <a href="{{url($cate->slug."/".$item->slug)}}" class="picture">
+                                        <img src="{{url($item->thumb)}}" alt="{{$item->title}}">
                                     </a>
+                                    <div class="card-header">
+                                        <a href="{{url($cate->slug."/".$item->slug)}}">
+                                            {{$item->title}}
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+                           @endforeach
                         </div>
-                       @endforeach
-                    </div>
+                    @endif
                 </div>
             </div>
         </div>
