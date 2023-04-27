@@ -197,10 +197,11 @@ class IndexController extends Controller
         return view("front.product.accessories", compact('cates','cate', 'subCates'));
     }
 
-    public function detail($cate_slug, $product) {
+    public function detail($cateSlug, $product) {
         $product = Product::where('slug', $product)->first();
         if(!$product) return redirect()->route('home');
         $cates = Cate::where('type_slug','accessories')->where('slug', '!=', 'batteries')->priority()->get();
+        $cate_slug = $cateSlug;
         return view('front.product.detail', compact('product','cates','cate_slug'));
     }
 

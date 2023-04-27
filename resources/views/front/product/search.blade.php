@@ -19,7 +19,7 @@
         <div class="container" >
             <div class="product-detail">
             @foreach($products as $product)
-                @if($product->cates[0]->type_slug == 'accessories')
+                @if(in_array($product->cates[0]->type_slug, ['accessories', 'batteries-large']))
                     <div class="row">
                         <h5>{{$product->title}}</h5>
                         <h5 class="mt-2 mb-2"> <a href="{{url($product->cates[0]->slug.'/'.$product->slug)}}">More Details</a></h5>
