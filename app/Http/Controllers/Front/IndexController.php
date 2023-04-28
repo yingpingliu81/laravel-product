@@ -183,6 +183,8 @@ class IndexController extends Controller
     }
 
     public function accessories($slug) {
+        $slug = $slug == "batteries" ? "batteries-large" : $slug;
+
         $cates = Cache::rememberForever("accessories", function () {
             return Cate::where('type_slug','accessories')->where('slug', '!=', 'batteries')->priority()->get();
         });
