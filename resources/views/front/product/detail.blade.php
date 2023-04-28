@@ -70,7 +70,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <div class="product-detail">
-                        @if($cate_slug != 'batteries')
+                        @if(!in_array($cate_slug, ['batteries', 'metal-case', 'batteries-small', 'batteries-large','plastic-case']))
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 @if($product->description)
                                     <li class="nav-item" role="presentation">
