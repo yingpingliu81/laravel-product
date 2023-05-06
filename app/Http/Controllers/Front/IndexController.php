@@ -183,6 +183,7 @@ class IndexController extends Controller
     }
 
     public function accessories($slug) {
+        if($slug == 'batteries-large') return redirect('batteries');
         $slug = $slug == "batteries" ? "batteries-large" : $slug;
 
         $cates = Cache::rememberForever("accessories", function () {
