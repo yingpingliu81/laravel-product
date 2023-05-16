@@ -140,7 +140,7 @@ class IndexController extends Controller
                 try {
                     Mail::send('mails.warranty_register', ['data' => $data], function ($message) {
                         $message->subject(config('app.name') . ' Receive Warranty Registration Form '.date('Y-m-d h:i'));
-                        $message->to('louis.liu@ptv.com.au');
+                        $message->to('support@satking.com.au');
                     });
                 } catch (\Exception $exception) {
                     Log::channel('mail')->error($exception->getMessage());
