@@ -19,7 +19,7 @@
     <section class="section">
         <div class="jumbotron">
             <div class="container">
-                <h2 class="text-center">SatKing Warranty</h2>
+                <h2 class="text-center">SolarKing Warranty</h2>
                 <p class="lead">Here at SolarKing we back our products! All SolarKing products come with a warranty. For further inquiries please contact SolarKing at <a href="mailTo:support@solarking.net.au">support@solarking.net.au</a> or call <a href="tel:1300139255">1300 139 255.</a>
                 </p>
                 <h4 class="text-center">To better service you, please <strong>register</strong></h4>
@@ -140,8 +140,7 @@
                                             </div>
                                             <br/>
                                             <div class="form-label">Which of the following best describes the reasons
-                                                for purchasing SatKing
-                                                Promax?
+                                                for purchasing SolarKing Product?
                                             </div>
                                             <div class="form-check form-check-inline">
                                                 <input class="form-check-input" type="checkbox" name="reasons[]" id="_0" value="Included in Kit"/>Included
@@ -176,7 +175,7 @@
                                                 Store</div><br/>
                                             <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" name="way_to_hear[]"
                                                                                                id="_3"
-                                                                                               value="SatKing Website"/>SatKing
+                                                                                               value="SolarKing Website"/>SolarKing
                                                 Website</div>
                                             <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" name="way_to_hear[]"
                                                                                                id="_4"

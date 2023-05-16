@@ -14,7 +14,7 @@
                 Useful Links
             </h1>
             <div class="col-sm-3">
-                <img src="{{url('images/ShowImage.jpeg')}}" alt="Satking Useful Links">
+                <img src="{{url('images/ShowImage.jpeg')}}" alt="Solarking Useful Links">
             </div>
             <div class="col-sm-9 p-5">
                 <h3><a href="https://www.solarking.net.au/" target="_blank">SolarKing</a></h3>
