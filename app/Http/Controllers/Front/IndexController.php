@@ -133,7 +133,19 @@ class IndexController extends Controller
                 ]);
                 $contact = Contact::create($request->except('_method'));
                 $contact->type = Contact::TYPE_WARRANTY;
+
                 $contact->save();
+                $data = $request->except(['_method','_token', 'g-recaptcha-response']);
+
+                try {
+                    Mail::send('mails.warranty_register', ['data' => $data], function ($message) {
+                        $message->subject(config('app.name') . ' Receive Warranty Registration Form '.date('Y-m-d h:i'));
+                        $message->to('support@satking.com.au');
+                    });
+                } catch (\Exception $exception) {
+                    Log::channel('mail')->error($exception->getMessage());
+                }
+
                 return back()->with('success','Thanks for contact us, we have received your information');
             } catch (\Exception $e) {
                 return back()->with('error', $e->getMessage());
