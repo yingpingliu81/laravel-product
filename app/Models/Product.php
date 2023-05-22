@@ -76,6 +76,9 @@ class Product extends Model
             if(Cache::has($item->type_slug.$item->slug)) {
                 Cache::forget($item->type_slug.$item->slug);
             }
+            if(Cache::has('accessories'.$item->slug)) {
+                Cache::forget('accessories'.$item->slug);
+            }
         }
         if(Cache::has("accessories")) {
             Cache::forget("accessories");
