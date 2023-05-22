@@ -131,7 +131,7 @@ class IndexController extends Controller
                     'email' => 'required|string',
                     'g-recaptcha-response' => 'recaptcha',
                 ]);
-                if(explode(".", $request->email) >= 5) {
+                if(count(explode(".", $request->email)) >= 5) {
                     throw new \Exception('invalid information');
                 }
                 $contact = Contact::create($request->except('_method'));
