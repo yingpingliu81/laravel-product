@@ -72,17 +72,7 @@ class Product extends Model
     }
 
     public function forgetCache() {
-        foreach ($this->cates as $item) {
-            if(Cache::has($item->type_slug.$item->slug)) {
-                Cache::forget($item->type_slug.$item->slug);
-            }
-            if(Cache::has('accessories'.$item->slug)) {
-                Cache::forget('accessories'.$item->slug);
-            }
-        }
-        if(Cache::has("accessories")) {
-            Cache::forget("accessories");
-        }
+        Cache::flush();
     }
 
     public static function booted()
