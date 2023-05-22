@@ -17,7 +17,6 @@ class DealerService
             $dealer = Dealer::create($request->except('_method'));
             $dealer->sort = $this->getNewSortNumber();
             $dealer->save();
-            $dealer->forgetCache();
             return $dealer;
         } catch (QueryException $e) {
             throw $e;
@@ -31,7 +30,6 @@ class DealerService
 
     public function deleteDealer($dealer) {
         try {
-            $dealer->forgetCache();
             $dealer->delete();
         } catch (\Exception $e) {
             throw  $e;
@@ -42,7 +40,6 @@ class DealerService
         try {
             $dealer->update($request->except('_method'));
             $dealer->save();
-            $dealer->forgetCache();
         } catch (QueryException $e) {
             throw $e;
         }
@@ -51,7 +48,6 @@ class DealerService
     public function setVisible(Dealer $dealer) {
         $dealer->status = $dealer->status == Dealer::STATUS_INVISIBLE ? Dealer::STATUS_VISIBLE : Dealer::STATUS_INVISIBLE;
         $dealer->save();
-        $dealer->forgetCache();
         return $dealer;
     }
 
@@ -64,7 +60,6 @@ class DealerService
             $dest->sort = $temp;
             $source->save();
             $dest->save();
-            $dest->forgetCache();
         }
     }
 

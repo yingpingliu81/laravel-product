@@ -16,7 +16,6 @@ class CateService
             $cate = Cate::create($request);
             $cate->sort = $this->getNewSortNumber();
             $cate->save();
-            $cate->forgetCache();
             return $cate;
         } catch (QueryException $e) {
             throw $e;
@@ -31,7 +30,6 @@ class CateService
     public function deleteCate($cate) {
         try {
             if($cate->products->count() > 0) throw new \Exception("please firstly delete products under ".$cate->title);
-            $cate->forgetCache();
             $cate->delete();
         } catch (\Exception $e) {
             throw  $e;
@@ -42,7 +40,6 @@ class CateService
         try {
             $cate->update($request);
             $cate->save();
-            $cate->forgetCache();
         } catch (QueryException $e) {
             throw $e;
         }
@@ -62,7 +59,6 @@ class CateService
             $dest->sort = $temp;
             $source->save();
             $dest->save();
-            $dest->forgetCache();
         }
     }
 

@@ -19,7 +19,6 @@ class BlogService
             $blog = Blog::create($request->except('_method'));
             $blog->sort = $this->getNewSortNumber();
             $blog->save();
-            $blog->forgetCache();
             return $blog;
         } catch (QueryException $e) {
             throw $e;
@@ -41,7 +40,6 @@ class BlogService
 
     public function deleteBlog($blog) {
         try {
-            $blog->forgetCache();
             $blog->delete();
         } catch (\Exception $e) {
             throw  $e;
@@ -52,7 +50,6 @@ class BlogService
         try {
             $blog->update($request->except('_method'));
             $blog->save();
-            $blog->forgetCache();
         } catch (QueryException $e) {
             throw $e;
         }
@@ -61,7 +58,6 @@ class BlogService
     public function setVisible(Blog $blog) {
         $blog->is_active = $blog->is_active === Blog::STATUS_INVISIBLE ? Blog::STATUS_VISIBLE : Blog::STATUS_INVISIBLE;
         $blog->save();
-        $blog->forgetCache();
         return $blog;
     }
 
@@ -74,7 +70,6 @@ class BlogService
             $dest->sort = $temp;
             $source->save();
             $dest->save();
-            $dest->forgetCache();
         }
     }
 
