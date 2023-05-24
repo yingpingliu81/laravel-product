@@ -36,10 +36,10 @@ Route::group(['prefix' => '/product'], function ($router) {
     Route::get('/{slug}',[IndexController::class, 'product'])->where('slug','commercial-solar-roof-ventilation|solar-roof-vent|solar-wall-exhaust-fan|photo-gallery|where-to-buy|lithium-batteries-dealers');
 });
 
-Route::get('/{slug}',[IndexController::class, 'accessories'])->where('slug','plastic-case|metal-case|batteries|batteries-small|batteries-large|solar-fan|solar-panels|solar-regulators|portable-power|pure-sine-wave-inverters|power-outlets|discontinued-items');
+Route::get('/{slug}',[IndexController::class, 'accessories'])->where('slug','voltage-regulator|plastic-case|metal-case|batteries|batteries-small|batteries-large|solar-fan|solar-panels|solar-regulators|portable-power|pure-sine-wave-inverters|power-outlets|discontinued-items');
 
 
-Route::get('/{cateSlug}/{product}',[IndexController::class, 'detail'])->where('cateSlug','plastic-case|metal-case|batteries|batteries-small|batteries-large|solar-fan|solar-panels|solar-regulators|portable-power|pure-sine-wave-inverters|power-outlets|discontinued-items');
+Route::get('/{cateSlug}/{product}',[IndexController::class, 'detail'])->where('cateSlug','voltage-regulator|plastic-case|metal-case|batteries|batteries-small|batteries-large|solar-fan|solar-panels|solar-regulators|portable-power|pure-sine-wave-inverters|power-outlets|discontinued-items');
 
 
 Route::get('/news', [IndexController::class, 'news']);

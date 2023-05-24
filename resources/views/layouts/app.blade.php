@@ -218,6 +218,12 @@
                                     </a>
                                 </li>
 
+                                <li>
+                                    <a href="{{url('/voltage-regulator')}}"
+                                       class="{{Request::is('voltage-regulator') ? 'active' : ''}}">Voltage Regulator
+                                    </a>
+                                </li>
+
                             </ul>
 
                         </li>
@@ -368,6 +374,12 @@
                         <li>
                             <a href="{{url('/pure-sine-wave-inverters')}}"
                                class="{{Request::is('pure-sine-wave-inverters') ? 'active' : ''}}">Inverters
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{url('/voltage-regulator')}}"
+                               class="{{Request::is('voltage-regulator') ? 'active' : ''}}">Voltage Regulator
                             </a>
                         </li>
 
