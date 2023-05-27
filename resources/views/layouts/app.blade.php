@@ -224,6 +224,12 @@
                                     </a>
                                 </li>
 
+                                <li>
+                                    <a href="{{url('/solar-ventilation')}}"
+                                       class="{{Request::is('solar-ventilation') ? 'active' : ''}}">Solar Ventilation
+                                    </a>
+                                </li>
+
                             </ul>
 
                         </li>
@@ -380,6 +386,12 @@
                         <li>
                             <a href="{{url('/voltage-regulator')}}"
                                class="{{Request::is('voltage-regulator') ? 'active' : ''}}">Voltage Regulator
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{{url('/solar-ventilation')}}"
+                               class="{{Request::is('solar-ventilation') ? 'active' : ''}}">Solar Ventilation
                             </a>
                         </li>
 

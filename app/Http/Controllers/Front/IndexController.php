@@ -200,6 +200,7 @@ class IndexController extends Controller
     public function accessories($slug) {
         if($slug == 'batteries-large') return redirect('batteries');
         $slug = $slug == "batteries" ? "batteries-large" : $slug;
+        $slug = $slug == "solar-fan" ? "solar-ventilation" : $slug;
 
         $cates = Cache::rememberForever("accessories", function () {
             return Cate::where('type_slug','accessories')->where('slug', '!=', 'batteries')->priority()->get();
