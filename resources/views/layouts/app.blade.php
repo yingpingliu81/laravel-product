@@ -165,20 +165,10 @@
                             <a href="javascript:;" class="{{Request::is('product/*') ? 'active' : ''}}">Product</a>
                             <span class="plus">+</span>
                             <ul class="sub">
-                                <li>
-                                    <a href="{{url('product/solar-roof-vent')}}"
-                                       class="{{Request::is('product/solar-roof-vent') ? 'active' : ''}}">Solar Roof Vent
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{url('/product/solar-wall-exhaust-fan')}}"
-                                       class="{{Request::is('product/solar-wall-exhaust-fan') ? 'active' : ''}}">Solar Wall Fan
-                                    </a>
-                                </li>
 
                                 <li>
-                                    <a href="{{url('/product/commercial-solar-roof-ventilation')}}"
-                                       class="{{Request::is('product/commercial-solar-roof-ventilation') ? 'active' : ''}}">Commercial Solar Roof Vent
+                                    <a href="{{url('/solar-ventilation')}}"
+                                       class="{{Request::is('solar-ventilation') ? 'active' : ''}}">Solar Ventilation
                                     </a>
                                 </li>
 
@@ -224,11 +214,7 @@
                                     </a>
                                 </li>
 
-                                <li>
-                                    <a href="{{url('/solar-ventilation')}}"
-                                       class="{{Request::is('solar-ventilation') ? 'active' : ''}}">Solar Ventilation
-                                    </a>
-                                </li>
+
 
                             </ul>
 
@@ -330,7 +316,7 @@
                  Request::is('batteries') || Request::is('solar-panels') || Request::is('solar-regulators')
                  || Request::is('portable-power') || Request::is('pure-sine-wave-inverters') ? 'active' : ''}}">Product</a>
                     <ul class="sub">
-                        <li>
+                       {{-- <li>
                             <a href="{{url('product/solar-roof-vent')}}"
                                class="{{Request::is('product/solar-roof-vent') ? 'active' : ''}}">Solar Roof Vent
                             </a>
@@ -344,6 +330,12 @@
                         <li>
                             <a href="{{url('/product/commercial-solar-roof-ventilation')}}"
                                class="{{Request::is('product/commercial-solar-roof-ventilation') ? 'active' : ''}}">Commercial Solar Roof Vent
+                            </a>
+                        </li>--}}
+
+                        <li>
+                            <a href="{{url('/solar-ventilation')}}"
+                               class="{{Request::is('solar-ventilation') ? 'active' : ''}}">Solar Ventilation
                             </a>
                         </li>
 
@@ -386,12 +378,6 @@
                         <li>
                             <a href="{{url('/voltage-regulator')}}"
                                class="{{Request::is('voltage-regulator') ? 'active' : ''}}">Voltage Regulator
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('/solar-ventilation')}}"
-                               class="{{Request::is('solar-ventilation') ? 'active' : ''}}">Solar Ventilation
                             </a>
                         </li>
 
