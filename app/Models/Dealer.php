@@ -88,8 +88,9 @@ class Dealer extends Model
     }
 
     public function forgetCache() {
+        dd(Cache::has("approved-installers"));
+
         if(Cache::has("approved-installers")) {
-            dd("1111");
             Cache::forget("approved-installers");
         }
 
