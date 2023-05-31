@@ -40,11 +40,11 @@ class DealerController extends Controller
     }
 
     public function update(DealerRequest $request, Dealer $dealer) {
-        dd('2222');
         try {
             $this->dealerService->updateDealer($request,$dealer);
             return response()->redirectTo('admin/dealers')->with('success','update dealer successfully');
         } catch (\Exception $exception) {
+            dd($exception->getMessage());
             return back()->withErrors($exception->getMessage());
         }
     }
