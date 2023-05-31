@@ -44,7 +44,6 @@ class DealerController extends Controller
             $this->dealerService->updateDealer($request,$dealer);
             return response()->redirectTo('admin/dealers')->with('success','update dealer successfully');
         } catch (\Exception $exception) {
-            dd($exception->getMessage());
             return back()->withErrors($exception->getMessage());
         }
     }
