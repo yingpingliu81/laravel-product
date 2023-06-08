@@ -71,13 +71,12 @@ class IndexController extends Controller
                 'company' => '|not_regex:/^(google)$/i',
                 'g-recaptcha-response' => 'recaptcha',
             ]);
-            $ld = new Language;
+           /* $ld = new Language;
             $res = $ld->detect($request->message)->bestResults()->close();
             $res = array_keys($res);
-            dd($res);
             if($res && (!in_array('en', $res) && !in_array('zh-Hans', $res))){
                 return back()->with('message','only english and chinese allow');
-            }
+            }*/
 
             $data = $request->except('_method');
             $data['type'] = Contact::TYPE_CUSTOMER;
