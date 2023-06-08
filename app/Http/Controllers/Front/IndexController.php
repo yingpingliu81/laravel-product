@@ -74,6 +74,7 @@ class IndexController extends Controller
             $ld = new Language;
             $res = $ld->detect($request->message)->bestResults()->close();
             $res = array_keys($res);
+            dd($res);
             if($res && (!in_array('en', $res) && !in_array('zh-Hans', $res))){
                 return back()->with('message','only english and chinese allow');
             }
