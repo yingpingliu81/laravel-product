@@ -56,7 +56,7 @@
 
                                 </div>
                                 <h3 class="product-slide-head">{{$product->title}}</h3>
-                                <p class="text-center">SKU: {{$product->sku}}</p>
+                                <p class="text-center">SKU: {{$product->sku}} @if($product->price)&nbsp;&nbsp;&nbsp;&nbsp;Price: {{$product->price}}@endif</p>
                                 <div class="carousel-inner">
                                     @foreach($product->images as $ind => $image)
                                         <div class="carousel-item {{!$ind ? "active" : ""}}"> <img class="d-block " src="{{url($image)}}" alt="{{$product->title}}"> </div>
