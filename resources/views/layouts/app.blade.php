@@ -456,7 +456,7 @@
 
             <div class="col-sm-3 footer-content">
                 <a href="{{url('/')}}">
-                    <img src="{{url('images/Roof-Ventilation-Fan-SolarKing.png?1')}}" alt="Solarking Logo">
+                    <img src="{{url('images/Roof-Ventilation-Fan-SolarKing.png?2')}}" alt="Solarking Logo">
                 </a>
 
                 <ul class="list-inline">
