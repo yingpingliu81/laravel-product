@@ -60,7 +60,7 @@
                                                 {{$product->id}}
                                             </td>
                                             <td>
-                                                {{Str::words($product->title,6,'...')}}
+                                                {{Str::words($product->title,10,'...')}}
                                             </td>
                                             <td>
                                                 {{$product->sku}}
