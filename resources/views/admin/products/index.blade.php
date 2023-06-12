@@ -41,9 +41,6 @@
                                         sku
                                     </th>
 
-                                    <th style="width: 10%;">
-                                        thumb
-                                    </th>
 
                                     <th>
                                         Category
@@ -68,9 +65,7 @@
                                             <td>
                                                 {{$product->sku}}
                                             </td>
-                                            <td>
-                                                <img src="{{url($product->thumb ?? '')}}" width="80"  />
-                                            </td>
+
 
                                             <td>
                                                 {{$product->cates->implode('title', ',')}}
