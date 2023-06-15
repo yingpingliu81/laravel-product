@@ -87,6 +87,7 @@ class IndexController extends Controller
                 Mail::send('mails.contact_notify', $data, function ($message) use ($adminNotifyEmails, $data) {
                     $message->subject((empty($data['source']) ? config('app.name') : $data['source']).' Receive Contact Form '.date('Y-m-d h:i'));
                     $message->to(data_get($adminNotifyEmails,0,'sales@ptv.com.au'));
+                    $message->cc(['louis@ptv.com.au']);
                     $message->replyTo($data['email']);
                 });
             } catch (\Exception $exception) {
@@ -144,6 +145,7 @@ class IndexController extends Controller
                     Mail::send('mails.warranty_register', ['data' => $data], function ($message) {
                         $message->subject(config('app.name') . ' Receive Warranty Registration Form '.date('Y-m-d h:i'));
                         $message->to('support@satking.com.au');
+                        $message->cc(['louis@ptv.com.au']);
                     });
                 } catch (\Exception $exception) {
                     Log::channel('mail')->error($exception->getMessage());
