@@ -100,7 +100,7 @@
                     <div class="product-detail">
                         @if(in_array($cate_slug, ['batteries', 'metal-case', 'batteries-small', 'batteries-large','plastic-case']))
                           @include('front.product.part-detail-batteries')
-                        @elseif($cate_slug == 'solar-ventilation')
+                        @elseif(in_array($cate_slug, ['solar-ventilation','product']))
                            @include('front.product.part-detail-solar-ventilation')
                         @else
                             @include('front.product.part-detail-other')
