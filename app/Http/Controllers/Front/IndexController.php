@@ -219,7 +219,20 @@ class IndexController extends Controller
     }
 
     public function detail($cateSlug, $product) {
-        $product = Product::where('slug', $product)->first();
+        switch ($product) {
+            case 'solar-roof-vent':
+                $product = Product::where('sku', '6755')->first();
+                break;
+            case 'commercial-solar-roof-ventilation':
+                $product = Product::where('sku', '6754')->first();
+                break;
+            case 'solar-wall-exhaust-fan':
+                $product = Product::where('sku', '6758')->first();
+                break;
+            default:
+                $product = Product::where('slug', $product)->first();
+                break;
+        }
         if(!$product) return redirect()->route('home');
         $cates = Cate::where('type_slug','accessories')->where('slug', '!=', 'batteries')->priority()->get();
         $cate_slug = $cateSlug;
