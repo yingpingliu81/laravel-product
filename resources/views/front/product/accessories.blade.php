@@ -68,11 +68,13 @@
                             @foreach($cate->visibleProducts as $item)
                             <div class="col-sm-4">
                                 <div class="card  ">
-                                    <a href="{{url($cate->slug."/".$item->slug)}}" class="picture">
+                                    @php($urls = ['6758' => 'product/solar-wall-exhaust-fan', '6754' => 'product/commercial-solar-roof-ventilation', '6755' => 'product/solar-roof-vent'])
+
+                                    <a href="{{in_array($item->sku, array_keys($urls)) ? url($urls[$item->sku]) : url($cate->slug."/".$item->slug)}}" class="picture">
                                         <img src="{{url($item->thumb)}}" alt="{{$item->title}}">
                                     </a>
                                     <div class="card-header">
-                                        <a href="{{$item->slug == 'solar-roof-ventilation-fan-320mm-v2' ? url("product/solar-roof-vent"): url($cate->slug."/".$item->slug)}}">
+                                        <a href="{{in_array($item->sku, array_keys($urls)) ? url($urls[$item->sku]) : url($cate->slug."/".$item->slug)}}" class="picture">
                                             {{$item->title}}
                                         </a>
                                     </div>
