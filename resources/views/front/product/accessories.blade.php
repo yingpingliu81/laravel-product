@@ -72,7 +72,7 @@
                                         <img src="{{url($item->thumb)}}" alt="{{$item->title}}">
                                     </a>
                                     <div class="card-header">
-                                        <a href="{{url($cate->slug."/".$item->slug)}}">
+                                        <a href="{{$item->slug == 'solar-roof-ventilation-fan-320mm-v2' ? url("product/solar-roof-vent"): url($cate->slug."/".$item->slug)}}">
                                             {{$item->title}}
                                         </a>
                                     </div>
