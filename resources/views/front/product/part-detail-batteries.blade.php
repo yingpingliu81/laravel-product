@@ -55,14 +55,19 @@
             @endif
 
             <div class="row video">
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2iO58RZn8w4" frameborder="0"></iframe>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/jvRwXB37RX0" frameborder="0"></iframe>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K6Xrvb8Zluc" frameborder="0"></iframe>
                     </div>
                 </div>
             </div>
