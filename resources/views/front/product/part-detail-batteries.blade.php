@@ -114,6 +114,51 @@
                         </a>
                     </div>
                 </div><!-- /-fx-gal-item -->
+                <div class="-fx-gal-item">
+                    <div class="-fx-gal-image-thumb" tabindex="1">
+                        <a href="javascript:;">
+                            <img src="../images/others/Solarking-Lithium-Iron-LiFePo4-Batteries.jpeg">
+                        </a>
+                    </div>
+                </div><!-- /-fx-gal-item -->
+                <div class="-fx-gal-item">
+                    <div class="-fx-gal-image-thumb" tabindex="1">
+                        <a href="javascript:;">
+                            <img src="../images/others/IMG_4593.jpg">
+                        </a>
+                    </div>
+                </div><!-- /-fx-gal-item -->
+
+                <div class="-fx-gal-item">
+                    <div class="-fx-gal-image-thumb" tabindex="1">
+                        <a href="javascript:;">
+                            <img src="../images/others/162051065_267935894906656_957549091558253719_n.jpeg">
+                        </a>
+                    </div>
+                </div><!-- /-fx-gal-item -->
+
+                <div class="-fx-gal-item">
+                    <div class="-fx-gal-image-thumb" tabindex="1">
+                        <a href="javascript:;">
+                            <img src="../images/others/264716290_437927977907446_3482980661139205586_n.jpeg">
+                        </a>
+                    </div>
+                </div><!-- /-fx-gal-item -->
+                <div class="-fx-gal-item">
+                    <div class="-fx-gal-image-thumb" tabindex="1">
+                        <a href="javascript:;">
+                            <img src="../images/others/199788791_320323986334513_9206544923835838431_n.jpeg">
+                        </a>
+                    </div>
+                </div><!-- /-fx-gal-item -->
+
+                <div class="-fx-gal-item">
+                    <div class="-fx-gal-image-thumb" tabindex="1">
+                        <a href="javascript:;">
+                            <img src="../images/others/157296990_257902089243370_4586025178591549337_n.jpeg">
+                        </a>
+                    </div>
+                </div><!-- /-fx-gal-item -->
             </div>
             <div class="text-center mt-5">
                 <a href="{{url('product/photo-gallery')}}" class="btn btn-customize2">Photo Gallery</a>

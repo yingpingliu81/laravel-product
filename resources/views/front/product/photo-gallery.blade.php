@@ -254,6 +254,33 @@
                                     <a href="../images/others/image006.jpg" data-lightbox="gallery"> <img alt="" src="../images/others/image006.jpg"> </a>
                                 </div>
 
+                                <div class="col-sm-4">
+                                    <a href="../images/others/Solarking-Lithium-Iron-LiFePo4-Batteries.jpeg" data-lightbox="gallery"> <img alt="" src="../images/others/image006.jpg"> </a>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <a href="../images/others/IMG_4593.jpg" data-lightbox="gallery"> <img alt="" src="../images/others/image006.jpg"> </a>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <a href="../images/others/162051065_267935894906656_957549091558253719_n.jpeg" data-lightbox="gallery"> <img alt="" src="../images/others/image006.jpg"> </a>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <a href="../images/others/264716290_437927977907446_3482980661139205586_n.jpeg" data-lightbox="gallery"> <img alt="" src="../images/others/image006.jpg"> </a>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <a href="../images/others/199788791_320323986334513_9206544923835838431_n.jpeg" data-lightbox="gallery"> <img alt="" src="../images/others/image006.jpg"> </a>
+                                </div>
+
+
+
+                                <div class="col-sm-4">
+                                    <a href="../images/others/57296990_257902089243370_4586025178591549337_n.jpeg" data-lightbox="gallery"> <img alt="" src="../images/others/image006.jpg"> </a>
+                                </div>
+
+
                             </div>
                         </div>
                     </div>
@@ -278,6 +305,11 @@
                                 <div class="col-sm-6 mt-2">
                                     <div class="embed-responsive embed-responsive-16by9">
                                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/j4PlM51Guz0" frameborder="0"  allowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 mt-2">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/K6Xrvb8Zluc" frameborder="0"  allowfullscreen=""></iframe>
                                     </div>
                                 </div>
                             </div>
