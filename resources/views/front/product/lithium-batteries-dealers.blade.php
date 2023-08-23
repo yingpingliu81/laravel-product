@@ -54,15 +54,21 @@
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="where-act-tab" data-bs-toggle="tab" data-bs-target="#where-act" href="#where-act" type="button" role="tab" aria-controls="where-act" aria-selected="true">ACT</a>
                 </li>
+                @if(!empty($dealers['PNG']))
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="where-png-tab" data-bs-toggle="tab" data-bs-target="#where-png" href="#where-png" type="button" role="tab" aria-controls="where-png" aria-selected="true">PNG</a>
                 </li>
+                @endif
+                @if(!empty($dealers['UAE']))
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="where-uae-tab" data-bs-toggle="tab" data-bs-target="#where-uae" href="#where-uae" type="button" role="tab" aria-controls="where-uae" aria-selected="true">UAE</a>
                 </li>
+                @endif
+                @if(!empty($dealers['HK']))
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="where-hk-tab" data-bs-toggle="tab" data-bs-target="#where-hk" href="#where-hk" type="button" role="tab" aria-controls="where-hk" aria-selected="true">HK</a>
                 </li>
+                @endif
                 @if(!empty($dealers['NZ']))
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="where-nz-tab" data-bs-toggle="tab" data-bs-target="#where-nz" href="#where-nz" type="button" role="tab" aria-controls="where-nz" aria-selected="true">NZ</a>
@@ -355,6 +361,7 @@
                         </div>
                     </div>
                 </div>
+                @if(!empty($dealers['PNG']))
                 <div class="tab-pane fade" id="where-png" role="tabpanel" aria-labelledby="where-png-tab">
                     <div class="container">
                         <div class="row">
@@ -389,6 +396,8 @@
                         </div>
                     </div>
                 </div>
+                @endif
+                @if(!empty($dealers['UAE']))
                 <div class="tab-pane fade" id="where-uae" role="tabpanel" aria-labelledby="where-uae-tab">
                     <div class="container">
                         <div class="row">
@@ -423,6 +432,8 @@
                         </div>
                     </div>
                 </div>
+                @endif
+                @if(!empty($dealers['HK']))
                 <div class="tab-pane fade" id="where-hk" role="tabpanel" aria-labelledby="where-hk-tab">
                     <div class="container">
                         <div class="row">
@@ -457,6 +468,8 @@
                         </div>
                     </div>
                 </div>
+                @endif
+
                 @if(!empty($dealers['NZ']))
                 <div class="tab-pane fade" id="where-nz" role="tabpanel" aria-labelledby="where-nz-tab">
                     <div class="container">
