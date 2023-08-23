@@ -61,9 +61,11 @@
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="where-hk-tab" data-bs-toggle="tab" data-bs-target="#where-hk" href="#where-hk" type="button" role="tab" aria-controls="where-hk" aria-selected="true">HK</a>
                 </li>
+                @if(!empty($dealers['NZ']))
                 <li class="nav-item" role="presentation">
                     <a class="nav-link" id="where-nz-tab" data-bs-toggle="tab" data-bs-target="#where-nz" href="#where-nz" type="button" role="tab" aria-controls="where-nz" aria-selected="true">NZ</a>
                 </li>
+                @endif
                 <li class="nav-item" role="presentation">
                     <a class="nav-link " id="where-all-tab" data-bs-toggle="tab" data-bs-target="#where-all" href="#where-all" type="button" role="tab" aria-controls="where-all" aria-selected="true">All</a>
                 </li>
@@ -451,7 +453,7 @@
                         </div>
                     </div>
                 </div>
-
+                @if(!empty($dealers['NZ']))
                 <div class="tab-pane fade" id="where-nz" role="tabpanel" aria-labelledby="where-nz-tab">
                     <div class="container">
                         <div class="row">
@@ -486,6 +488,7 @@
                         </div>
                     </div>
                 </div>
+                @endif
 
                 <div class="tab-pane fade " id="where-all" role="tabpanel" aria-labelledby="where-all-tab">
                     <div class="container section6">

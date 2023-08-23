@@ -194,7 +194,6 @@ class IndexController extends Controller
                 return Dealer::where('type', Dealer::TYPE_BATTER_DEALER)->priority()->visible()->get()->groupBy('state');
             });
             $latest_dealer = Dealer::dealers()->orderBy('updated_at','desc')->first();
-
             return view("front.product.$slug", compact('dealers', 'latest_dealer'));
         }
     }
