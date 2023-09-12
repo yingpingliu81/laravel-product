@@ -42,7 +42,7 @@
 
     <script>
         var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("page_id", "103368958030018");
+        chatbox.setAttribute("page_id", @if(in_array($cate_slug, ['solar-ventilation','product'])) "167954660436659" @else "103368958030018" @endif);
         chatbox.setAttribute("attribution", "biz_inbox");
 
         window.fbAsyncInit = function() {
