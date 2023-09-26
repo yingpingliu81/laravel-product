@@ -20,11 +20,11 @@
                 </div>
             </div>
             <div class="row">
-                <h2 class="mt-4 mb-2 text-center"><span class="fontLine">Advantage</span></h2>
+                <h2 class="mt-4 mb-2 text-center"><span class="fontLine">Advantages</span></h2>
                 <div class="col-sm-4  ">
                     <div class="card  ">
                         <div class="picture">
-                            <img src="../images/Solar-whiz.jpg" alt="Solar Whiz">
+                            <img src="{{url(data_get($product, 'images.0','images/Solar-whiz.jpg'))}}" alt="Solar Whiz">
                         </div>
                         <div class="card-header">Keep Your Home Comfortable</div>
                         <div class="card-body">
@@ -42,7 +42,7 @@
                 <div class="col-sm-4 ">
                     <div class="card ">
                         <div class="picture">
-                            <img class="card-img-top" src="../images/SolarKing-Exhaust-Fan.jpg" alt="SolarKing Exhaust Fan">
+                            <img class="card-img-top" src="{{url(data_get($product, 'images.1','images/SolarKing-Exhaust-Fan.jpg'))}}" alt="SolarKing Exhaust Fan">
                         </div>
                         <div class="card-header">Save Your Energy</div>
                         <div class="card-body">
@@ -57,7 +57,7 @@
                 <div class="col-sm-4 ">
                     <div class="card  ">
                         <div class="picture">
-                            <img class="card-img-top" src="../images/SolarKing.jpg" alt="SolarKing">
+                            <img class="card-img-top" src="{{url(data_get($product, 'images.2','images/SolarKing.jpg'))}}" alt="SolarKing">
                         </div>
                         <div class="card-header">Easy Installation and Superior Performance</div>
                         <div class="card-body">
