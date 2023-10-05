@@ -1,0 +1,7 @@
+[22-Jan-2023 21:54:16 UTC] PHP Fatal error:  Uncaught Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException: The file "/tmp/phpQIkMNK" does not exist in /home/arsd6slrey3k/public_html/solarking/vendor/symfony/http-foundation/File/File.php:36
+Stack trace:
+#0 /home/arsd6slrey3k/public_html/solarking/vendor/symfony/http-foundation/File/UploadedFile.php(77): Symfony\Component\HttpFoundation\File\File->__construct('/tmp/phpQIkMNK', true)
+#1 /home/arsd6slrey3k/public_html/solarking/vendor/symfony/http-foundation/FileBag.php(87): Symfony\Component\HttpFoundation\File\UploadedFile->__construct('/tmp/phpQIkMNK', 'System.jpg.p hp', 'image/jpeg', 0, false)
+#2 /home/arsd6slrey3k/public_html/solarking/vendor/symfony/http-foundation/FileBag.php(52): Symfony\Component\HttpFoundation\FileBag->convertFileInformation(Array)
+#3 /home/arsd6slrey3k/public_html/solarking/vendor/symfony/http-foundation/FileBag.php(61): Symfony\Component\HttpFoundation\FileBag->set('imgfile', Array)
+#4 /home/arsd6slrey3k/public_html/solarking/vendor/symfony/http-foundation/File in /home/arsd6slrey3k/public_html/solarking/vendor/symfony/http-foundation/File/File.php on line 36

@@ -19,3 +19,6 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
+RewriteCond %{HTTP_HOST} ^solarking\.net\.au$
+RewriteRule ^(.*)$ "https\:\/\/www\.solarking\.net\.au\/$1" [R=301,L]
+
