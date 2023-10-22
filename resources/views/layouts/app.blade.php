@@ -138,10 +138,9 @@
                         </a>
                     </div>
                     <div class="contact-form">
-                        <button class="btn btn-customize1" data-bs-toggle="modal"
-                                data-bs-target="#contact-form">
+                        <a class="btn btn-customize1" href="{{url("/contact")}}">
                             Send us a Message
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -298,10 +297,10 @@
                             <button type="submit" class="input-group-text">Search</button>
                         </div>
                     </form>
-                    <div class="btn btn-customize1" data-bs-toggle="modal"
-                         data-bs-target="#contact-form">
+                    <a class="btn btn-customize1"
+                          href="{{url("/contact")}}">
                         Send us a Message
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -531,7 +530,7 @@
     </div>
 </footer>
 
-<div class="modal fade" id="contact-form" tabindex="-1" aria-labelledby="exampleModalLabel"
+{{--<div class="modal fade" id="contact-form" tabindex="-1" aria-labelledby="exampleModalLabel"
      aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
 
@@ -589,7 +588,7 @@
             </div>
         </div>
     </div>
-</div>
+</div>--}}
 
 
 
