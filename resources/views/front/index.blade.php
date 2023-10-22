@@ -57,8 +57,8 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="imagestwo">
-                        <img src="{{url('images/home/Solar-Roof-Ventilation-Solarking-16.jpg')}}" width="100%" class="image1" alt="Roof Insulation"/>
-                        <img src="{{url('images/home/Solarking-Perth-Solar-Roof-Vent.jpg')}}"  width="100%" class="image2" alt="Roof Ventilation"/>
+                        <img src="{{url('images/home/Solar-Roof-Ventilation-Solarking-16.jpg')}}" width="100%" height="100%"  class="image1" alt="Roof Insulation"/>
+                        <img src="{{url('images/home/Solarking-Perth-Solar-Roof-Vent.jpg')}}"  width="100%"  class="image2" alt="Roof Ventilation"/>
                     </div>
                 </div>
             </div>
@@ -66,7 +66,7 @@
         <div class="section3 section">
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="pic-big"><img src="images/5.png"  width="100%" alt="SolarKing lithium batteries" class="w-100 "></div>
+                    <div class="pic-big"><img src="images/5.png"  width="100%" height="100%"  alt="SolarKing lithium batteries" class="w-100 "></div>
                 </div>
                 <div class="col-sm-6 center">
                     <h3 class="mt-5 mb-5"><strong>SolarKing Lithium batteries
@@ -98,7 +98,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="imagestwo">
-                        <img src="{{url('images/home/RV-Solar-Panel-Image-1.jpg')}}"  width="100%" class="image1" alt="SolarKing lithium batteries"/>
+                        <img src="{{url('images/home/RV-Solar-Panel-Image-1.jpg')}}"  width="100%"  height="100%" class="image1" alt="SolarKing lithium batteries"/>
                     </div>
                 </div>
             </div>

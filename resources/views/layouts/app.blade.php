@@ -112,7 +112,7 @@
         <div class="menu1">
             <div class="logo">
                 <a href="{{url("/")}}">
-                    <img src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png?2')}}"  width="100%" alt="Solarking Logo">
+                    <img src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png?2')}}"  width="100%" height="100%"  alt="Solarking Logo">
                 </a>
             </div>
             <div class="menu1-right">
@@ -148,7 +148,7 @@
         <div class="mobile">
             <div class="logo">
                 <a href="{{url("/")}}">
-                    <img  width="100%" src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png')}}"
+                    <img  width="100%" height="100%"  src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png')}}"
                          alt="{{config('app.name')}} Logo">
                 </a>
             </div>
@@ -455,7 +455,7 @@
 
             <div class="col-sm-3 footer-content">
                 <a href="{{url('/')}}">
-                    <img src="{{url('images/Roof-Ventilation-Fan-SolarKing.png?2')}}"  width="100%" alt="Solarking Logo">
+                    <img src="{{url('images/Roof-Ventilation-Fan-SolarKing.png?2')}}"  width="100%" height="100%"  alt="Solarking Logo">
                 </a>
 
                 <ul class="list-inline">
