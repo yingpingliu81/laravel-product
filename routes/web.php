@@ -13,9 +13,10 @@ use App\Http\Controllers\Front\ProductController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware('cache.headers:public;max_age=3600')->group(function () {
+    Route::get('/', [IndexController::class, 'home'])->name('home');
+});
 
-
-Route::get('/', [IndexController::class, 'home'])->name('home');
 
 Route::get('/about', [IndexController::class, 'about']);
 
