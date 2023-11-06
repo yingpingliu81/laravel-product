@@ -381,7 +381,6 @@
                 (installer.website ? '<p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank" href=" ' + installer.website + ' "> ' + installer.name + '</a></p>\n' : "") +
                 '                        </div>\n' +
                 '</div>';
-            console.log(dataT);
 
             var position = new google.maps.LatLng(installer.lat, installer.lng);
             bounds.extend(position);

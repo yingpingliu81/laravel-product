@@ -39,7 +39,7 @@
 
 
         <!-- Global site tag (gtag.js) - Google Ads: 861711757 -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-861711757"></script>
+        <script async defer src="https://www.googletagmanager.com/gtag/js?id=AW-861711757"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -55,7 +55,7 @@
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.defer=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
         })(window,document,'script','dataLayer','GTM-PFG255L');</script>
         <!-- End Google Tag Manager -->
@@ -66,7 +66,7 @@
 
     @section('facebook')
     <!--  Clickcease.com tracking--><script type="text/javascript">var script = document.createElement('script');
-            script.async = true; script.type = 'text/javascript';
+            script.async = true; script.defer = true; script.type = 'text/javascript';
             var target = 'https://www.clickcease.com/monitor/stat.js';
             script.src = target;var elem = document.head;elem.appendChild(script);</script>
         <noscript><a href="https://www.clickcease.com" rel="nofollow"><img src="https://monitor.clickcease.com/stats/stats.aspx" alt="ClickCease" /></a></noscript><!--  Clickcease.com tracking-->
@@ -92,6 +92,8 @@
         js = d.createElement(s);
         js.id = id;
         js.src = "https://platform.twitter.com/widgets.js";
+        js.async = true;
+        js.defer = true;
         fjs.parentNode.insertBefore(js, fjs);
         t._e = [];
         t.ready = function(f) {

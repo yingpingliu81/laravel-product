@@ -554,7 +554,6 @@
                 (dealer.website ? '<p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank" href=" ' + dealer.website + ' "> ' + dealer.name + '</a></p>\n' : "") +
                 '                        </div>\n' +
                 '</div>';
-            console.log(dataT);
 
             var position = new google.maps.LatLng(dealer.lat, dealer.lng);
             bounds.extend(position);
