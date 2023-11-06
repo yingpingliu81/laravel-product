@@ -150,7 +150,7 @@
         <div class="mobile">
             <div class="logo">
                 <a href="{{url("/")}}">
-                    <img  width="100%" height="100%"  src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png')}}"
+                    <img  width="100" height="30"  src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png')}}"
                          alt="{{config('app.name')}} Logo">
                 </a>
             </div>
