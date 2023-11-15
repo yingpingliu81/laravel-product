@@ -15,7 +15,7 @@
 @endsection
 
 @section('google')
-    @parent
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWT1R6CNV4"></script>
     <script>

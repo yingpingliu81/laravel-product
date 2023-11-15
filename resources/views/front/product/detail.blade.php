@@ -19,7 +19,7 @@
 @section('og_updated_time', data_get($product,'updated_at'))
 
 @section('google')
-    @parent
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWT1R6CNV4"></script>
     <script>

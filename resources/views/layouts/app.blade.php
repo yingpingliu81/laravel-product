@@ -35,9 +35,29 @@
 
     <meta property="article:modified_time" content="@yield('article_modified_time', data_get($latest_news, '0.updated_at'))" />
     <meta property="og:updated_time" content="@yield('og_updated_time', data_get($latest_news, '0.updated_at'))">
+    <meta name="google-site-verification" content="PDm9s2sAYWVxvlzL3FfpAdc5lymHlR9FZcX3l1rXdj4" />
+    <meta name="facebook-domain-verification" content="gwwgmh3pmqrypxuuq0882un6kvv5an" />
 
     @section('style')
         <link rel="stylesheet" href="{{mix('css/app.css')}}">
+    @show
+
+    @section('google')
+
+    <!-- Global site tag (gtag.js) - Google Ads: 861711757 -->
+        <script async defer src="https://www.googletagmanager.com/gtag/js?id=AW-861711757"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'AW-861711757');
+        </script>
+        <script>
+            function gtag_report_conversion(url) {
+                var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-861711757/tdNMCIHf_8UBEI3b8poD', 'event_callback': callback }); return false; }
+        </script>
+
     @show
 
 <!-- Event snippet for Solarking Submit lead form conversion page -->
@@ -48,8 +68,10 @@
 </head>
 <body>
 
-
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFG255L"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <header class="header">
     <div class="container">
@@ -540,36 +562,7 @@
 
 <script src="{{mix('js/app.js')}}"></script>
 @yield('javascript')
-@section('google')
 
-    <meta name="google-site-verification" content="PDm9s2sAYWVxvlzL3FfpAdc5lymHlR9FZcX3l1rXdj4" />
-
-
-    <!-- Global site tag (gtag.js) - Google Ads: 861711757 -->
-    <script async defer src="https://www.googletagmanager.com/gtag/js?id=AW-861711757"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'AW-861711757');
-    </script>
-    <script>
-        function gtag_report_conversion(url) {
-            var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-861711757/tdNMCIHf_8UBEI3b8poD', 'event_callback': callback }); return false; }
-    </script>
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.defer=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-PFG255L');</script>
-    <!-- End Google Tag Manager -->
-
-
-
-@show
 
 @section('facebook')
     <!--  Clickcease.com tracking--><script type="text/javascript">var script = document.createElement('script');
@@ -577,10 +570,6 @@
         var target = 'https://www.clickcease.com/monitor/stat.js';
         script.src = target;var elem = document.head;elem.appendChild(script);</script>
     <noscript><a href="https://www.clickcease.com" rel="nofollow"><img src="https://monitor.clickcease.com/stats/stats.aspx" alt="ClickCease" /></a></noscript><!--  Clickcease.com tracking-->
-
-
-
-    <meta name="facebook-domain-verification" content="gwwgmh3pmqrypxuuq0882un6kvv5an" />
 @show
 
 <script>
@@ -602,8 +591,5 @@
     }(document, "script", "twitter-wjs"));
 </script>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PFG255L"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+
 </html>
