@@ -56,7 +56,7 @@
         <div class="menu1">
             <div class="logo">
                 <a href="{{url("/")}}">
-                    <img src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png?2')}}"  width="100"   alt="Solarking Logo">
+                    <img src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png?2')}}"  width="350" height="106"  alt="Solarking Logo">
                 </a>
             </div>
             <div class="menu1-right">
