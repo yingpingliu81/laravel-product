@@ -11,8 +11,9 @@
     <link rel="preload" href="/fonts/EloquiaDisplay_Light.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/EloquiaDisplay_Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/SemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin>
 
-    <title>  @yield('title') </title>
+    <title>  @yield('title')</title>
     <meta name="description" content="@yield('description')">
     <meta name="keywords" content="@yield('keywords')">
     <meta name="title" content="@yield('title')">

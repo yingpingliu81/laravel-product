@@ -2,22 +2,18 @@
   font-family: 'EloquiaDisplay_Regular'
   src: url('../fonts/EloquiaDisplay_Regular.woff2') format('woff2'), url('../fonts/EloquiaDisplay_Regular.woff') format('woff')
   font-style: normal
-  font-display: block
 @font-face
   font-family: 'EloquiaDisplay_Light'
   src: url('../fonts/EloquiaDisplay_Light.woff2') format('woff2'), url('../fonts/EloquiaDisplay_Light.woff') format('woff')
   font-style: normal
-  font-display: block
 @font-face
   font-family: 'EloquiaDisplay_Bold'
   src: url('../fonts/EloquiaDisplay_Bold.woff2') format('woff2'), url('../fonts/EloquiaDisplay_Bold.woff') format('woff')
   font-style: normal
-  font-display: block
 @font-face
   font-family: 'EloquiaDisplay-SemiBoldItalic'
   src: url('../fonts/EloquiaDisplay-SemiBoldItalic.woff2') format('woff2'), url('../fonts/EloquiaDisplay-SemiBoldItalic.woff') format('woff')
   font-style: normal
-  font-display: block
 
 =fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 576px, $upper-range: 1320px)
   font-size: calc(#{$min-font-size} + #{$max-font-size / ($max-font-size * 0 + 1) - $min-font-size / ($min-font-size * 0 + 1)} * ( (100vw - #{$lower-range}) / #{$upper-range / ($upper-range * 0 + 1) - $lower-range / ($lower-range * 0 + 1)}))
