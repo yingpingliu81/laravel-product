@@ -92,7 +92,7 @@
         <div class="mobile">
             <div class="logo">
                 <a href="{{url("/")}}">
-                    <img  width="100"   src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png')}}"
+                    <img  width="170" height="51"  src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png')}}"
                          alt="{{config('app.name')}} Logo">
                 </a>
             </div>
