@@ -7,6 +7,11 @@
     <link href="{{url('images/favicon.ico')}}" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" />
     <link href="{{url('images/favicon.ico')}}" mce_href="favicon.ico" rel="icon" type="image/x-icon" />
     <link href="{{url('images/favicon.ico')}}" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="preload" href="/fonts/EloquiaDisplay_Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/EloquiaDisplay_Light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/EloquiaDisplay_Bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/SemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+
     <title>  @yield('title') </title>
     <meta name="description" content="@yield('description')">
     <meta name="keywords" content="@yield('keywords')">
