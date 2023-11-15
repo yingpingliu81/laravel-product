@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-    <link href="{{url('images/favicon.ico')}}" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" />
-    <link href="{{url('images/favicon.ico')}}" mce_href="favicon.ico" rel="icon" type="image/x-icon" />
-    <link href="{{url('images/favicon.ico')}}" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="{{url('images/Solar-Fan-icon.png')}}" mce_href="favicon.ico" rel="bookmark" type="image/x-icon" />
+    <link href="{{url('images/Solar-Fan-icon.png')}}" mce_href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="{{url('images/Solar-Fan-icon.png')}}" mce_href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="preload" href="/fonts/EloquiaDisplay_Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/EloquiaDisplay_Light.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/EloquiaDisplay_Bold.woff2" as="font" type="font/woff2" crossorigin>
