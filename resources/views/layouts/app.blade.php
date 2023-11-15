@@ -564,13 +564,13 @@
 @yield('javascript')
 
 
-@section('facebook')
+{{--@section('facebook')
     <!--  Clickcease.com tracking--><script type="text/javascript">var script = document.createElement('script');
         script.async = true; script.defer = true; script.type = 'text/javascript';
         var target = 'https://www.clickcease.com/monitor/stat.js';
         script.src = target;var elem = document.head;elem.appendChild(script);</script>
     <noscript><a href="https://www.clickcease.com" rel="nofollow"><img src="https://monitor.clickcease.com/stats/stats.aspx" alt="ClickCease" /></a></noscript><!--  Clickcease.com tracking-->
-@show
+@show--}}
 
 <script>
     window.twttr = (function(d, s, id) {
