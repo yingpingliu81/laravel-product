@@ -23,11 +23,11 @@
             <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active first" style="background-image: url(../images/Roof-Ventilation-Fan.jpg)">
+            <div class="carousel-item active first" style="background-image: url(../images/Roof-Ventilation-Fan.avif)">
             </div>
-            <div class="carousel-item second" style="background-image: url(../images/Lithium-Battery-Australia-Solarking.png)">
+            <div class="carousel-item second" style="background-image: url(../images/Lithium-Battery-Australia-Solarking.avif)">
             </div>
-            <div class="carousel-item third" style="background-image: url(../images/home/RV-Solar-Panel-Image.jpg)">
+            <div class="carousel-item third" style="background-image: url(../images/home/RV-Solar-Panel-Image.avif)">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -57,8 +57,14 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="imagestwo">
-                        <img src="{{url('images/home/Solar-Roof-Ventilation-Solarking-16.jpg')}}" width="100%" height="100%"  class="image1" alt="Roof Insulation"/>
-                        <img src="{{url('images/home/Solarking-Perth-Solar-Roof-Vent.jpg')}}"  width="100%"  class="image2" alt="Roof Ventilation"/>
+                        <picture>
+                            <source srcSet="{{url('images/home/Solar-Roof-Ventilation-Solarking-16.avif')}}" type="image/avif" />
+                            <img src="{{url('images/home/Solar-Roof-Ventilation-Solarking-16.jpg')}}" width="100%" height="100%"  class="image1" decoding="async" loading="lazy" alt="Roof Insulation"/>
+                        </picture>
+                        <picture>
+                            <source srcSet="{{url('images/home/Solarking-Perth-Solar-Roof-Vent.avif')}}" type="image/avif" />
+                            <img src="{{url('images/home/Solarking-Perth-Solar-Roof-Vent.jpg')}}" width="200"  height="160" class="image2" decoding="async" loading="lazy" alt="Roof Insulation"/>
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -66,7 +72,12 @@
         <div class="section3 section">
             <div class="row">
                 <div class="col-sm-6">
-                    <div class="pic-big"><img src="images/5.png"  width="100%" height="100%"  alt="SolarKing lithium batteries" class="w-100 "></div>
+                    <div class="pic-big">
+                        <picture>
+                            <source srcSet="{{url('images/5.avif')}}" type="image/avif" />
+                            <img src="{{url('images/5.png')}}" width="100%" height="100%"  class="image1" decoding="async" loading="lazy" alt="SolarKing lithium batteries"/>
+                        </picture>
+                    </div>
                 </div>
                 <div class="col-sm-6 center">
                     <h3 class="mt-5 mb-5"><strong>SolarKing Lithium batteries
@@ -98,7 +109,10 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="imagestwo">
-                        <img src="{{url('images/home/RV-Solar-Panel-Image-1.jpg')}}"  width="100%"  height="100%" class="image1" alt="SolarKing lithium batteries"/>
+                        <picture>
+                            <source srcSet="{{url('images/home/RV-Solar-Panel-Image-1.avif')}}" type="image/avif" />
+                            <img src="{{url('images/home/RV-Solar-Panel-Image-1.jpg')}}" width="100%" height="100%"  class="image1" decoding="async" loading="lazy" alt="SolarKing lithium batteries"/>
+                        </picture>
                     </div>
                 </div>
             </div>

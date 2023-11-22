@@ -78,7 +78,10 @@
         <div class="menu1">
             <div class="logo">
                 <a href="{{url("/")}}">
-                    <img src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png?2')}}"  width="350" height="106"  alt="Solarking Logo">
+                    <picture>
+                        <source srcSet="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.avif')}}" type="image/avif" />
+                        <img src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png')}}" width="350" height="106"   decoding="async" loading="lazy" alt="Solarking Logo"/>
+                    </picture>
                 </a>
             </div>
             <div class="menu1-right">
@@ -114,8 +117,10 @@
         <div class="mobile">
             <div class="logo">
                 <a href="{{url("/")}}">
-                    <img  width="170" height="51"  src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png')}}"
-                         alt="{{config('app.name')}} Logo">
+                    <picture>
+                        <source srcSet="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.avif')}}" type="image/avif" />
+                        <img src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing.png')}}" width="170" height="51"   decoding="async" loading="lazy" alt="{{config('app.name')}} Logo"/>
+                    </picture>
                 </a>
             </div>
             <div class="menu">
@@ -421,7 +426,10 @@
 
             <div class="col-sm-3 footer-content">
                 <a href="{{url('/')}}">
-                    <img src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing2.png')}}"  width="100%" height="100%"  alt="Solarking Logo">
+                    <picture>
+                        <source srcSet="{{url('images/Best-Solar-Exhaust-Fan-SolarKing2.avif')}}" type="image/avif" />
+                        <img src="{{url('images/Best-Solar-Exhaust-Fan-SolarKing2.png')}}" width="100%" height="100%"  alt="Solarking Logo" decoding="async" loading="lazy" />
+                    </picture>
                 </a>
 
                 <ul class="list-inline">
