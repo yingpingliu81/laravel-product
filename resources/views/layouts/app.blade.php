@@ -12,9 +12,6 @@
     <link rel="preload" href="/fonts/EloquiaDisplay_Bold.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/EloquiaDisplay-SemiBoldItalic.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" as="image" href="/images/Roof-Ventilation-Fan.avif">
-    <link rel="preload" as="image" href="/images/Lithium-Battery-Australia-Solarking.avif">
-    <link rel="preload" as="image" href="/images/home/RV-Solar-Panel-Image.avif">
 
     <title>  @yield('title')</title>
     <meta name="description" content="@yield('description')">

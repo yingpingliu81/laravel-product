@@ -23,11 +23,23 @@
             <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-            <div class="carousel-item active first" style="background-image: url(../images/Roof-Ventilation-Fan.avif)">
+            <div class="carousel-item active first">
+                <picture>
+                    <source srcSet="{{url('/images/Roof-Ventilation-Fan.avif')}}" type="image/avif" />
+                    <img src="{{url('images/Roof-Ventilation-Fan.avif')}}" width="100%" decoding="async" loading="lazy" alt="Roof Insulation"/>
+                </picture>
             </div>
-            <div class="carousel-item second" style="background-image: url(../images/Lithium-Battery-Australia-Solarking.avif)">
+            <div class="carousel-item second">
+                <picture>
+                    <source srcSet="{{url('images/Lithium-Battery-Australia-Solarking.avif')}}" type="image/avif" />
+                    <img src="{{url('images/Lithium-Battery-Australia-Solarking.avif')}}" width="100%" decoding="async" loading="lazy" alt="Roof Insulation"/>
+                </picture>
             </div>
-            <div class="carousel-item third" style="background-image: url(../images/home/RV-Solar-Panel-Image.avif)">
+            <div class="carousel-item third">
+                <picture>
+                    <source srcSet="{{url('images/home/RV-Solar-Panel-Image.avif')}}" type="image/avif" />
+                    <img src="{{url('images/home/RV-Solar-Panel-Image.avif')}}" width="100%" decoding="async" loading="lazy" alt="Roof Insulation"/>
+                </picture>
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
