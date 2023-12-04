@@ -10,7 +10,7 @@
     <link rel="preload" href="/fonts/EloquiaDisplay_Regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/EloquiaDisplay_Light.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/EloquiaDisplay_Bold.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/fonts/SemiBoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/EloquiaDisplay-SemiBoldItalic.woff" as="font" type="font/woff" crossorigin>
     <link rel="preload" href="/fonts/fontawesome-webfont.woff2?v=4.7.0" as="font" type="font/woff2" crossorigin>
 
     <title>  @yield('title')</title>
