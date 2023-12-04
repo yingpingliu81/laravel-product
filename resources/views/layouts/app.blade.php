@@ -580,7 +580,7 @@
     <noscript><a href="https://www.clickcease.com" rel="nofollow"><img src="https://monitor.clickcease.com/stats/stats.aspx" alt="ClickCease" /></a></noscript><!--  Clickcease.com tracking-->
 @show--}}
 
-<script>
+{{--<script>
     window.twttr = (function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0],
             t = window.twttr || {};
@@ -597,7 +597,7 @@
         };
         return t;
     }(document, "script", "twitter-wjs"));
-</script>
+</script>--}}
 
 
 </html>
