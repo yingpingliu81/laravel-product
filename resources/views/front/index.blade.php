@@ -26,19 +26,19 @@
             <div class="carousel-item active first">
                 <picture>
                     <source srcSet="{{url('/images/Roof-Ventilation-Fan.avif')}}" type="image/avif" />
-                    <img src="{{url('images/Roof-Ventilation-Fan.avif')}}" width="100%" decoding="async" loading="lazy" alt="Roof Insulation"/>
+                    <img src="{{url('images/Roof-Ventilation-Fan.jpg')}}" width="100%" height="100%" decoding="async" loading="lazy" alt="Solar Roof Ventilation Fan"/>
                 </picture>
             </div>
             <div class="carousel-item second">
                 <picture>
                     <source srcSet="{{url('images/Lithium-Battery-Australia-Solarking.avif')}}" type="image/avif" />
-                    <img src="{{url('images/Lithium-Battery-Australia-Solarking.avif')}}" width="100%" decoding="async" loading="lazy" alt="Roof Insulation"/>
+                    <img src="{{url('images/Lithium-Battery-Australia-Solarking.png')}}" width="100%" height="100%"  decoding="async" loading="lazy" alt="Lithium Iron Battery"/>
                 </picture>
             </div>
             <div class="carousel-item third">
                 <picture>
                     <source srcSet="{{url('images/home/RV-Solar-Panel-Image.avif')}}" type="image/avif" />
-                    <img src="{{url('images/home/RV-Solar-Panel-Image.avif')}}" width="100%" decoding="async" loading="lazy" alt="Roof Insulation"/>
+                    <img src="{{url('images/home/RV-Solar-Panel-Image.jpg')}}" width="100%" height="100%"  decoding="async" loading="lazy" alt="Solar Panels"/>
                 </picture>
             </div>
         </div>
