@@ -25,12 +25,12 @@
             <div class="carousel-item active first">
                 <picture>
                     <source srcSet="{{url('/images/Roof-Ventilation-Fan.avif')}}" type="image/avif" />
-                    <img src="{{url('images/Roof-Ventilation-Fan.jpg')}}" class="computer" width="100%" height="100%" decoding="async" loading="lazy" alt="Solar Roof Ventilation Fan"/>
+                    <img src="{{url('images/Roof-Ventilation-Fan.jpg')}}" class="computer" width="100%" height="100%"  alt="Solar Roof Ventilation Fan"/>
                 </picture>
 
                 <picture>
                     <source srcSet="{{url('/images/Roof-Ventilation-Fan-m.avif')}}" type="image/avif" />
-                    <img src="{{url('images/Roof-Ventilation-Fan-m.jpg')}}" class="mobile" width="100%" height="100%" decoding="async" loading="lazy" alt="Solar Roof Ventilation Fan"/>
+                    <img src="{{url('images/Roof-Ventilation-Fan-m.jpg')}}" class="mobile" width="100%" height="100%"  alt="Solar Roof Ventilation Fan"/>
                 </picture>
             </div>
             <div class="carousel-item second">
