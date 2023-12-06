@@ -25,7 +25,7 @@
             <div class="carousel-item active first">
                 <picture>
                     <source srcSet="{{url('/images/Roof-Ventilation-Fan.avif')}}" type="image/avif" />
-                    <img src="{{url('images/Roof-Ventilation-Fan.jpg')}}" class="computer" width="100%" height="100%"  alt="Solar Roof Ventilation Fan"/>
+                    <img src="{{url('images/Roof-Ventilation-Fan.jpg')}}" class="computer" decoding="async" loading="lazy" width="100%" height="100%"  alt="Solar Roof Ventilation Fan"/>
                 </picture>
 
                 <picture>
