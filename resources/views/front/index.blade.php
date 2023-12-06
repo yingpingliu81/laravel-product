@@ -25,19 +25,34 @@
             <div class="carousel-item active first">
                 <picture>
                     <source srcSet="{{url('/images/Roof-Ventilation-Fan.avif')}}" type="image/avif" />
-                    <img src="{{url('images/Roof-Ventilation-Fan.jpg')}}" width="100%" height="100%" decoding="async" loading="lazy" alt="Solar Roof Ventilation Fan"/>
+                    <img src="{{url('images/Roof-Ventilation-Fan.jpg')}}" class="computer" width="100%" height="100%" decoding="async" loading="lazy" alt="Solar Roof Ventilation Fan"/>
+                </picture>
+
+                <picture>
+                    <source srcSet="{{url('/images/Roof-Ventilation-Fan-m.avif')}}" type="image/avif" />
+                    <img src="{{url('images/Roof-Ventilation-Fan-m.jpg')}}" class="mobile" width="100%" height="100%" decoding="async" loading="lazy" alt="Solar Roof Ventilation Fan"/>
                 </picture>
             </div>
             <div class="carousel-item second">
                 <picture>
                     <source srcSet="{{url('images/Lithium-Battery-Australia-Solarking.avif')}}" type="image/avif" />
-                    <img src="{{url('images/Lithium-Battery-Australia-Solarking.png')}}" width="100%" height="100%"  decoding="async" loading="lazy" alt="Lithium Iron Battery"/>
+                    <img src="{{url('images/Lithium-Battery-Australia-Solarking.png')}}" class="computer" width="100%" height="100%"  decoding="async" loading="lazy" alt="Lithium Iron Battery"/>
+                </picture>
+
+                <picture>
+                    <source srcSet="{{url('images/Lithium-Battery-Australia-Solarking-m.avif')}}" type="image/avif" />
+                    <img src="{{url('images/Lithium-Battery-Australia-Solarking-m.png')}}" class="mobile" width="100%" height="100%"  decoding="async" loading="lazy" alt="Lithium Iron Battery"/>
                 </picture>
             </div>
             <div class="carousel-item third">
                 <picture>
                     <source srcSet="{{url('images/home/RV-Solar-Panel-Image.avif')}}" type="image/avif" />
-                    <img src="{{url('images/home/RV-Solar-Panel-Image.jpg')}}" width="100%" height="100%"  decoding="async" loading="lazy" alt="Solar Panels"/>
+                    <img src="{{url('images/home/RV-Solar-Panel-Image.jpg')}}" class="computer" width="100%" height="100%"  decoding="async" loading="lazy" alt="Solar Panels"/>
+                </picture>
+
+                <picture>
+                    <source srcSet="{{url('images/RV-Solar-Panel-Image-m.avif')}}" type="image/avif" />
+                    <img src="{{url('images/RV-Solar-Panel-Image-m.jpg')}}" class="mobile" width="100%" height="100%"  decoding="async" loading="lazy" alt="Solar Panels"/>
                 </picture>
             </div>
         </div>
