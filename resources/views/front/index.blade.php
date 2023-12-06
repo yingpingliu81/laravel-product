@@ -7,8 +7,8 @@
 @section('keywords', 'SolarKing, Solar Fan,Solar roof fan,Solar Roof Exhaust fan,Solar roof ventilation fan,Solar attic fan,Solar attic exhaust fan,Solarking Solar Fan,Solar Panels, Folding Solar Panels, Solar Regulators,Autosat, Sphere Dish, Automatic Dish, Satellite System, budget auto dish')
 
 @section('style')
-    @parent
     <meta property="og_image" content="{{url('images/home/Solarking-Perth-Solar-Roof-Vent.jpg')}}" />
+    <link rel="stylesheet" href="{{url('css/home.css')}}">
     <link rel="stylesheet" href="{{url('css/map.css')}}"  rel="preload" as="style" onload="this.rel='stylesheet'">
 @endsection
 @section('og_type', "product" )

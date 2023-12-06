@@ -1,0 +1,199 @@
+@import "reset"
+@import "bootstrap"
+@import 'variables'
+@import "~font-awesome/scss/font-awesome.scss"
+@import "mixin"
+@import "layout"
+.home
+  background: $white-color
+  .carousel-inner
+    .carousel-item
+      background-repeat: no-repeat
+      background-size: cover
+      height: 85vh
+      background-position: center
+      @media (max-width: 576px)
+        height: 35vh
+    h2
+      text-align: center
+      color: $white-color
+      font-family: EloquiaDisplay-SemiBoldItalic
+      @include fluid-type(18px, 30px)
+      text-shadow: 0 1px 2px rgb(0 0 0 / 60%)
+    h5
+      text-align: center
+      color: #555
+      @include fluid-type(16px, 20px)
+      line-height: 30px
+      text-shadow: 0 1px 2px rgb(0 0 0 / 60%)
+      @media (max-width: 576px)
+        line-height: 20px
+  .carousel-indicators
+    margin: 0
+  .carousel-control-next, .carousel-control-prev
+    z-index: -1
+.carousel-dark
+  .carousel-indicators
+    .active
+      background-color: $background-active
+.section1
+   content-visibility: auto
+   contain-intrinsic-size: 1px 5000px
+   @include margin-top(60px)
+   @include margin-bottom(40px)
+   h1
+     text-align: center
+     font-family: EloquiaDisplay_Bold
+     @include fluid-type(20px, 34px)
+     @include margin(20px)
+   h5
+     @include fluid-type(18px, 20px)
+     text-align: center
+     @include margin(20px 0 80px)
+   p
+     @include fluid-type(16px, 18px)
+     line-height: 24px
+     letter-spacing: .5px
+     @include padding(10px)
+   .imagestwo
+     position: relative
+     .image2
+       position: absolute
+       width: 200px
+       left: -100px
+       bottom: -50px
+       @media (max-width: 576px)
+         display: none
+.section2
+  content-visibility: auto
+  contain-intrinsic-size: 1px 5000px
+  @include margin-top(80px)
+  @include margin-bottom(40px)
+  h1
+    text-align: center
+    font-family: EloquiaDisplay_Bold
+    @include fluid-type(20px, 34px)
+    @include margin(20px)
+  p
+    @include fluid-type(14px, 16px)
+    line-height: 20px
+    letter-spacing: .5px
+.section3
+  @include margin-top(40px)
+  @include margin-bottom(40px)
+  content-visibility: auto
+  contain-intrinsic-size: 1px 5000px
+  h1
+    font-family: EloquiaDisplay_Bold
+    @include fluid-type(20px, 34px)
+    @include margin(20px)
+  p
+    @include fluid-type(16px, 20px)
+    line-height: 24px
+.section6
+  content-visibility: auto
+  contain-intrinsic-size: 1px 5000px
+  @include margin-top(40px)
+  @include margin-bottom(40px)
+  h1
+    font-family: EloquiaDisplay_Bold
+    @include fluid-type(20px, 34px)
+    @include margin(20px 0)
+    text-align: center
+  p
+    @include fluid-type(16px, 20px)
+    line-height: 24px
+    text-align: center
+  .map a:hover, .map a:focus
+    background-color: transparent !important
+  .map
+    @media (max-width: 576px)
+      margin-left: 0
+      height: 250px
+    .btn
+      @media (max-width: 576px)
+        display: none
+.section
+  content-visibility: auto
+  contain-intrinsic-size: 1px 5000px
+  @include margin-top(40px)
+  @include margin-bottom(40px)
+  h1
+    font-family: EloquiaDisplay_Bold
+    @include fluid-type(34px, 50px)
+    @include margin(20px 0)
+    text-align: center
+  h2
+    font-family: EloquiaDisplay_Bold
+    @include fluid-type(30px, 40px)
+    @include margin(20px 0)
+  p
+    @include fluid-type(14px, 16px)
+    line-height: 26px
+    letter-spacing: .5px
+  .center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+  .list-group-item
+    @include fluid-type(16px, 18px)
+    line-height: 26px
+    letter-spacing: .5px
+    border-bottom: 0.5px dashed #bbb
+  .list-group-item:last-child
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125)
+  .table
+      line-height: 26px
+      letter-spacing: .5px
+      @include fluid-type(14px, 16px)
+      thead
+        font-weight: bold
+      img
+        width: 30px
+  .dropcap
+    font-size: 35px
+    line-height: 46px
+    color: $product-title-color
+    text-align: center
+    display: inline-block
+    float: left
+    height: 48px
+    width: 48px
+    margin: 10px 20px 0 0
+    border: 1px solid $product-title-color
+    border-radius: 3px
+    -webkit-border-radius: 3px
+    -moz-border-radius: 3px
+    -o-border-radius: 3px
+  .nav-tabs
+    justify-content: center
+    .nav-link
+      @include padding(15px 30px)
+      font-size: 18px
+      color: $black-color
+  .tab-pane
+    .container
+      @include margin-top(40px)
+      @include margin-bottom(40px)
+  .accessories
+    ul
+      list-style: none
+      li
+        @include fluid-type(14px, 16px)
+        line-height: 26px
+        letter-spacing: .5px
+    .carousel
+      @media (max-width: 575.99px)
+        margin-top: 20px
+  h5
+    font-family: EloquiaDisplay_Bold
+    @include fluid-type(16px, 18px)
+  .product-review
+    h5
+      font-family: EloquiaDisplay-SemiBoldItalic
+      color: #666
+    .card-text
+      font-size: 16px
+      line-height: 20px
+
