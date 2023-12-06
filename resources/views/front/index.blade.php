@@ -137,7 +137,12 @@
                     <div class="imagestwo">
                         <picture>
                             <source srcSet="{{url('images/home/RV-Solar-Panel-Image-1.avif')}}" type="image/avif" />
-                            <img src="{{url('images/home/RV-Solar-Panel-Image-1.jpg')}}" width="100%" height="100%"  class="image1" decoding="async" loading="lazy" alt="SolarKing lithium batteries"/>
+                            <img src="{{url('images/home/RV-Solar-Panel-Image-1.jpg')}}" class="computer" width="100%" height="100%"  class="image1" decoding="async" loading="lazy" alt="SolarKing lithium batteries"/>
+                        </picture>
+
+                        <picture>
+                            <source srcSet="{{url('images/home/RV-Solar-Panel-Image-1-m.avif')}}" type="image/avif" />
+                            <img src="{{url('images/home/RV-Solar-Panel-Image-1-m.jpg')}}" class="mobile" width="100%" height="100%"  class="image1" decoding="async" loading="lazy" alt="SolarKing lithium batteries"/>
                         </picture>
                     </div>
                 </div>
