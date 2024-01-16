@@ -4,7 +4,6 @@ import "bootstrap/js/dist/tab"
 window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js')
 
 
-
 const faqs = document.querySelectorAll('.faq-title').forEach(function(element) {
     element.addEventListener('click', function (e) {
         const content = this.nextElementSibling;
