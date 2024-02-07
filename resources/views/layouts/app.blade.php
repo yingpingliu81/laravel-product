@@ -39,7 +39,16 @@
     <meta name="facebook-domain-verification" content="gwwgmh3pmqrypxuuq0882un6kvv5an" />
 
     @section('style')
-        <link rel="stylesheet" href="{{mix('css/app.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{ mix('css/app.css') }}" id="app-async-css">
+        <script>
+            window.addEventListener('load', function() {
+                var link = document.createElement('link');
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = '{{ mix('css/app.css') }}';
+                document.getElementById('app-async-css').parentNode.insertBefore(link, document.getElementById('app-async-css'));
+            });
+        </script>
     @show
 
     @section('google')

@@ -8,7 +8,7 @@
 
 @section('style')
     <meta property="og_image" content="{{url('images/home/Solarking-Perth-Solar-Roof-Vent.jpg')}}" />
-    <link rel="stylesheet" href="{{url('css/home.css')}}">
+    <link rel="stylesheet" href="{{url('css/home.css')}}" rel="preload" as="style" onload="this.rel='stylesheet'">
     <link rel="stylesheet" href="{{url('css/map.css')}}"  rel="preload" as="style" onload="this.rel='stylesheet'">
 @endsection
 @section('og_type', "product" )
