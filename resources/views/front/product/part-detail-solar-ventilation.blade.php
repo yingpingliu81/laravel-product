@@ -521,7 +521,7 @@
                             <img class="card-img-top" src="../images/home/10000-CBM-1-.jpg" alt="Solar Whiz">
                         </div>
 
-                        <div class="card-header "><a href="{{url('product/commercial-solar-roof-ventilation')}}" class="card-header-title">Solar Commercial Fan</a></div>
+                        <div class="card-header "><a href="{{url('solar-ventilation/commercial-solar-roof-ventilation-fan-600mm-120w')}}" class="card-header-title">Solar Commercial Fan</a></div>
 
                     </div>
                 </div>
