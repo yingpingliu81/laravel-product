@@ -22,9 +22,7 @@ Route::get('/about', [IndexController::class, 'about']);
 
 Route::post('/search-products', [IndexController::class, 'search']);
 
-Route::get('/employment', function () {
-    return view('front.employment');
-});
+
 Route::get('/policies', [IndexController::class, 'policies']);
 Route::get('/useful-links', [IndexController::class, 'usefulLinks']);
 
