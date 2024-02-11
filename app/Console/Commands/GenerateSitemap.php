@@ -30,32 +30,32 @@ class GenerateSitemap extends Command
         $postsitmap->add(
             Url::create("/")
                 ->setPriority(1)
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_NEVER)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
         );
 
         $postsitmap->add(
             Url::create("/about")
                 ->setPriority(0.9)
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_NEVER)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY)
         );
 
         $postsitmap->add(
             Url::create("/contact")
                 ->setPriority(0.9)
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_NEVER)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY)
         );
 
         $postsitmap->add(
             Url::create("/news")
                 ->setPriority(0.9)
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_NEVER)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
         );
 
 
         $postsitmap->add(
             Url::create("/blogs")
                 ->setPriority(0.9)
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_NEVER)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
         );
 
         foreach (["warranty-registration","faq","approved-installers", "technical-support"] as $item) {
@@ -110,13 +110,13 @@ class GenerateSitemap extends Command
         $postsitmap->add(
             Url::create("/policies")
                 ->setPriority(0.7)
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_NEVER)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY)
         );
 
         $postsitmap->add(
             Url::create("/useful-links")
                 ->setPriority(0.7)
-                ->setChangeFrequency(Url::CHANGE_FREQUENCY_NEVER)
+                ->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY)
         );
 
         $postsitmap->writeToFile(public_path('sitemap.xml'));
