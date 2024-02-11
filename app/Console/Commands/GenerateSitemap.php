@@ -74,30 +74,23 @@ class GenerateSitemap extends Command
             );
         }
 
-        foreach (["battery-monitor", "battery-charger", "solar-ventilation", "voltage-regulator",
-                     "batteries", "batteries-small", "batteries-large", "solar-fan",
-                     "solar-panels", "solar-regulators", "portable-power", "pure-sine-wave-inverters",
-                     "power-outlets", "discontinued-items"] as $item) {
-            $postsitmap->add(
-                Url::create("/{$item}")
-                    ->setPriority(0.9)
-                    ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
-            );
-            $cate = Cate::where('type_slug', "accessories")->where('slug', $item)->with('visibleProducts')->priority()->first();
-            foreach (data_get($cate, "visibleProducts", []) as $product) {
-                $postsitmap->add(
-                    Url::create("/accessories/$product->slug")
-                        ->setPriority(0.9)
-                        ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
-                );
-            }
-        }
 
         $cates = Cate::where('type_slug', "batteries-large")->with('visibleProducts')->priority()->get();
         foreach ($cates as $cate) {
             foreach (data_get($cate, "visibleProducts", []) as $product) {
                 $postsitmap->add(
                     Url::create("/batteries-large/$product->slug")
+                        ->setPriority(0.9)
+                        ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
+                );
+            }
+        }
+
+        $cates = Cate::where('type_slug', "accessories")->with('visibleProducts')->priority()->get();
+        foreach ($cates as $cate) {
+            foreach (data_get($cate, "visibleProducts", []) as $product) {
+                $postsitmap->add(
+                    Url::create("/$cate->slug/$product->slug")
                         ->setPriority(0.9)
                         ->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY)
                 );
