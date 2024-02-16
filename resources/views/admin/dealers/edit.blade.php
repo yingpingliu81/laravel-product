@@ -182,7 +182,7 @@
 
 
     <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1hTNb6U0pdXS9h0xC4R2j3Y3IthTmoRE&libraries=places&language=en&callback=initAutocomplete&sessiontoken =<?php echo uniqid(); ?>"
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyv-m-DnFy1HwSPqo6UVZY6taOtotsFgc&libraries=places&language=en&callback=initAutocomplete&sessiontoken =<?php echo uniqid(); ?>"
             async defer type="application/javascript"></script>
 
     <style>

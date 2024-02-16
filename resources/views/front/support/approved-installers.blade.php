@@ -348,7 +348,7 @@
 
 @endsection
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1hTNb6U0pdXS9h0xC4R2j3Y3IthTmoRE"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyv-m-DnFy1HwSPqo6UVZY6taOtotsFgc"></script>
 <script>
     function initMap() {
 
@@ -370,6 +370,7 @@
         document.querySelectorAll('.installer').forEach(function(element) {
 
             const installer = JSON.parse(element.getAttribute('data-installer'));
+            if(!installer.lat || !installer.lng) return;
 
             const dataT =    '<div class="card">\n' +
                 '                        <div class="card-header"><h5><span class="fa fa-address-card-o"></span> ' + installer.name + (installer.suburb ?  ' - ' + installer.suburb : '') +  '</h5> </div>\n' +
