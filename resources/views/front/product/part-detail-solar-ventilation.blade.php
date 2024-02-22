@@ -194,7 +194,7 @@
                 <div class="-fx-gal-item">
                     <div class="-fx-gal-image-thumb" tabindex="1">
                         <a href="{{url('product/photo-gallery')}}">
-                            <img src="../images/product/gallery/1/Solar-Roof-Ventilation-South-Australia.jpg">
+                            <img src="../images/product/gallery/399307406_844578147674040_6692929590226153849_n.jpg">
                         </a>
                     </div>
                 </div><!-- /-fx-gal-item -->
@@ -203,7 +203,7 @@
                 <div class="-fx-gal-item">
                     <div class="-fx-gal-image-thumb" tabindex="1">
                         <a href="{{url('product/photo-gallery')}}">
-                            <img src="../images/product/gallery/1/Solarking-Roof-Ventilation-fan.jpg">
+                            <img src="../images/product/gallery/75380179_536426720256116_7872494613401960448_n.jpeg">
                         </a>
                     </div>
                 </div><!-- /-fx-gal-item -->
@@ -211,7 +211,7 @@
                 <div class="-fx-gal-item">
                     <div class="-fx-gal-image-thumb" tabindex="1">
                         <a href="{{url('product/photo-gallery')}}">
-                            <img src="../images/product/gallery/QQ-Photo20171207113423.jpg">
+                            <img src="../images/product/gallery/426507065_917840523681135_7316954368093865186_n.jpg">
                         </a>
                     </div>
                 </div><!-- /-fx-gal-item -->
@@ -219,7 +219,7 @@
                 <div class="-fx-gal-item">
                     <div class="-fx-gal-image-thumb" tabindex="1">
                         <a href="{{url('product/photo-gallery')}}">
-                            <img src="../images/product/gallery/QQ-Photo20171207113540.jpg">
+                            <img src="../images/product/gallery/download232344.jpeg">
                         </a>
                     </div>
                 </div><!-- /-fx-gal-item -->
