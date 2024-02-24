@@ -53,6 +53,15 @@
                     </div>
                 </div>
             @endif
+            @if($product->content)
+                <div class="row">
+                    <h2 class="mt-4 mb-2 text-center"><span class="fontLine">Compliance</span></h2>
+                    <div class="feature text-center">
+                        {!! $product->content !!}
+                    </div>
+                </div>
+            @endif
+
 
             <div class="row video">
                 <div class="col-md-4">

@@ -105,6 +105,7 @@
                         @else
                             @include('front.product.part-detail-other')
                         @endif
+
                     </div>
 
                     @include('front.contact.part_contact')

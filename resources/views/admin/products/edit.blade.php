@@ -125,7 +125,7 @@
                                     </div>
 
                                     <div class="col-sm-6">
-                                        <label>Content</label>
+                                        <label>Content(Battery Compliance)</label>
                                         <textarea  id="lb_content" name="content" hidden>{!! $product->content !!}</textarea>
                                     </div>
                                     <div class="col-sm-6">
