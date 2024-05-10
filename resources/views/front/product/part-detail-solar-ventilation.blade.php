@@ -61,15 +61,8 @@
                         </div>
                         <div class="card-header">Easy Installation and Superior Performance</div>
                         <div class="card-body">
-                            <p class="card-text"> The SolarKing Exhaust Fan can be self-installed or you
-                                can use one of our approved installers to do
-                                the job for you. The unit just required 1 roof tile to be removed for
-                                installation or for metal
-                                roof’s just a 300mm opening. </p>
-                            <p class="card-text">The brushless DC motor makes the operation quiet and
-                                assures the motor will have long life. Being brushless
-                                it is also far more efficient compared to other motors so the
-                                performance is better.</p>
+                            <p class="card-text">The SolarKing Exhaust Fan can be self-installed or you can use one of our approved installers to do the job for you. Just a 320mm opening in the wall will be required.</p>
+                            <p class="card-text">The brushless DC motor makes the operation quiet and assures the motor will have long life. Being brushless it is also far more efficient compared to other motors so the performance is better.</p>
                         </div>
                     </div>
                 </div>
