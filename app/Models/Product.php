@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Application;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Cache;
 
 class Product extends Model
@@ -72,7 +73,7 @@ class Product extends Model
     }
 
     public function forgetCache($model) {
-        Cache::flush();
+        Artisan::call("cache:clear");
         if(Cache::has("accessories")) {
             Cache::forget("accessories");
         }
