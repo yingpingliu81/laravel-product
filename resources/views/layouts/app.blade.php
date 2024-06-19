@@ -56,15 +56,16 @@
     <!-- Global site tag (gtag.js) - Google Ads: 861711757 -->
         <script async defer src="https://www.googletagmanager.com/gtag/js?id=AW-861711757"></script>
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+            window.addEventListener('load', function() {
+                function gtag_report_conversion(url) {
+                    var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-861711757/tdNMCIHf_8UBEI3b8poD', 'event_callback': callback }); return false; }
 
-            gtag('config', 'AW-861711757');
-        </script>
-        <script>
-            function gtag_report_conversion(url) {
-                var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-861711757/tdNMCIHf_8UBEI3b8poD', 'event_callback': callback }); return false; }
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'AW-861711757');
+            });
         </script>
 
     @show
