@@ -302,9 +302,6 @@
 
             </div>
 
-
-            @include('front.contact.part_contact')
-
         </div>
     </div>
     @if($product->intro)
