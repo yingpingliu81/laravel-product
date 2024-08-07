@@ -22,7 +22,10 @@ class IndexController extends Controller
         $latest_news = Cache::rememberForever("latest_news", function () {
             return Blog::priority()->news()->latest()->take(7)->get();
         });
-        View::share(compact('latest_news'));
+        $cates = Cache::rememberForever("accessories", function () {
+            return Cate::where('type_slug','accessories')->whereNotIn('slug', ['batteries','discontinued-items'])->priority()->get();
+        });
+        View::share(compact('latest_news', 'cates'));
     }
 
     public function home() {
@@ -203,9 +206,7 @@ class IndexController extends Controller
         $slug = $slug == "batteries" ? "batteries-large" : $slug;
         $slug = $slug == "solar-fan" ? "solar-ventilation" : $slug;
 
-        $cates = Cache::rememberForever("accessories", function () {
-            return Cate::where('type_slug','accessories')->where('slug', '!=', 'batteries')->priority()->get();
-        });
+
 
         $cate = Cache::rememberForever("accessories".$slug, function () use ($slug) {
             return Cate::where('type_slug','accessories')->where('slug',$slug)->with('visibleProducts')->first();
@@ -214,7 +215,7 @@ class IndexController extends Controller
 
         $subCates = Cate::where('type_slug', $slug)->orderBy('sort')->with('visibleProducts')->get();
 
-        return view("front.product.accessories", compact('cates','cate', 'subCates'));
+        return view("front.product.accessories", compact('cate', 'subCates'));
     }
 
     public function detail($cateSlug, $product) {
@@ -233,9 +234,8 @@ class IndexController extends Controller
                 break;
         }
         if(!$product) return redirect()->route('home');
-        $cates = Cate::where('type_slug','accessories')->where('slug', '!=', 'batteries')->priority()->get();
         $cate_slug = $cateSlug;
-        return view('front.product.detail', compact('product','cates','cate_slug'));
+        return view('front.product.detail', compact('product', 'cate_slug'));
     }
 
     public function search(Request $request) {

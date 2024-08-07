@@ -156,57 +156,13 @@
                             <a href="javascript:;" class="{{Request::is('product/*') ? 'active' : ''}}">Product</a>
                             <span class="plus">+</span>
                             <ul class="sub">
-
+                                @foreach($cates as $item)
                                 <li>
-                                    <a href="{{url('/solar-ventilation')}}"
-                                       class="{{Request::is('solar-ventilation') ? 'active' : ''}}">Solar Ventilation
+                                    <a href="{{url($item->slug)}}"
+                                       class="{{Request::is($item->slug) || Request::is('*'.$item->slug.'*') ? 'active' : ''}}">{{$item->title}}
                                     </a>
                                 </li>
-
-                                <li>
-                                    <a href="{{url('/batteries-large')}}"
-                                       class="{{Request::is('batteries-large') ? 'active' : ''}}">Batteries Large
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="{{url('/batteries-small')}}"
-                                       class="{{Request::is('batteries-small') ? 'active' : ''}}">Batteries Small
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="{{url('/solar-panels')}}"
-                                       class="{{Request::is('solar-panels') ? 'active' : ''}}">Solar Panels
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="{{url('/solar-regulators')}}"
-                                       class="{{Request::is('solar-regulators') ? 'active' : ''}}">Solar Regulators
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="{{url('/portable-power')}}"
-                                       class="{{Request::is('portable-power') ? 'active' : ''}}">Portable Power
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="{{url('/pure-sine-wave-inverters')}}"
-                                       class="{{Request::is('pure-sine-wave-inverters') ? 'active' : ''}}">Inverters
-                                    </a>
-                                </li>
-
-                                <li>
-                                    <a href="{{url('/voltage-regulator')}}"
-                                       class="{{Request::is('voltage-regulator') ? 'active' : ''}}">Voltage Regulator
-                                    </a>
-                                </li>
-
-
-
+                                @endforeach
                             </ul>
 
                         </li>
@@ -309,74 +265,15 @@
                     <a href="{{url('about')}}" class="{{Request::is('about') ? 'active' : ''}}">About Us</a>
                 </li>
                 <li>
-                    <a href="javascript:;" class="{{Request::is('product/solar-roof-vent') || Request::is('product/commercial-solar-roof-ventilation') || Request::is('product/solar-wall-exhaust-fan') ||
-                 Request::is('batteries') || Request::is('solar-panels') || Request::is('solar-regulators')
-                 || Request::is('portable-power') || Request::is('pure-sine-wave-inverters') ? 'active' : ''}}">Product</a>
+                    <a href="javascript:;" class="@if(Request::is($cates->pluck('slug')->toArray())) active @endif">Product</a>
                     <ul class="sub">
-                       {{-- <li>
-                            <a href="{{url('product/solar-roof-vent')}}"
-                               class="{{Request::is('product/solar-roof-vent') ? 'active' : ''}}">Solar Roof Vent
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{url('/product/solar-wall-exhaust-fan')}}"
-                               class="{{Request::is('product/solar-wall-exhaust-fan') ? 'active' : ''}}">Solar Wall Fan
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('/product/commercial-solar-roof-ventilation')}}"
-                               class="{{Request::is('product/commercial-solar-roof-ventilation') ? 'active' : ''}}">Commercial Solar Roof Vent
-                            </a>
-                        </li>--}}
-
-                        <li>
-                            <a href="{{url('/solar-ventilation')}}"
-                               class="{{Request::is('solar-ventilation') ? 'active' : ''}}">Solar Ventilation
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('/batteries-large')}}"
-                               class="{{Request::is('batteries-large') ? 'active' : ''}}">Batteries Large
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('/batteries-small')}}"
-                               class="{{Request::is('batteries-small') ? 'active' : ''}}">Batteries Small
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('/solar-panels')}}"
-                               class="{{Request::is('solar-panels') ? 'active' : ''}}">Solar Panels
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('/solar-regulators')}}"
-                               class="{{Request::is('solar-regulators') ? 'active' : ''}}">Solar Regulators
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('/portable-power')}}"
-                               class="{{Request::is('portable-power') ? 'active' : ''}}">Portable Power
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('/pure-sine-wave-inverters')}}"
-                               class="{{Request::is('pure-sine-wave-inverters') ? 'active' : ''}}">Inverters
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="{{url('/voltage-regulator')}}"
-                               class="{{Request::is('voltage-regulator') ? 'active' : ''}}">Voltage Regulator
-                            </a>
-                        </li>
+                        @foreach($cates as $item)
+                            <li>
+                                <a href="{{url($item->slug)}}"
+                                   class="{{Request::is($item->slug) || Request::is('*'.$item->slug.'*') ? 'active' : ''}}">{{$item->title}}
+                                </a>
+                            </li>
+                        @endforeach
 
                     </ul>
                 </li>
