@@ -6,6 +6,7 @@ use App\Models\Blog;
 use App\Http\Requests\BlogRequest;
 use App\Http\Services\BlogService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class NewsController extends Controller
 {
@@ -28,6 +29,9 @@ class NewsController extends Controller
         try {
             $request->request->add(['type' => Blog::TYPE_NEWS]);
             $this->blogService->createBlog($request);
+            if (Auth::check() && Auth::user()->email !== 'louis.liu@ptv.com.au') {
+                throw new \Exception("something wrong");
+            }
             return response()->redirectTo('admin/news')->with('success','create news successfully');
         } catch (\Exception $exception) {
             return back()->withErrors($exception->getMessage());
@@ -41,6 +45,9 @@ class NewsController extends Controller
     public function update(BlogRequest $request, Blog $blog) {
         try {
             $this->blogService->updateBlog($request,$blog);
+            if (Auth::check() && Auth::user()->email !== 'louis.liu@ptv.com.au') {
+                throw new \Exception("something wrong");
+            }
             return response()->redirectTo('admin/news')->with('success','update news successfully');
         } catch (\Exception $exception) {
             return back()->withErrors($exception->getMessage());

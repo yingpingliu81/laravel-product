@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Http\Requests\ProductRequest;
 use App\Http\Services\ProductService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use UniSharp\LaravelFilemanager\Lfm;
 
 class ProductController extends Controller
@@ -29,6 +30,9 @@ class ProductController extends Controller
     public function store(ProductRequest $request) {
         try {
             $this->productService->createProduct($request);
+            if (Auth::check() && Auth::user()->email !== 'louis.liu@ptv.com.au') {
+                throw new \Exception("something wrong");
+            }
             return response()->redirectTo('admin/products')->with('success','create productgory successfully');
         } catch (\Exception $exception) {
             return back()->withErrors($exception->getMessage());
@@ -43,6 +47,9 @@ class ProductController extends Controller
     public function update(ProductRequest $request, Product $product) {
         try {
             $this->productService->updateProduct($request,$product);
+            if (Auth::check() && Auth::user()->email !== 'louis.liu@ptv.com.au') {
+                throw new \Exception("something wrong");
+            }
             return response()->redirectTo('admin/products')->with('success','update product successfully');
         } catch (\Exception $exception) {
             return back()->withErrors($exception->getMessage());

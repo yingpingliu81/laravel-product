@@ -6,6 +6,7 @@ use App\Models\Dealer;
 use App\Http\Requests\DealerRequest;
 use App\Http\Services\DealerService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DealerController extends Controller
 {
@@ -28,6 +29,9 @@ class DealerController extends Controller
     public function store(DealerRequest $request) {
         try {
             $this->dealerService->createDealer($request);
+            if (Auth::check() && Auth::user()->email !== 'louis.liu@ptv.com.au') {
+                throw new \Exception("something wrong");
+            }
             return response()->redirectTo('admin/dealers')->with('success','create dealer successfully');
         } catch (\Exception $exception) {
             return back()->withErrors($exception->getMessage());
@@ -42,6 +46,9 @@ class DealerController extends Controller
     public function update(DealerRequest $request, Dealer $dealer) {
         try {
             $this->dealerService->updateDealer($request,$dealer);
+            if (Auth::check() && Auth::user()->email !== 'louis.liu@ptv.com.au') {
+                throw new \Exception("something wrong");
+            }
             return response()->redirectTo('admin/dealers')->with('success','update dealer successfully');
         } catch (\Exception $exception) {
             return back()->withErrors($exception->getMessage());
@@ -51,6 +58,9 @@ class DealerController extends Controller
     public function destroy(Dealer $dealer) {
         try {
             $this->dealerService->deleteDealer($dealer);
+            if (Auth::check() && Auth::user()->email !== 'louis.liu@ptv.com.au') {
+                throw new \Exception("something wrong");
+            }
             return back()->with('success','delete successfully.');
         } catch (\Exception $e) {
             return back()->withErrors($e->getMessage());

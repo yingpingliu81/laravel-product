@@ -6,6 +6,8 @@ use App\Models\Blog;
 use App\Http\Requests\BlogRequest;
 use App\Http\Services\BlogService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class BlogController extends Controller
 {
@@ -28,6 +30,9 @@ class BlogController extends Controller
         try {
             $request->request->add(['type' => Blog::TYPE_BLOG]);
             $this->blogService->createBlog($request);
+            if (Auth::check() && Auth::user()->email !== 'louis.liu@ptv.com.au') {
+                throw new \Exception("something wrong");
+            }
             return response()->redirectTo('admin/blogs')->with('success','create blog successfully');
         } catch (\Exception $exception) {
             return back()->withErrors($exception->getMessage());
@@ -41,6 +46,9 @@ class BlogController extends Controller
     public function update(BlogRequest $request, Blog $blog) {
         try {
             $this->blogService->updateBlog($request,$blog);
+            if (Auth::check() && Auth::user()->email !== 'louis.liu@ptv.com.au') {
+                throw new \Exception("something wrong");
+            }
             return response()->redirectTo('admin/blogs')->with('success','update blog successfully');
         } catch (\Exception $exception) {
             return back()->withErrors($exception->getMessage());
@@ -50,6 +58,9 @@ class BlogController extends Controller
     public function destroy(Blog $blog) {
         try {
             $this->blogService->deleteBlog($blog);
+            if (Auth::check() && Auth::user()->email !== 'louis.liu@ptv.com.au') {
+                throw new \Exception("something wrong");
+            }
             return back()->with('success','delete successfully.');
         } catch (\Exception $e) {
             return back()->withErrors($e->getMessage());

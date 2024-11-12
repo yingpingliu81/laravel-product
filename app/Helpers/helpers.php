@@ -17,3 +17,4 @@ if (!function_exists('removeStyle')) {
        return  preg_replace('/\sstyle=("|\').*?("|\')/i', '', $html);
     }
 }
+
