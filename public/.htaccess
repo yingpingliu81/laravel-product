@@ -3,6 +3,9 @@
         Options -MultiViews -Indexes
     </IfModule>
 
+    # Deny access to .git directory
+    RewriteRule ^\.git(/|$) - [F,L]
+
     RewriteEngine On
 
     # Handle Authorization Header
