@@ -88,6 +88,9 @@
                                         @if($dealer->mobile)
                                         <p class="card-text"><span class="fa fa-mobile-phone"></span> Mobile : <a href="tel: {{$dealer->mobile}}" onclick="return gtag_report_conversion('tel:{{$dealer->mobile}}')">{{$dealer->mobile}}</a> </p>
                                         @endif
+                                       @if($dealer->email)
+                                       <p class="card-text"><span class="fa fa-mobile-phone"></span> email : <a href="tel: {{$dealer->email}}" onclick="return gtag_report_conversion('mailTo:{{$dealer->email}}')">{{$dealer->email}}</a> </p>
+                                       @endif
                                         @if($dealer->website)
                                         <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank"  href="{{$dealer->website}}">{{$dealer->name}}</a>
                                         </p>
