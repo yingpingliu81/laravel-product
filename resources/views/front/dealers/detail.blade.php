@@ -39,6 +39,9 @@
                                     @if($item->mobile)
                                     <p class="card-text"><span class="fa fa-fax"></span> Mobile : <a href="tel:   {{$item->mobile}} ">{{$item->mobile}}  </a></p>
                                     @endif
+                                    @if($item->email)
+                                    <p class="card-text"><span class="fa fa-fax"></span> Email : <a href="tel:   {{$item->email}} ">{{$item->email}}  </a></p>
+                                    @endif
                                     @if($item->website)
                                     <p class="card-text"><span class="fa fa-external-link"></span> Website: <a target="_blank" href="{{$item->website}}">{{$item->name}}</a>
                                     </p>
