@@ -9,3 +9,4 @@ material-dashboard-master/*
 public/files/*
 public/photos/*
 storage/framework/sessions/*
+public/error_log
