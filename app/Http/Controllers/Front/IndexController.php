@@ -221,7 +221,7 @@ class IndexController extends Controller
     public function detail($cateSlug, $product) {
         switch ($product) {
             case 'solar-roof-vent':
-                $product = Product::where('sku', '6755')->first();
+                $product = Product::where('sku', '6757')->first();
                 break;
             case 'commercial-solar-roof-ventilation':
                 $product = Product::where('sku', '6754')->first();
