@@ -80,6 +80,12 @@
                 <!-- End Facebook Pixel Code -->
             });
 
+            document.addEventListener("visibilitychange", () => {
+                console.log(`Visibility: ${document.visibilityState}`);
+            });
+
+
+
         </script>
     <!-- Facebook Pixel Code -->
     <noscript>

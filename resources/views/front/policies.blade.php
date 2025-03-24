@@ -22,7 +22,7 @@
                     </p>
                     <p>These terms constitute the entire agreement between You and SatKing regarding the operation of the site.
                     </p>
-                    <p>Notices to ourselves can be sent to 162 Chesterville Road Moorabbin Vic 3189. You acknowledge that we may use your primary email to us as your address for any alterations to this policy and you agree to such communications.
+                    <p>Notices to ourselves can be sent to 1/38 Adelaide St Dandenong Victoria 3175. You acknowledge that we may use your primary email to us as your address for any alterations to this policy and you agree to such communications.
                     </p>
                 </div>
             </div>
