@@ -27,7 +27,7 @@
                 @else
                     <div class="row">
                         <h5>{{$product->title}}</h5>
-                        @php($urls = ['6762' => 'product/solar-wall-exhaust-fan', '6754' => 'product/commercial-solar-roof-ventilation', '6755' => 'product/solar-roof-vent'])
+                        @php($urls = ['6768' => 'product/solar-wall-exhaust-fan', '6754' => 'product/commercial-solar-roof-ventilation', '6755' => 'product/solar-roof-vent'])
                         <h5 class="mt-2 mb-2"> <a href="{{url($urls[$product->sku])}}">More Details</a></h5>
                     </div>
                 @endif

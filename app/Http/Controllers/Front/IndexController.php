@@ -227,7 +227,7 @@ class IndexController extends Controller
                 $product = Product::where('sku', '6754')->first();
                 break;
             case 'solar-wall-exhaust-fan':
-                $product = Product::where('sku', '6762')->first();
+                $product = Product::where('sku', '6768')->first();
                 break;
             default:
                 $product = Product::where('slug', $product)->first();
