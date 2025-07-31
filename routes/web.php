@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\ProductController;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Cache;
 
 /*
 |--------------------------------------------------------------------------
@@ -117,4 +119,24 @@ Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']
 Route::get('/test-mail', function () {
     return view('mails.invited_code');
 });
+
+
+Route::get('/test-cache-direct', function () {
+    try {
+        $result = Artisan::call("cache:clear");
+        return "Direct cache clear result: " . $result . " (0 = success)";
+    } catch (\Exception $e) {
+        return "Error: " . $e->getMessage();
+    }
+});
+
+Route::get('/test-cache-flush', function () {
+    try {
+        Cache::flush();
+        return "Cache::flush() completed successfully";
+    } catch (\Exception $e) {
+        return "Error: " . $e->getMessage();
+    }
+});
+
 //Auth::routes(['register' => false]);
