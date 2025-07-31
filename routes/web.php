@@ -130,13 +130,6 @@ Route::get('/test-cache-direct', function () {
     }
 });
 
-Route::get('/test-cache-flush', function () {
-    try {
-        Cache::flush();
-        return "Cache::flush() completed successfully";
-    } catch (\Exception $e) {
-        return "Error: " . $e->getMessage();
-    }
-});
+
 
 //Auth::routes(['register' => false]);
