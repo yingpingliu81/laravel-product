@@ -108,6 +108,15 @@ Route::group(['prefix' => '/admin'], function ($router) {
     Route::post('/password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
     Route::get('/password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
     Route::post('/password/reset', 'Auth\ResetPasswordController@reset');
+
+    Route::get('/test-cache-direct', function () {
+        try {
+            $result = Artisan::call("cache:clear");
+            return "Direct cache clear result: " . $result . " (0 = success)";
+        } catch (\Exception $e) {
+            return "Error: " . $e->getMessage();
+        }
+    });
 });
 
 
@@ -121,14 +130,7 @@ Route::get('/test-mail', function () {
 });
 
 
-Route::get('/test-cache-direct', function () {
-    try {
-        $result = Artisan::call("cache:clear");
-        return "Direct cache clear result: " . $result . " (0 = success)";
-    } catch (\Exception $e) {
-        return "Error: " . $e->getMessage();
-    }
-});
+
 
 
 

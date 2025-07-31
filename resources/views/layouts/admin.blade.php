@@ -118,6 +118,13 @@
                     </form>
                 </li>
 
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{url('admin/test-cache-direct')}}">
+                        <i class="material-icons">delete</i>
+                        <p>Clear Cache</p>
+                    </a>
+                </li>
+
             </ul>
         </div>
     </div>

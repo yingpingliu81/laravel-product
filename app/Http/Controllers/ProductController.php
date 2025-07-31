@@ -8,6 +8,8 @@ use App\Http\Services\ProductService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use UniSharp\LaravelFilemanager\Lfm;
+use Illuminate\Support\Facades\Artisan;
+
 
 class ProductController extends Controller
 {
@@ -33,6 +35,7 @@ class ProductController extends Controller
             if (Auth::check() && Auth::user()->email !== 'louis.liu@ptv.com.au') {
                 throw new \Exception("something wrong");
             }
+            Artisan::call("cache:clear");
             return response()->redirectTo('admin/products')->with('success','create productgory successfully');
         } catch (\Exception $exception) {
             return back()->withErrors($exception->getMessage());
@@ -50,6 +53,7 @@ class ProductController extends Controller
             if (Auth::check() && Auth::user()->email !== 'louis.liu@ptv.com.au') {
                 throw new \Exception("something wrong");
             }
+            Artisan::call("cache:clear");
             return response()->redirectTo('admin/products')->with('success','update product successfully');
         } catch (\Exception $exception) {
             return back()->withErrors($exception->getMessage());
@@ -59,6 +63,7 @@ class ProductController extends Controller
     public function destroy(Product $product) {
         try {
             $this->productService->deleteProduct($product);
+            Artisan::call("cache:clear");
             return back()->with('success','delete successfully.');
         } catch (\Exception $e) {
             return back()->withErrors($e->getMessage());
