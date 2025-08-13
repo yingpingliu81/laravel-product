@@ -125,7 +125,6 @@
 
         // This example requires the Places library. Include the libraries=places
         // parameter when you first load the API. For example:
-        // <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
         var autocomplete;
         var componentForm = {
             locality: 'long_name',
@@ -171,9 +170,6 @@
     </script>
 
 
-    <script
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyv-m-DnFy1HwSPqo6UVZY6taOtotsFgc&libraries=places&language=en&callback=initAutocomplete&sessiontoken =<?php echo uniqid(); ?>"
-            async defer type="application/javascript"></script>
 
     <style>
         .row {

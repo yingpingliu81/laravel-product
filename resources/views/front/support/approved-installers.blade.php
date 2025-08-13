@@ -348,7 +348,6 @@
 
 @endsection
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyv-m-DnFy1HwSPqo6UVZY6taOtotsFgc"></script>
 <script>
     function initMap() {
 
